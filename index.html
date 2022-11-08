@@ -38,20 +38,19 @@
                 width: 50px;
                 height: 50px;
                 margin: 8px;
+                border-radius: 30%;
             }
             .header p {
                 font: 35px "Helvetica", Arial;
-                margin:10px;
+                margin: 8px;
             }
             .sticky {
                 position: fixed;
                 width: 100%;
             }
-
             .sticky + .content {
                 padding-top: 90px;
             }
- 
             .content {
                 padding: 5px 30px;
             }
@@ -60,7 +59,7 @@
 	<body>
         <!-- Here goes the sticky header -->
 		<div class="header" id="mainHeader">
-            <img src="https://avatars.githubusercontent.com/u/74740271?v=4"     alt="Profile picture of Semmelstulle">
+            <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profile picture of Semmelstulle">
             <p>Semmelstulle</p>
         </div>
         
@@ -70,11 +69,15 @@
             <div class="greeter">
                 <h1>Hello world. This is me.</h1>
             </div>
-            <br><br><br><br><br><br><br>
-
-            <!-- Container for links -->
-            <a href="https://mastodon.social/@semmelstulle" style="text-decoration: none; color: #e0ccff;">Mastodon profile</a>
+            
+            <p>Do you want to see what's new?</p>
+            
+            <a rel="me" href="https://mastodon.social/@Semmelstulle">Mastodon</a>
+            
+            <img class="gitLogo" src="/resources/images/GitHubReversocatLight.png" alt="Official GitHub logo">
+            
             <a href="https://github.com/SemmelStulle" style="text-decoration: none; color: #e0ccff;">GitHub profile</a>
+            
             <p>bla</p>
             <p>bla</p>
             <p>bla</p>
@@ -93,6 +96,7 @@
             <p>bla</p>
             <p>bla</p>
             <p>bla</p>
+            
         </div>
         
         <script>
