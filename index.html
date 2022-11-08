@@ -25,22 +25,23 @@
                 margin: 0;
                 background: #1c1c1c;
                 color: #e1e1e1;
-                font-family: Helvetica, Arial;
+                font: "Helvetica Neue";
             }
             .header {
                 padding: 8px 8px;
                 background: #3c3c3c;
                 color: #f8f8f8;
+                display: flex;
+                align-items: center;
             }
             .header img {
-                vertical-align: left;
                 width: 50px;
                 height: 50px;
                 margin: 8px;
             }
-            .header h2 {
-                position: relative;
-                top: 18 px;
+            .header p {
+                font: 35px "Helvetica Neue";
+                margin:10px
             }
             .sticky {
                 position: fixed;
@@ -60,7 +61,7 @@
         <!-- Here goes the sticky header -->
 		<div class="header" id="mainHeader">
             <img src="https://avatars.githubusercontent.com/u/74740271?v=4"     alt="Profile picture of Semmelstulle">
-            <h2>Semmelstulle</h2>
+            <p>Semmelstulle</p>
         </div>
         
         <!-- Class for content needed I guess -->
