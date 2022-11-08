@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+        <!-- load CSS -->
+        <link rel="stylesheet" href="main.css">
+        
         <!-- I was told this one should fix scaling -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
@@ -21,39 +24,7 @@
 		<link rel="shortcut icon" href="/resources/favicons/196.png" sizes="196x196">
 
         <style>
-            body {
-                margin: 0;
-                background: #1c1c1c;
-                color: #e1e1e1;
-                font-family: Helvetica, Arial;
-            }
-            .header {
-                padding: 8px 8px;
-                background: #3c3c3c;
-                color: #f8f8f8;
-                display: flex;
-                align-items: center;
-            }
-            .header img {
-                width: 50px;
-                height: 50px;
-                margin: 8px;
-                border-radius: 30%;
-            }
-            .header p {
-                font: 35px "Helvetica", Arial;
-                margin: 8px;
-            }
-            .sticky {
-                position: fixed;
-                width: 100%;
-            }
-            .sticky + .content {
-                padding-top: 90px;
-            }
-            .content {
-                padding: 5px 30px;
-            }
+
         </style>
 	</head>
 	<body>
@@ -68,17 +39,17 @@
             <!-- Greeter -->
             <div class="greeter">
                 <h1>Hello world. This is me.</h1>
+                <p>Do you want to see what's new?</p>
             </div>
             
-            <p>Do you want to see what's new?</p>
+            <img class="socialImages" src="https://joinmastodon.org/logos/logo-purple.svg" alt="Official MAstodon logo">
+                
+            <img class="socialImages" src="../resources/images/GitHubInvertocatLight.png" alt="Official GitHub logo">
+            <br>
             
-            <img src="https://joinmastodon.org/logos/logo-purple.svg" alt="Official MAstodon logo">
+            <a class="socialLinks" rel="me" href="https://mastodon.social/@Semmelstulle">Mastodon</a>
             
-            <a rel="me" href="https://mastodon.social/@Semmelstulle" style="text-decoration: none; color: #e0ccff;">Mastodon</a>
-            
-            <img src="../resources/images/GitHubInvertocatLight.png" alt="Official GitHub logo">
-            
-            <a href="https://github.com/SemmelStulle" style="text-decoration: none; color: #e0ccff;">GitHub profile</a>
+            <a class="socialLinks" href="https://github.com/SemmelStulle">GitHub profile</a>
             
             <p>bla</p>
             <p>bla</p>
@@ -101,19 +72,7 @@
             
         </div>
         
-        <script>
-            window.onscroll = function() {stickyTopFunction()};
-
-            var header = document.getElementById("mainHeader");
-            var sticky = header.offsetTop;
-
-            function stickyTopFunction() {
-                if (window.pageYOffset > sticky) {
-                    header.classList.add("sticky");
-                } else {
-                    header.classList.remove("sticky");
-                }
-            }
-        </script>
+        <!-- Load JS-->
+        <script src="main.js"></script>
 	</body>
 </html>
