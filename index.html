@@ -2,26 +2,110 @@
 <html>
 	<head>
 		<title>Semmelstulle</title>
-
-<!-- normal favicons -->
+        
+        <!-- normal favicons -->
 		<link rel="icon" type="image/x-icon" href="/resources/favicons/32.png" sizes="32x32">
 		<link rel="icon" type="image/x-icon" href="/resources/favicons/128.png" sizes="128x128">
 		<link rel="icon" type="image/x-icon" href="/resources/favicons/180.png" sizes="180x180">
 		<link rel="icon" type="image/x-icon" href="/resources/favicons/192.png" sizes="192x192">
-
-<!-- iOS favicons -->
+            
+        <!-- iOS favicons -->
 		<link rel="apple-touch-icon" href="/resources/favicons/120.png" sizes="120x120">
 		<link rel="apple-touch-icon" href="/resources/favicons/152.png" sizes="152x152">
 		<link rel="apple-touch-icon" href="/resources/favicons/180.png" sizes="180x180">
-
-<!-- Android -->
+            
+        <!-- Android -->
 		<link rel="shortcut icon" href="/resources/favicons/196.png" sizes="196x196">
 
+        <style>
+            body {
+                margin: 0;
+                background: #1c1c1c;
+                color: #e1e1e1;
+                font-family: Helvetica, Arial;
+            }
+            .header {
+                padding: 8px 8px;
+                background: #3c3c3c;
+                color: #f8f8f8;
+            }
+            .header img {
+                float: left;
+                width: 50px;
+                height: 50px;
+                margin: 8px;
+            }
+            .header h2 {
+                position: relative;
+                top: 18 px;
+            }
+            .sticky {
+                position: fixed;
+                width: 100%;
+            }
+
+            .sticky + .content {
+                padding-top: 90px;
+            }
+ 
+            .content {
+                padding: 5px 30px;
+            }
+        </style>
 	</head>
 	<body>
-		<h1>This is my homepage. Under construction.</h1>
-		<p>Enjoy my profile picture.</p>
-		<img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profile picture of Semmelstulle">
-		<a href="https://mastodon.social/@semmelstulle">Mastodon profile</a>
+        <!-- Here goes the sticky header -->
+		<div class="header" id="mainHeader">
+            <img src="https://avatars.githubusercontent.com/u/74740271?v=4"     alt="Profile picture of Semmelstulle">
+            <h2>Semmelstulle</h2>
+        </div>
+        
+        <!-- Class for content needed I guess -->
+        <div class="content">
+            <!-- Greeter -->
+            <div class="greeter">
+                <h1>Hello world. This is me.</h1>
+            </div>
+            <!-- Container for links -->
+            <div class="socialLinks">
+                <a href="https://mastodon.social/@semmelstulle" style="text-decoration: none; color: #e0ccff;">Mastodon profile</a>
+                <br>
+                <a href="https://github.com/SemmelStulle" style="text-decoration: none; color: #e0ccff;">GitHub profile</a>
+            </div>
+            
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+            <p>bla</p><br>
+        </div>
+        
+        <script>
+            window.onscroll = function() {stickyTopFunction()};
+
+            var header = document.getElementById("mainHeader");
+            var sticky = header.offsetTop;
+
+            function stickyTopFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
 	</body>
 </html>
