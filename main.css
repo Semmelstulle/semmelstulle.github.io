@@ -28,18 +28,9 @@ body {
 .sticky + .content {
     padding-top: 90px;
 }
-.socialImages {
-    width: 100px;
-    align: left;
-}
-.socialLinks {
-    text-decoration: none;
-    color: #e0ccff;
-    margin: 10px;
-}
 .greeter {
     margin: 25px;
 }
 .socials {
-    margin: 80px;
+    margin: 70px;
 }
