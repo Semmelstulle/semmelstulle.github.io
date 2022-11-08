@@ -42,5 +42,5 @@ body {
 }
 .socialLinks {
     padding: 20px;
-    display: flex;
+    display: grid;
 }
