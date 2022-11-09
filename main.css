@@ -44,8 +44,12 @@ body {
 }
 .links{
     display: flex;
+    padding-left: 8%;
     gap: 30px;
-    padding-left: 30px;
+}
+.disclaimer {
+    margin-left: 8%;
+    margin-right: 8%;
 }
 .footer {
     position: fixed;
