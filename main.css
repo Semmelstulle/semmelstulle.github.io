@@ -1,7 +1,7 @@
 :root {
     --colbg: #111111;
     --colfg: #e6e6e6;
-    --colfoot: #303030;
+    --colfoot: rgba(50, 50, 50, 0.75);
     --collnk: #8538f7;
     --mrgnhead: 5%;
 }
@@ -39,6 +39,8 @@ body {
 .about {
     font-size: 24px;
     margin: 8%;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .links{
     display: flex;
@@ -56,6 +58,8 @@ body {
     padding: 20px;
     display: flex;
     align-items: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 .footer img {
     width: 40px;
