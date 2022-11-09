@@ -15,8 +15,9 @@ body {
     justify-content: right;
     align-items: center;
 }
-.greet p {
+.greet h2 {
     font-size: 40px;
+    font-weight: bold;
     background: linear-gradient(#6813FD, #A60CFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -38,7 +39,7 @@ body {
 }
 .about {
     font-size: 24px;
-    padding: 40px;
+    padding: 30px;
 }
 .footer {
     position: fixed;
