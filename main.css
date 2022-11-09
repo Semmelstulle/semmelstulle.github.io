@@ -8,6 +8,7 @@ body {
     background: var(--colbg);
     color: var(--colfg);
     font-family: Helvetica, Arial;
+    margin: 0px;
 }
 .greet {
     display: flex;
@@ -15,7 +16,7 @@ body {
     align-items: center;
 }
 .greet p {
-    font-size: 50px;
+    font-size: 44px;
     background: linear-gradient(#6813FD, #A60CFF);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
