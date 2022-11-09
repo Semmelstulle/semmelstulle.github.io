@@ -2,7 +2,7 @@
     --colbg: #111111;
     --colfg: #e6e6e6;
     --colfoot: #303030;
-    --collnk: #8533ff;
+    --collnk: #8538f7;
     --mrgnhead: 5%;
 }
 body {
@@ -19,7 +19,7 @@ body {
 .greet h2 {
     font-size: 40px;
     font-weight: bold;
-    background: linear-gradient(#6813FD, #A60CFF);
+    background: linear-gradient(to bottom right, #8538f7, #a714fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-top: var(--mrgnhead);
@@ -38,7 +38,7 @@ body {
 }
 .about {
     font-size: 24px;
-    margin: 30px;
+    margin: 8%;
 }
 .links{
     display: flex;
