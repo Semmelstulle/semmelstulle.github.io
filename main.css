@@ -52,6 +52,16 @@ body {
     margin-left: 8%;
     margin-right: 8%;
 }
+.easterEgg {
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+.easterEgg img {
+    padding: 0px;
+}
+.easterEgg p {
+    padding: 0px;
+}
 .footer {
     position: fixed;
     left: 0;
