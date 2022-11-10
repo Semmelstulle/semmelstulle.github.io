@@ -17,8 +17,7 @@ body {
     align-items: center;
 }
 .greet h2 {
-    font-size: xx-large;
-    font-size: -webkit-xxx-large;
+    font-size: 40px;
     font-weight: bold;
     background: linear-gradient(to bottom right, #8538f7, #a714fc);
     -webkit-background-clip: text;
@@ -38,7 +37,7 @@ body {
     margin-left: auto;
 }
 .about {
-    font-size: large;
+    font-size: 20px;
     margin: 8%;
     margin-top: 40px;
     margin-bottom: 40px;
