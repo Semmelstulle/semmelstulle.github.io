@@ -11,31 +11,15 @@
         <meta name="description" content="A personal website for interested people, mainly for work and coding.">
         <meta name="robots" content="noindex, nofollow, noarchive">
         <meta name="googlebots" content="noindex, nofollow, noarchive">
+        <meta name="msapplication-TileColor" content="#8538f7">
+        <meta name="msapplication-TileImage" content="/favicon.png">
         
 		<title>Semmelstulle</title>
         
-        <!-- normal favicons -->
-		<link rel="icon" type="image/png" href="/resources/favicons/32.png" sizes="32x32">
-		<link rel="icon" type="image/png" href="/resources/favicons/128.png" sizes="128x128">
-		<link rel="icon" type="image/png" href="/resources/favicons/180.png" sizes="180x180">
-		<link rel="icon" type="image/png" href="/resources/favicons/192.png" sizes="192x192">
-        
-        <!-- iOS favicon and launch icon -->
-        <link rel="apple-touch-icon" sizes="57x57" href="../resources/favicons/57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="../resources/favicons/60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="../resources/favicons/72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="../resources/favicons/76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="../resources/favicons/114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../resources/favicons/120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="../resources/favicons/144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="../resources/favicons/152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="../resources/favicons/180.png">
-                
-        <!-- Android -->
-		<link rel="shortcut icon" href="/resources/favicons/favicon.png">
-            
-        <!-- mask icon -->
-        <link color="#6364FF" href="../resources/favicons/mask.svg" rel="mask-icon">
+        <!-- Set favicons -->
+		<link rel="icon" type="image/png" href="../favicon.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon.png">
+		<link rel="shortcut icon" href="../favicon.png">
         
         <!-- Embedded CSS -->
         <style>
@@ -55,7 +39,6 @@
                 .footer {
                     background-color: rgba(50, 50, 50, 0.75);
                 }
-                
             }
             @media (prefers-color-scheme: light) {
                 body {
@@ -132,8 +115,8 @@
                 padding: 20px;
                 display: flex;
                 align-items: center;
-                -webkit-backdrop-filter: blur(10px);
-                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
             }
             .footer img {
                 width: 40px;
@@ -156,7 +139,7 @@
         </div>
         <div class="links">
             <p><a href="https://github.com/SemmelStulle">
-                <img src="../resources/images/GitHubInvertocatLight.png" alt="Link to my GitHub" width="60" height="60"></a></p>
+                <img class="svg"  src="../resources/images/GitHubInvertocatLight.png" alt="Link to my GitHub" width="60" height="60"></a></p>
             <p><a href="mailto:4gtmqb7gww@privaterelay.appleid.com?subject=Kontaktaufnahme">
                 <img src="../resources/images/improvisedMail.png" alt="Link that opens your default mail software with my mail preinserted" width="60" height="60"></a></p>
         </div>
@@ -168,12 +151,12 @@
         <p class="features">This is a list of features this site supports:<br><br>- switches light mode with system/browser<br>- favicons for almost all systems<br>- can be a PWA on iOS (add to home screen and it becomes a window with no decorations)<br>- blur for the disclaimer bar<br>- an easter egg<br>- in line CSS and JS for very easy editing and manipulation<br>- comments in the code</p>
         <p class="disclaimer">This website is optimized for WebKit and WebRender. Please visit from Safari or Firefox for best results.</p>
         <div class="easterEgg">
-        <img src="../resources/images/easterEgg.png" alt="Image of an egg" width="30px" heigth="30px">
+        <img class="svg" src="../resources/images/easterEgg.svg" alt="Image of an egg" width="30px" heigth="30px">
         <p>You found the easter egg, yay!</p>
         </div>
         
         <div class="footer">
-            <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub Logo">
+            <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40">
             <p>This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
         </div>
         
