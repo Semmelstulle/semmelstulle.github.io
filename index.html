@@ -40,19 +40,31 @@
         <!-- Embedded CSS -->
         <style>
             :root {
-                color-scheme: dark light;
                 --collnk: #8538f7;
                 --mrgnhead: 5%;
             }
             body {
-                background: #161616;
-                color: #e6e6e6;
                 font-family: Helvetica, Arial;
                 margin: 0px;
             }
-            .lightMode {
-                background: #e6e6e6;
-                color: #161616;
+            @media (prefers-color-scheme: dark) {
+                .body {
+                    background: #161616;
+                    color: #e6e6e6;
+                }
+                .footer {
+                    background-color: rgba(50, 50, 50, 0.75);
+                }
+                
+            }
+            @media (prefers-color-scheme: light) {
+                .body {
+                    background: #e6e6e6;
+                    color: #161616;
+                }
+                .footer {
+                    background-color: rgba(220, 220, 220, 0.75);
+                }
             }
             .greet {
                 display: flex;
@@ -90,6 +102,11 @@
                 padding-left: 8%;
                 gap: 30px;
             }
+            .features {
+                margin-top: 40px;
+                margin-left: 8%;
+                margin-right: 8%;
+            }
             .disclaimer {
                 margin-top: 40px;
                 margin-left: 8%;
@@ -111,16 +128,12 @@
                 bottom: 0;
                 height: 40px;
                 width: 100%;
-                background-color: rgba(50, 50, 50, 0.75);
                 color: var(--colfg);
                 padding: 20px;
                 display: flex;
                 align-items: center;
                 -webkit-backdrop-filter: blur(10px);
                 backdrop-filter: blur(10px);
-                .lightMode {
-                    background-color: rgba(200, 200, 200, 0.75);
-                }
             }
             .footer img {
                 width: 40px;
@@ -147,12 +160,12 @@
             <p><a href="mailto:4gtmqb7gww@privaterelay.appleid.com?subject=Kontaktaufnahme">
                 <img src="../resources/images/improvisedMail.png" alt="Link that opens your default mail software with my mail preinserted" width="60" height="60"></a></p>
         </div>
-        <button onclick="lightModeFunction()">Toggle between dark and light mode</button>
-
+        
         <div class="stuff">
             <!-- Here go the links and previews to stuff I already made -->
             
         </div>
+        <p class="features">This is a list of features this site supports:<br><br>- switches light mode with system/browser<br>- favicons for almost all systems<br>- can be a PWA on iOS (add to home screen and it becomes a window with no decorations)<br>- blur for the disclaimer bar<br>- an easter egg<br>- in line CSS and JS for very easy editing and manipulation<br>- comments in the code</p>
         <p class="disclaimer">This website is optimized for WebKit and WebRender. Please visit from Safari or Firefox for best results.</p>
         <div class="easterEgg">
         <img src="../resources/images/easterEgg.png" alt="Image of an egg" width="30px" heigth="30px">
@@ -166,12 +179,6 @@
         
         <!-- Embedded JS -->
         <script>
-            function lightModeFunction() {
-            var element = document.body;
-            element.classList.toggle("lightMode");
-            element.classList.toggle("footer lightMode");
-
-            }
         </script>
         
 	</body>
