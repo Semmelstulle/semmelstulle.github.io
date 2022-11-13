@@ -162,12 +162,22 @@
         <p class="features">This is a list of features this site supports:<br><br>- switches light mode with system/browser<br>- favicons for almost all systems<br>- can be a PWA on iOS (add to home screen and it becomes a window with no decorations)<br>- blur for the disclaimer bar<br>- an easter egg<br>- in line CSS and JS for very easy editing and manipulation<br>- comments in the code</p>
         <p class="disclaimer">This website is optimized for WebKit and WebRender. Please visit from Safari or Firefox for best results.</p>
         <div class="easterEgg">
-        <img class="svg" src="../resources/images/easterEgg.svg" alt="Image of an egg" width="30px" heigth="30px">
+            <picture>
+                <source srcset="../resources/images/EasterEggDark.png" media="(prefers-color-scheme: light)" alt="GitHub logo" width="30" height="30"/>
+                <source srcset="../resources/images/EasterEggLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)" alt="GitHub logo" width="30" height="30"/>
+            <img src="../resources/images/EasterEggLight.png" alt="GitHub logo" width="30" height="30"/>
+        </picture>
+        <!--img class="svg" src="../resources/images/easterEgg.svg" alt="Image of an egg" width="30px" heigth="30px"-->
         <p>You found the easter egg, yay!</p>
         </div>
         
         <div class="footer">
-            <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40">
+            <picture>
+              <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)" alt="GitHub logo" width="40" height="40"/>
+              <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)" alt="GitHub logo" width="40" height="40"/>
+              <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"/>
+            </picture>
+            <!--img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"-->
             <p>This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
         </div>
         
