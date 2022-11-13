@@ -3,7 +3,7 @@
     --mrgnhead: 5%;
 }
 body {
-    font-family: Helvetica, Arial;
+    font-family: ui-rounded, ui-sans;
     margin: 0px;
 }
 @media (prefers-color-scheme: dark) {
