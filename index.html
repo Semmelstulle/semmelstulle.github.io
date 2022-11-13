@@ -33,114 +33,12 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=00000001">
         
         <!-- Embedded CSS -->
-        <style>
-            :root {
-                --collnk: #8538f7;
-                --mrgnhead: 5%;
-            }
-            body {
-                font-family: Helvetica, Arial;
-                margin: 0px;
-            }
-            @media (prefers-color-scheme: dark) {
-                body {
-                    background: #161616;
-                    color: #e6e6e6;
-                }
-                .footer {
-                    background-color: rgba(50, 50, 50, 0.75);
-                }
-            }
-            @media (prefers-color-scheme: light) {
-                body {
-                    background: #e6e6e6;
-                    color: #161616;
-                }
-                .footer {
-                    background-color: rgba(220, 220, 220, 0.75);
-                }
-            }
-            .greet {
-                display: flex;
-                justify-content: right;
-                align-items: center;
-            }
-            .greet h2 {
-                font-size: 40px;
-                font-weight: bold;
-                background: linear-gradient(to bottom right, #8538f7, #a714fc);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                margin-top: var(--mrgnhead);
-                margin-right: auto;
-                margin-bottom: var(--mrgnhead);
-                margin-left: var(--mrgnhead);
-            }
-            .greet img {
-                border-radius: 30%;
-                width: 80px;
-                height: 80px;
-                margin-top: var(--mrgnhead);
-                margin-right: var(--mrgnhead);
-                margin-bottom: var(--mrgnhead);
-                margin-left: auto;
-            }
-            .about {
-                font-size: 20px;
-                margin: 8%;
-                margin-top: 40px;
-                margin-bottom: 40px;
-            }
-            .links{
-                display: flex;
-                padding-left: 8%;
-                gap: 30px;
-            }
-            .features {
-                margin-top: 40px;
-                margin-left: 8%;
-                margin-right: 8%;
-            }
-            .disclaimer {
-                margin-top: 40px;
-                margin-left: 8%;
-                margin-right: 8%;
-            }
-            .easterEgg {
-                padding-top: 30px;
-                padding-bottom: 0px;
-            }
-            .easterEgg img {
-                padding: 0px;
-            }
-            .easterEgg p {
-                padding: 0px;
-            }
-            .footer {
-                position: fixed;
-                left: 0;
-                bottom: 0;
-                height: 40px;
-                width: 100%;
-                color: var(--colfg);
-                padding: 20px;
-                display: flex;
-                align-items: center;
-                -webkit-backdrop-filter: blur(20px);
-                backdrop-filter: blur(20px);
-            }
-            .footer img {
-                width: 40px;
-                height: 40px;
-            }
-            .footer p {
-                margin: 20px;
-            }
-
-        </style>
-            
+        <link rel="stylesheet" href="main.css">
 	</head>
 	<body>
+        <!-- Embed JS -->
+        <script type="text/javascript" src="main.js"></script>
+        
         <div class="greet">
             <h2>Hello world.<br>This is me.</h2>
             <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profile picture of owner">
@@ -150,9 +48,18 @@
         </div>
         <div class="links">
             <p><a href="https://github.com/SemmelStulle">
-                <img class="svg"  src="../resources/images/GitHubInvertocatLight.png" alt="Link to my GitHub" width="60" height="60"></a></p>
+                <picture>
+                    <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
+                    <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+                    <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="60" height="60"/>
+                </picture>
+            </a></p>
             <p><a href="mailto:4gtmqb7gww@privaterelay.appleid.com?subject=Kontaktaufnahme">
-                <img src="../resources/images/improvisedMail.png" alt="Link that opens your default mail software with my mail preinserted" width="60" height="60"></a></p>
+                <picture>
+                    <source srcset="../resources/images/MailDark.png" media="(prefers-color-scheme: light)"/>
+                    <source srcset="../resources/images/MailLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+                    <img src="../resources/images/MailLight.png" alt="Mail symbol" width="60" height="60"/>
+            </a></p>
         </div>
         
         <div class="stuff">
@@ -163,27 +70,20 @@
         <p class="disclaimer">This website is optimized for WebKit and WebRender. Please visit from Safari or Firefox for best results.</p>
         <div class="easterEgg">
             <picture>
-                <source srcset="../resources/images/EasterEggDark.png" media="(prefers-color-scheme: light)" alt="GitHub logo" width="30" height="30"/>
-                <source srcset="../resources/images/EasterEggLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)" alt="GitHub logo" width="30" height="30"/>
+                <source srcset="../resources/images/EasterEggDark.png" media="(prefers-color-scheme: light)"/>
+                <source srcset="../resources/images/EasterEggLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
             <img src="../resources/images/EasterEggLight.png" alt="GitHub logo" width="30" height="30"/>
         </picture>
-        <!--img class="svg" src="../resources/images/easterEgg.svg" alt="Image of an egg" width="30px" heigth="30px"-->
         <p>You found the easter egg, yay!</p>
         </div>
         
         <div class="footer">
             <picture>
-              <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)" alt="GitHub logo" width="40" height="40"/>
-              <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)" alt="GitHub logo" width="40" height="40"/>
+              <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
+              <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
               <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"/>
             </picture>
-            <!--img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"-->
             <p>This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
         </div>
-        
-        <!-- Embedded JS -->
-        <script>
-        </script>
-        
 	</body>
 </html>
