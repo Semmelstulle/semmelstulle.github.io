@@ -14,9 +14,8 @@ body {
     .footer {
         background-color: rgba(50, 50, 50, 0.75);
     }
-    a {
-        text-decoration: none;
-        background-color: lightgreen;
+    .txtlnk {
+        -webkit-text-fill-color: #e6e6e6;
     }
 }
 @media (prefers-color-scheme: light) {
@@ -27,9 +26,8 @@ body {
     .footer {
         background-color: rgba(220, 220, 220, 0.75);
     }
-    .href {
-        text-decoration: none;
-        background-color: lightgreen;
+    .txtlnk {
+        -webkit-text-fill-color: #161616;
     }
 }
 .greet {
@@ -77,6 +75,12 @@ body {
     margin-top: 40px;
     margin-left: 8%;
     margin-right: 8%;
+}
+.txtlnk {
+    text-decoration: none;
+    text-decoration-line: underline;
+    text-decoration-thickness: 5px;
+    text-decoration-color: #8538f7;
 }
 .easterEgg {
     padding-top: 30px;
