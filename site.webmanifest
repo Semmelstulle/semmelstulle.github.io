@@ -1,19 +1,20 @@
 {
-    "name": "",
-    "short_name": "",
+    "name": "Semmelstulle",
+    "short_name": "Semmelstulle",
     "icons": [
         {
-            "src": "/android-chrome-192x192.png?v=00000001",
+            "src": "/android-chrome-192x192.png?v=1.0.3",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/android-chrome-512x512.png?v=00000001",
+            "src": "/android-chrome-512x512.png?v=1.0.3",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
     "theme_color": "#8538f7",
-    "background_color": "#161616",
+    "background_color": "#8538f7",
+    "start_url": "Https://semmelstulle.github.io",
     "display": "standalone"
 }
