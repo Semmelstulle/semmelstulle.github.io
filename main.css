@@ -14,6 +14,10 @@ body {
     .footer {
         background-color: rgba(50, 50, 50, 0.75);
     }
+    a {
+        text-decoration: none;
+        background-color: lightgreen;
+    }
 }
 @media (prefers-color-scheme: light) {
     body {
@@ -22,6 +26,10 @@ body {
     }
     .footer {
         background-color: rgba(220, 220, 220, 0.75);
+    }
+    .href {
+        text-decoration: none;
+        background-color: lightgreen;
     }
 }
 .greet {
