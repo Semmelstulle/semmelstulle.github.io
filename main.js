@@ -43,6 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const xbtn = document.getElementById("footerx");
     xbtn.onclick = function () {
         footerToHide.style.display = "none";
-        localStorage.setItem('hiddenFooter', 'true')
+        localStorage.setItem('hiddenFooter', true)
     }
 });
