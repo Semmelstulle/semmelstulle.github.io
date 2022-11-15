@@ -24,8 +24,6 @@ function storageAvailable(type) {
     }
 }
 
-
-
 /*This makes sure any JS inside is run AFTER the website loaded*/
 document.addEventListener('DOMContentLoaded', () => {
     

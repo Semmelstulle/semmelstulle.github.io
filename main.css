@@ -53,6 +53,9 @@ body {
     margin-left: 8%;
     margin-right: 8%;
 }
+.disclaimer button {
+    
+}
 .txtlnk {
     text-decoration: none;
     text-decoration-line: underline;
@@ -94,6 +97,7 @@ body {
     padding-right: 20px;
     position: absolute;
     right: 40px;
+    cursor: pointer;
 }
 
 /*This part checks some features and changes the appearance accordingly*/
