@@ -118,8 +118,8 @@ body {
         -webkit-text-fill-color: #161616;
     }
 }
-@media all and (display-mode: standalone) {
+@media (display-mode: standalone) {
     .footer {
-        height: 60px;
+        display: none;
     )
 }
