@@ -29,20 +29,29 @@ function storageAvailable(type) {
 /*This makes sure any JS inside is run AFTER the website loaded*/
 document.addEventListener('DOMContentLoaded', () => {
     
+    /*This hides the footer when tapping the x*/
+    const footerToHide = document.getElementById("footer");
+    const xbtn = document.getElementById("footerx");
+    const storageBtn = document.getElementById("clearStorageBtn");
+    xbtn.onclick = function() {
+        footerToHide.style.display = "none";
+        localStorage.setItem('hiddenFooter', 'true')
+    }
+    /*This clears localStorage*/
+    storageBtn.onclick = function() {
+        localStorage.clear();
+    }
+    
     /*Checks if there is a localStorage entry to hide the footer*/
     if (storageAvailable('localStorage')) {
       // Yippee! We can use localStorage awesomeness
-        let isFooterHidden = localStorage.getItem('hiddenFooter');
-        if (isFooterHidden == true) {
+        const isFooterHidden = localStorage.getItem('hiddenFooter');
+        if (isFooterHidden == 'true') {
             footerToHide.style.display = "none";
         };
     } else {
     }
-    /*This hides the footer when tapping the x*/
-    const footerToHide = document.getElementById("footer");
-    const xbtn = document.getElementById("footerx");
-    xbtn.onclick = function () {
-        footerToHide.style.display = "none";
-        localStorage.setItem('hiddenFooter', true)
-    }
+    
+    
+    
 });
