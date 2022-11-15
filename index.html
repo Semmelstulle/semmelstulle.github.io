@@ -38,7 +38,6 @@
 	<body>
         <!-- Embed JS -->
         <script type="text/javascript" src="main.js"></script>
-        
         <div class="greet">
             <h2>Hello world.<br>This is me.</h2>
             <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profile picture of owner">
@@ -78,13 +77,14 @@
         <p>You found the easter egg, yay!</p>
         </div>
         
-        <div class="footer">
+        <div id="footer" class="footer">
             <picture>
               <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
               <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
               <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"/>
             </picture>
-            <p>This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
+            <p class="footertext">This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
+            <p id="footerx" class="footerx">X</p>
         </div>
 	</body>
 </html>
