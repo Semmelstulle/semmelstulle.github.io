@@ -6,30 +6,6 @@ body {
     font-family: ui-rounded, ui-sans, system-ui, Arial;
     margin: 0px;
 }
-@media (prefers-color-scheme: dark) {
-    body {
-        background: #161616;
-        color: #e6e6e6;
-    }
-    .footer {
-        background-color: rgba(50, 50, 50, 0.75);
-    }
-    .txtlnk {
-        -webkit-text-fill-color: #e6e6e6;
-    }
-}
-@media (prefers-color-scheme: light) {
-    body {
-        background: #e6e6e6;
-        color: #161616;
-    }
-    .footer {
-        background-color: rgba(220, 220, 220, 0.75);
-    }
-    .txtlnk {
-        -webkit-text-fill-color: #161616;
-    }
-}
 .greet {
     display: flex;
     justify-content: right;
@@ -104,9 +80,6 @@ body {
     align-items: center;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
-    @media all and (display-mode: standalone) {
-        height: 60px;
-    }
 }
 .footer img {
     width: 40px;
@@ -120,4 +93,33 @@ body {
     padding-right: 20px;
     position: absolute;
     right: 40px;
+}
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #161616;
+        color: #e6e6e6;
+    }
+    .footer {
+        background-color: rgba(50, 50, 50, 0.75);
+    }
+    .txtlnk {
+        -webkit-text-fill-color: #e6e6e6;
+    }
+}
+@media (prefers-color-scheme: light) {
+    body {
+        background: #e6e6e6;
+        color: #161616;
+    }
+    .footer {
+        background-color: rgba(220, 220, 220, 0.75);
+    }
+    .txtlnk {
+        -webkit-text-fill-color: #161616;
+    }
+}
+@media (display-mode: standalone) {
+    .footer {
+        height: 60px;
+    )
 }
