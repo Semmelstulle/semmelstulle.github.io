@@ -104,6 +104,9 @@ body {
     align-items: center;
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
+    @media all and (display-mode: standalone) {
+        height: 60px;
+    }
 }
 .footer img {
     width: 40px;
