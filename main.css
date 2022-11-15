@@ -1,4 +1,5 @@
 :root {
+    /*I thought variables are cool but they break on me as soon as I need to use variables in a @media check*/
     --collnk: #8538f7;
     --mrgnhead: 5%;
 }
@@ -94,6 +95,8 @@ body {
     position: absolute;
     right: 40px;
 }
+
+/*This part checks some features and changes the appearance accordingly*/
 @media (prefers-color-scheme: dark) {
     body {
         background: #161616;
