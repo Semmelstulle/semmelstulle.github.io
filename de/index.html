@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="de-DE" xml:lang="de-DE" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
         <!-- Meta parts -->
         <meta charset="utf-8">
@@ -7,7 +7,7 @@
         <meta name="theme-color" content="#8538f7">
         <meta name="color-scheme" content="dark light">
         <meta name="author" content="Semmelstulle">
-        <meta name="description" content="My personal homepage for interested people, mainly for work and coding.">
+        <meta name="description" content="Meine persönliche Homepage für Interessierte, hauptsächlich zum Coden und für die Bewerbund gedacht.">
         <meta property="og:title" content="Semmelstulle"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://semmelstulle.github.io"/>
@@ -21,8 +21,9 @@
 		<title>Semmelstulle</title>
         
         <!-- Multi language -->
-        <link rel="canonical" href="https://semmelstulle.github.io/">
-        <link rel="alternate" href="https://semmelstulle.github.io/de/" hreflang="de-DE">
+        <link rel="canonical" href="https://semmelstulle.github.io/de">
+        <link rel="alternate" href="https://semmelstulle.github.io/" hreflang="en-GB">
+        <link rel="alternate" href="https://semmelstulle.github.io/" hreflang="en-US">
 
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=1.0.3">
@@ -43,11 +44,11 @@
         <!-- Embed JS -->
         <script type="text/javascript" src="../main.js"></script>
         <div class="greet">
-            <h2>Hello world.<br>This is me.</h2>
-            <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profile picture of owner">
+            <h2>Hallo Welt.<br>Das bin ich.</h2>
+            <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profilbild des Besitzers">
         </div>
         <div class="about">
-            <p>About me<br><br>Currently I am visiting school to geht my high-school diploma. My goal is to get hired as a software engineer and Python, shell, Swift, HTML and Flutter aren't new to me.<br><br>All my knowledge is self taught and in my spare time I try to develop an open source mental health app. RaspberryPi and Docker have been part of some personal projects, too!<br><br>If you happen to need a junior software engineer and either accept fully remote work or have an office around Nuremberg, you can check out my GitHub below and send me a mail!</p>
+            <p>Über mich<br><br>Aktuell besuche ich ein Gymnasium, um mein Abitur zu absolvieren. Ich möchte Anwendungsentwickler werden und Python, Shell, Swift, HTML als auch Flutter habe ich bereits benutzt.<br><br>Mein bisheriges Wissen ist selbst angeeignet und in meiner Freizeit arbeite ich an einer quelloffenen App für mentale Gesundheit. RaspberryPi und Docker waren ebenfalls schon Teil meiner Projekte!<br><br>Wenn Sie auf der Suche nach einem Anwendungsentwickler zum ausbilden sind, kontaktieren Sie mich gern per Mail und schauen Sie, was ich bereits auf GitHub gestellt habe!</p>
         </div>
         <div class="links">
             <p><a href="https://github.com/SemmelStulle">
@@ -69,26 +70,26 @@
             <!-- Here go the links and previews to stuff I already made -->
             
         </div>
-        <p class="features">This is a list of features this site supports:<br>
-        <br>- Switches light mode with system/browser
-        <br>- Favicons for almost all use cases
-        <br>- Can be a PWA on iOS (add to home screen and it becomes a window with no decorations)
-        <br>- Blur for the footer
-        <br>- An easter egg
-        <br>- Separated CSS and JS for better readability
-        <br>- Comments in the code
-        <br>- Tries to use the OS font to make it feel more native
-        <br>- Uses as little JavaScript as possible
-        <br>- As compatible with OS features and accessibility as I can get it to be
-        <br>- Uses LocalStorage
-        <br>- Multilingual (currently supports German and English, Spanish might follow)
+        <p class="features">Hier eine Liste der Features, die diese Website unterstützt:<br>
+        <br>- Wechselt zwischen hellem und dunklem Modus mit dem Browser/dem OS
+        <br>- Favicons für fast alle Zwecke
+        <br>- Kann als PWA installiert werden (ein Fenster ohne Browser Dekoration)
+        <br>- Unschärfe für den footer
+        <br>- Ein Easter Egg
+        <br>- Separates CSS und JS für bessere Lesbarkeit
+        <br>- Kommentare im Code
+        <br>- Benutzt die Schrift des OS, wenn bereitgestellt
+        <br>- Verwendet möglichst wenig JavaScript
+        <br>- Benutzt möglichst viele OS Features für eine native Benutzung
+        <br>- Benutzt LocalStorage
+        <br>- Ist mehrsprachig (aktuell Englisch und Deutsch, Spanisch kommt eventuell ebenfalls)
         </p>
         <div class="disclaimer">
-            <p>This website is optimized for WebKit and WebRender. Please visit from Safari or Firefox for best results.</p>
-            <p>The source code of this site can be <a class="txtlnk" href="https://github.com/SemmelStulle/semmelstulle.github.io">found here</a>.</p>
-            <p>Here are some settings for technical stuff and tech demo.</p>
-            <button id="clearStorageBtn">clear localStorage</button>
-            <p>Here you can set the language manually: 
+            <p>Diese Website ist für WebKit und WebRender optimiert. Für die Beste Erfahrung, besuchen Sie die Seite bitte mit Safari oder Firefox.</p>
+            <p>Der Quellcode dieser Seite ist <a class="txtlnk" href="https://github.com/SemmelStulle/semmelstulle.github.io">hier zu finden</a>.</p>
+            <p>Hier folgen ein paar Einstellungen zur Demonstration.</p>
+            <button id="clearStorageBtn">Bereinige localStorage</button>
+            <p>Hier können Sie die Sprache manuell festlegen: 
                 <a class ="txtlnk" href="https://semmelstulle.github.io/">English</a>,
                 <a class ="txtlnk" href="https://semmelstulle.github.io/de/">Deutsch</a>
             </p>
@@ -102,7 +103,7 @@
                 <source srcset="../resources/images/EasterEggLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
             <img src="../resources/images/EasterEggLight.png" alt="GitHub logo" width="30" height="30"/>
         </picture>
-        <p>You found the easter egg, yay!</p>
+        <p>Du hast das Easter Egg gefunden, yay!</p>
         </div>
         
         <!-- Footer -->
@@ -112,7 +113,7 @@
               <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
               <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"/>
             </picture>
-            <p class="footertext">This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
+            <p class="footertext">Diese Website läuft auf GitHub per Docker. GitHub steht in keiner Verbindung zu dieser Seite.</p>
             <p id="footerx" class="footerx">X</p>
         </div>
 	</body>
