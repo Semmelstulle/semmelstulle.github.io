@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 	<head>
         <!-- Meta parts -->
         <meta charset="utf-8">
@@ -16,6 +16,7 @@
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Semmelstulle">
         <meta name="twitter:description" content="My personal homepage for interested people, mainly for work and coding.">
+            
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="mobile-web-app-capable" content="yes">
         
@@ -25,16 +26,16 @@
 		<title>Semmelstulle</title>
         
         <!-- Multi language -->
-        <link rel="canonical" href="https://semmelstulle.github.io/">
+        <link rel="canonical" href="https://semmelstulle.github.io/" hreflang="en-GB">
         <link rel="alternate" href="https://semmelstulle.github.io/de/" hreflang="de-DE">
 
         <!-- Favicons -->
+        <link rel="shortcut icon" href="/favicon.ico?v=4" sizes="any">
+        <link rel="icon" href="/mask-icon.svg?v=1" type="image/svg+xml">
         <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=4">
         <link rel="mask-icon" href="../mask-icon.svg?v=2">
-        <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=4">
-        <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png?v=4">
         <link rel="manifest" href="../site.webmanifest?v=4">
-        <link rel="shortcut icon" href="/favicon.ico?v=4">
+            
         <meta name="apple-mobile-web-app-title" content="Semmelstulle">
         <meta name="application-name" content="Semmelstulle">
         <meta name="msapplication-TileColor" content="#8538f7">
@@ -42,84 +43,28 @@
     
         
         <!-- Embedded CSS -->
-        <link rel="stylesheet" href="../main.css">
+        <style>
+        </style>
 	</head>
+    
 	<body>
-        <!-- Embed JS -->
-        <script type="text/javascript" src="../main.js"></script>
-        <div class="greet">
-            <h2>Hello world.<br>This is me.</h2>
-            <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profile picture of owner">
-        </div>
-        <div class="about">
-            <p>About me<br><br>Currently I am visiting school to geht my high-school diploma. My goal is to get hired as a software engineer and Python, shell, Swift, HTML and Flutter aren't new to me.<br><br>All my knowledge is self taught and in my spare time I try to develop an open source mental health app. RaspberryPi and Docker have been part of some personal projects, too!<br><br>If you happen to need a junior software engineer and either accept fully remote work or have an office around Nuremberg, you can check out my GitHub below and send me a mail!</p>
-        </div>
-        <div class="links">
-            <p><a href="https://github.com/SemmelStulle">
-                <picture>
-                    <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
-                    <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-                    <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="60" height="60"/>
-                </picture>
-            </a></p>
-            <p><a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
-                <picture>
-                    <source srcset="../resources/images/MailDark.png" media="(prefers-color-scheme: light)"/>
-                    <source srcset="../resources/images/MailLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-                    <img src="../resources/images/MailLight.png" alt="Mail symbol" width="60" height="60"/>
-            </a></p>
-        </div>
         
-        <div class="stuff">
-            <!-- Here go the links and previews to stuff I already made -->
-            
-        </div>
-        <p class="features">This is a list of features this site supports:<br>
-        <br>- Switches light mode with system/browser
-        <br>- Favicons for almost all use cases
-        <br>- Can be a PWA on iOS (add to home screen and it becomes a window with no decorations)
-        <br>- Blur for the footer
-        <br>- An easter egg
-        <br>- Separated CSS and JS for better readability
-        <br>- Comments in the code
-        <br>- Tries to use the OS font to make it feel more native
-        <br>- Uses as little JavaScript as possible
-        <br>- As compatible with OS features and accessibility as I can get it to be
-        <br>- Uses LocalStorage
-        <br>- Multilingual (currently supports German and English, Spanish might follow)
-        </p>
-        <div class="disclaimer">
-            <p>This website is optimized for WebKit and WebRender. Please visit from Safari or Firefox for best results.</p>
-            <p>The source code of this site can be <a class="txtlnk" href="https://github.com/SemmelStulle/semmelstulle.github.io">found here</a>.</p>
-            <p>Here are some settings for technical stuff and tech demo.</p>
-            <button id="clearStorageBtn">clear localStorage</button>
-            <p>Here you can set the language manually: 
-                <a class ="txtlnk" href="https://semmelstulle.github.io/">English</a>,
-                <a class ="txtlnk" href="https://semmelstulle.github.io/de/">Deutsch</a>
-            </p>
-        </div>
-
+        <!-- Embedded JS -->
+        <script>
+        </script>
         
-        <!-- Well, it's the easter egg...
-        <div class="easterEgg">
-            <picture>
-                <source srcset="../resources/images/EasterEggDark.png" media="(prefers-color-scheme: light)"/>
-                <source srcset="../resources/images/EasterEggLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-            <img src="../resources/images/EasterEggLight.png" alt="GitHub logo" width="30" height="30"/>
-        </picture>
-        <p>You found the easter egg, yay!</p>
-        </div>
-        -->
-        
-        <!-- Footer -->
-        <div id="footer" class="footer">
-            <picture>
-              <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
-              <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-              <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" height="40"/>
-            </picture>
-            <p class="footertext">This website is hosted on GitHub using Docker. GitHub is not affiliated with this site.</p>
-            <p id="footerx" class="footerx">X</p>
-        </div>
+          <h1>Hello world!</h1>
+          <h2>Social links</h2>
+          <ul>
+            <li><a href="https://www.example.com">GitHub user</a></li>
+            <li><a href="https://www.example.com">GitHub website</a></li>
+            <li><a href="https://www.example.com">mailto: uri</a></li>
+          </ul>
+          <h2>My profile</h2>
+          <p>Hey, I'm 25 years old and have over a decade of experience with software, scripting and ui.
+          <br>The key things I did so far: bla x y
+          </p>
+          <img src="mask-icon.png" alt="test">
+              
 	</body>
 </html>
