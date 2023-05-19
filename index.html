@@ -52,7 +52,35 @@
             .profileMask {
                 border-radius: 100%;
             }
-            
+            .spacer {
+                flex-grow: 1;
+            }
+            .headerBar {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                padding-top: 0px;
+                font-size: 19px;
+                font-weight: bold;
+                background: linear-gradient(to bottom right, #8538f7, #a714fc);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+            .headerBar a {
+                padding: 20px;
+            }
+            .mainText {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 25px;
+            }
+            .mainBody img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
             /*This part checks some features and changes the appearance accordingly*/
             @media (prefers-color-scheme: dark) {
                 body {
@@ -105,27 +133,30 @@
             }
         </script>
         
-          <h1>Hello world!</h1>
-          <h2>Social links</h2>
-          <ul>
-            <li>
-                <a href="https://github.com/SemmelStulle">
-                <img src="https://avatars.githubusercontent.com/u/74740271?v=4" width="50" heigth="50" class="profileMask">
-                </a></li>
-            <li>
-                <a href="https://github.com/SemmelStulle/semmelstulle.github.io">
-                    <img src="/Users/dennis/Developer/semmelstulle.github.io/resources/images/GitHubInvertocatLight.png" width="50" heigth="50">
-                </a></li>
-            <li>
-                <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
-                    <img src="/Users/dennis/Developer/semmelstulle.github.io/resources/images/MailLight.png" width="50" heigth="50">
-                </a></li>
-          </ul>
-          <h2>My profile</h2>
-          <p>Hey, I'm 25 years old and have over a decade of experience with software, scripting and ui.
-          <br>The key things I did so far: bla x y
-          </p>
-          <img src="mask-icon.png" alt="test">
-              
-	</body>
+        <div class="headerBar">
+            <h1>Hello world!</h1>
+            <div class="spacer"></div>
+            <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
+                <img src="/Users/dennis/Developer/semmelstulle.github.io/resources/images/MailLight.png" alt="mail symbol" width="40" heigth="40">
+            </a>
+            <a href="https://github.com/SemmelStulle/semmelstulle.github.io">
+                <img src="/Users/dennis/Developer/semmelstulle.github.io/resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" heigth="40">
+            </a>
+            <a href="https://github.com/SemmelStulle">
+                <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="profile picture from GitHub" width="40" heigth="40" class="profileMask">
+            </a>
+        </div>
+        <div class="mainBody">
+            <div class="mainText">
+                <h2>My profile</h2>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                <br>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                </p>
+            </div>
+            <div class="personalPhoto">
+                <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="profile picture from GitHub" width="auto" heigth="auto">
+            </div>
+        </div>
+    </body>
 </html>
