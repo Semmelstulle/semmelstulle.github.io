@@ -114,9 +114,9 @@
                 }
             }
             @media (min-width: 850px) {
-              .mainBody {
-                flex-direction: row;
-              }
+                .mainBody {
+                    flex-direction: row;
+                }
             }
             @media (max-width: 580px) {
                 .removable {
@@ -167,10 +167,18 @@
             <div class="spacer"></div>
             <div class="removable">
             <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
-                <img src="../resources/images/MailLight.png../resources/images/MailLight.png" alt="mail symbol" width="40" heigth="40" class="menuItem">
+                <picture>
+                    <source srcset="../resources/images/MailDark.png" media="(prefers-color-scheme: light)"/>
+                    <source srcset="../resources/images/MailLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+                    <img src="../resources/images/MailLight.png" alt="mail symbol" width="40" heigth="40" class="menuItem">
+                </picture>
             </a>
             <a href="https://github.com/SemmelStulle/semmelstulle.github.io">
-                <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" heigth="40" class="menuItem">
+                <picture>
+                    <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
+                    <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+                    <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" heigth="40" class="menuItem">
+                </picture>
             </a>
             <a href="https://github.com/SemmelStulle">
                 <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="profile picture from GitHub" width="40" heigth="40" class="profileMask">
@@ -181,9 +189,9 @@
         <div class="mainBody">
             <div class="mainText">
                 <h2>My profile</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-                <br>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-                <br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                <p>Hey, my name is Dennis, I'm 25 years old and I'm from Nuremberg, Germany.<br><br>
+                I am doing a lot of different tech stuff since I'm 14. I do all things like repair my DS Lite, keep an old IdeaPad G580 running recent software using OpenCore, creating Peawell, this website and I like doing things using the terminal. I have experience setting up a Linux server, I've used Docker to run Homebridge, I also did a little bit of networking stuff. What I really want to do though is becoming a professional software developer or maybe even UI designer.<br><br>
+                If you want to check out what I do, you can check out my GitHub or contact me using the mail button on this website. Keep in mind though that this is just a mail alias so my main adress won't get spammed by bots.
                 </p>
             </div>
             <div class="personalPhoto">
