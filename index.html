@@ -44,6 +44,28 @@
         
         <!-- Embedded CSS -->
         <style>
+            :root {
+            }
+            body {
+                font-family: ui-rounded, ui-sans, system-ui, Arial;
+            }
+            .profileMask {
+                border-radius: 100%;
+            }
+            
+            /*This part checks some features and changes the appearance accordingly*/
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background: #161616;
+                    color: #e6e6e6;
+                }
+            }
+            @media (prefers-color-scheme: light) {
+                body {
+                    background: #e6e6e6;
+                    color: #161616;
+                }
+            }
         </style>
 	</head>
     
@@ -51,14 +73,53 @@
         
         <!-- Embedded JS -->
         <script>
+            /*MDN check if storage API is available*/
+            function storageAvailable(type) {
+                let storage;
+                try {
+                    storage = window[type];
+                    const x = '__storage_test__';
+                    storage.setItem(x, x);
+                    storage.removeItem(x);
+                    return true;
+                }
+                catch (e) {
+                    return e instanceof DOMException && (
+                        // everything except Firefox
+                        e.code === 22 ||
+                        // Firefox
+                        e.code === 1014 ||
+                        // test name field too, because code might not be present
+                        // everything except Firefox
+                        e.name === 'QuotaExceededError' ||
+                        // Firefox
+                        e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+                        // acknowledge QuotaExceededError only if there's something already stored
+                        (storage && storage.length !== 0);
+                }
+            }
+
+            /*This makes sure any JS inside is run AFTER the website loaded*/
+            document.addEventListener('DOMContentLoaded', () => {
+                
+            }
         </script>
         
           <h1>Hello world!</h1>
           <h2>Social links</h2>
           <ul>
-            <li><a href="https://www.example.com">GitHub user</a></li>
-            <li><a href="https://www.example.com">GitHub website</a></li>
-            <li><a href="https://www.example.com">mailto: uri</a></li>
+            <li>
+                <a href="https://github.com/SemmelStulle">
+                <img src="https://avatars.githubusercontent.com/u/74740271?v=4" width="50" heigth="50" class="profileMask">
+                </a></li>
+            <li>
+                <a href="https://github.com/SemmelStulle/semmelstulle.github.io">
+                    <img src="/Users/dennis/Developer/semmelstulle.github.io/resources/images/GitHubInvertocatLight.png" width="50" heigth="50">
+                </a></li>
+            <li>
+                <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
+                    <img src="/Users/dennis/Developer/semmelstulle.github.io/resources/images/MailLight.png" width="50" heigth="50">
+                </a></li>
           </ul>
           <h2>My profile</h2>
           <p>Hey, I'm 25 years old and have over a decade of experience with software, scripting and ui.

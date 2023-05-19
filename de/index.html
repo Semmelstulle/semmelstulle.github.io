@@ -43,11 +43,199 @@
     
         
         <!-- Embedded CSS -->
-        <link rel="stylesheet" href="../main.css">
+        <style>
+            :root {
+                /*I thought variables are cool but they break on me as soon as I need to use variables in a @media check*/
+                --collnk: #8538f7;
+                --mrgnhead: 5%;
+            }
+            body {
+                font-family: ui-rounded, ui-sans, system-ui, Arial;
+                margin: 0px;
+            }
+            .greet {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+            }
+            .greet h2 {
+                font-size: 40px;
+                font-weight: bold;
+                background: linear-gradient(to bottom right, #8538f7, #a714fc);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                margin-top: var(--mrgnhead);
+                margin-right: auto;
+                margin-bottom: var(--mrgnhead);
+                margin-left: var(--mrgnhead);
+            }
+            .greet img {
+                border-radius: 30%;
+                width: 80px;
+                height: 80px;
+                margin-top: var(--mrgnhead);
+                margin-right: var(--mrgnhead);
+                margin-bottom: var(--mrgnhead);
+                margin-left: auto;
+            }
+            .about {
+                font-size: 20px;
+                margin: 8%;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+            .links{
+                display: flex;
+                padding-left: 8%;
+                gap: 30px;
+            }
+            .features {
+                margin-top: 40px;
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+            .disclaimer {
+                margin-top: 40px;
+                margin-left: 8%;
+                margin-right: 8%;
+            }
+            .disclaimer button {
+                
+            }
+            .txtlnk {
+                text-decoration: none;
+                text-decoration-line: underline;
+                text-decoration-thickness: 5px;
+                text-decoration-color: var(--collnk);
+            }
+            .easterEgg {
+                padding-top: 30px;
+                padding-bottom: 0px;
+            }
+            .easterEgg img {
+                padding: 0px;
+            }
+            .easterEgg p {
+                padding: 0px;
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                height: 40px;
+                width: 100%;
+                color: var(--colfg);
+                padding: 20px;
+                display: flex;
+                align-items: center;
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
+            }
+            .footer img {
+                width: 40px;
+                height: 40px;
+            }
+            .footertext {
+                margin: 20px;
+                padding-right: 50px;
+            }
+            .footerx {
+                padding-right: 20px;
+                position: absolute;
+                right: 40px;
+                cursor: pointer;
+            }
+            
+            /*This part checks some features and changes the appearance accordingly*/
+            @media (prefers-color-scheme: dark) {
+                body {
+                    background: #161616;
+                    color: #e6e6e6;
+                }
+                .footer {
+                    background-color: rgba(50, 50, 50, 0.75);
+                }
+                .txtlnk {
+                    -webkit-text-fill-color: #e6e6e6;
+                }
+            }
+            @media (prefers-color-scheme: light) {
+                body {
+                    background: #e6e6e6;
+                    color: #161616;
+                }
+                .footer {
+                    background-color: rgba(220, 220, 220, 0.75);
+                }
+                .txtlnk {
+                    -webkit-text-fill-color: #161616;
+                }
+            }
+            @media (display-mode: standalone) {
+                .footer {
+                    display: none;
+                    )
+                }
+            </style>
+
 	</head>
 	<body>
         <!-- Embed JS -->
-        <script type="text/javascript" src="../main.js"></script>
+        <script>
+            /*MDN check if storage API is available*/
+            function storageAvailable(type) {
+                let storage;
+                try {
+                    storage = window[type];
+                    const x = '__storage_test__';
+                    storage.setItem(x, x);
+                    storage.removeItem(x);
+                    return true;
+                }
+                catch (e) {
+                    return e instanceof DOMException && (
+                    // everything except Firefox
+                    e.code === 22 ||
+                    // Firefox
+                    e.code === 1014 ||
+                    // test name field too, because code might not be present
+                    // everything except Firefox
+                    e.name === 'QuotaExceededError' ||
+                    // Firefox
+                    e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+                    // acknowledge QuotaExceededError only if there's something already stored
+                    (storage && storage.length !== 0);
+                }
+            }
+            
+            /*This makes sure any JS inside is run AFTER the website loaded*/
+            document.addEventListener('DOMContentLoaded', () => {
+                
+                /*This hides the footer when tapping the x*/
+                const footerToHide = document.getElementById("footer");
+                const xbtn = document.getElementById("footerx");
+                const storageBtn = document.getElementById("clearStorageBtn");
+                xbtn.onclick = function() {
+                    footerToHide.style.display = "none";
+                    localStorage.setItem('hiddenFooter', 'true')
+                }
+                /*This clears localStorage*/
+                storageBtn.onclick = function() {
+                    localStorage.clear();
+                }
+                
+                /*Checks if there is a localStorage entry to hide the footer*/
+                if (storageAvailable('localStorage')) {
+                    // Yippee! We can use localStorage awesomeness
+                    const isFooterHidden = localStorage.getItem('hiddenFooter');
+                    if (isFooterHidden == 'true') {
+                        footerToHide.style.display = "none";
+                    };
+                } else {
+                }
+            });
+        </script>
+        
         <div class="greet">
             <h2>Hallo Welt.<br>Das bin ich.</h2>
             <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="Profilbild des Besitzers">
@@ -94,9 +282,9 @@
             <p>Der Quellcode dieser Seite ist <a class="txtlnk" href="https://github.com/SemmelStulle/semmelstulle.github.io">hier zu finden</a>.</p>
             <p>Hier folgen ein paar Einstellungen zur Demonstration.</p>
             <button id="clearStorageBtn">Bereinige localStorage</button>
-            <p>Hier können Sie die Sprache manuell festlegen: 
-                <a class ="txtlnk" href="https://semmelstulle.github.io/">English</a>,
-                <a class ="txtlnk" href="https://semmelstulle.github.io/de/">Deutsch</a>
+            <p>Hier können Sie die Sprache manuell festlegen:
+            <a class ="txtlnk" href="https://semmelstulle.github.io/">English</a>,
+            <a class ="txtlnk" href="https://semmelstulle.github.io/de/">Deutsch</a>
             </p>
         </div>
 
