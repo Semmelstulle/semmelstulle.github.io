@@ -118,6 +118,11 @@
                     flex-direction: row;
                 }
             }
+            @media (min-width: 581px) {
+                .menuButton {
+                    display: none;
+                }
+            }
             @media (max-width: 580px) {
                 .removable {
                     display: none;
@@ -184,11 +189,13 @@
                 <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="profile picture from GitHub" width="30" heigth="30" class="profileMask">
             </a>
             </div>
+            <div class="menuButton"
             <picture>
                 <source srcset="../resources/images/MenuDark.png" media="(prefers-color-scheme: light)"/>
                 <source srcset="../resources/images/MenuLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
                 <img src="../resources/images/MenuLight.png" alt="menu toggle" width="30" heigth="30" class="menuItem">
             </picture>
+            </div>
         </div>
         <div class="mainBody">
             <div class="mainText">
