@@ -51,6 +51,7 @@
             }
             .menuItem {
                 margin-left: 20px;
+                border-radius: 100%;
             }
             .profileMask {
                 margin-left: 20px;
@@ -61,9 +62,9 @@
             }
             .headerBar {
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 align-items: center;
-                padding: 20px;
+                padding: 15px;
                 padding-top: 0px;
                 padding-bottom: 0px;
                 font-size: 19px;
@@ -72,14 +73,20 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
             }
+            .headerBar h1 {
+                align-items: left;
+            }
+            .links {
+                align-items: right;
+            }
             .mainBody {
               display: flex;
+              flex-direction: column;
               align-items: center;
               margin-left: auto;
               margin-right: auto;
               padding-left: min(15px);
               padding-right: min(15px);
-              flex-direction: column;
               max-width: 1100px;
             }
             .mainBody img {
@@ -111,18 +118,17 @@
                 }
             }
             @media (min-width: 850px) {
-                .mainBody {
+                .headerBar {
                     flex-direction: row;
                 }
-            }
-            @media (min-width: 521px) {
-                .menuButton {
-                    display: none;
+                .headerBar h1 {
+                    justify-content: left;
                 }
-            }
-            @media (max-width: 520px) {
-                .removable {
-                    display: none;
+                .links {
+                    justify-content: right;
+                }
+                .mainBody {
+                    flex-direction: row;
                 }
             }
         </style>
@@ -167,7 +173,7 @@
         <div class="headerBar">
             <h1>Hello world!</h1>
             <div class="spacer"></div>
-            <div class="removable">
+            <div class="links">
             <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
                 <picture>
                     <source srcset="../resources/images/MailDark.png" media="(prefers-color-scheme: light)"/>
@@ -185,13 +191,6 @@
             <a href="https://github.com/SemmelStulle">
                 <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="profile picture from GitHub" width="30" heigth="30" class="profileMask">
             </a>
-            </div>
-            <div class="menuButton"
-            <picture>
-                <source srcset="../resources/images/MenuDark.png" media="(prefers-color-scheme: light)"/>
-                <source srcset="../resources/images/MenuLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-                <img src="../resources/images/MenuLight.png" alt="menu toggle" width="30" heigth="30" class="menuItem">
-            </picture>
             </div>
         </div>
         <div class="mainBody">
