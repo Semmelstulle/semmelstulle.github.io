@@ -184,7 +184,11 @@
                 <img src="https://avatars.githubusercontent.com/u/74740271?v=4" alt="profile picture from GitHub" width="40" heigth="40" class="profileMask">
             </a>
             </div>
-            <img src="https://www.pinclipart.com/picdir/big/532-5328945_menu-bar-icon-white-clipart-png-download-menu.png" alt="menu toggle" width="40" heigth="40" class="menuItem">
+            <picture>
+                <source srcset="../resources/images/MenuDark.png" media="(prefers-color-scheme: light)"/>
+                <source srcset="../resources/images/MenuLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+                <img src="../resources/images/MenuLight.png" alt="menu toggle" width="40" heigth="40" class="menuItem">
+            </picture>
         </div>
         <div class="mainBody">
             <div class="mainText">
