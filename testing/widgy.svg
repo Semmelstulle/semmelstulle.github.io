@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 128 128" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="widgy">
+        <path d="M112,117.204L112,34L78,0L26.796,0C20.838,0 16,4.838 16,10.796L16,117.204C16,123.162 20.838,128 26.796,128L101.204,128C107.162,128 112,123.162 112,117.204Z" style="fill:url(#_Radial1);"/>
+        <g transform="matrix(0.240926,0.240926,-0.240926,0.240926,64,32.6633)">
+            <path d="M67,83.636C67,80.526 64.474,78 61.364,78L22.636,78C19.526,78 17,80.526 17,83.636L17,122.364C17,125.474 19.526,128 22.636,128L61.364,128C64.474,128 67,125.474 67,122.364L67,83.636ZM117,82.396C117,79.97 115.03,78 112.604,78L82.396,78C79.97,78 78,79.97 78,82.396L78,112.604C78,115.03 79.97,117 82.396,117L112.604,117C115.03,117 117,115.03 117,112.604L117,82.396ZM107,89.698C107,88.485 106.015,87.5 104.802,87.5L89.698,87.5C88.485,87.5 87.5,88.485 87.5,89.698L87.5,104.802C87.5,106.015 88.485,107 89.698,107L104.802,107C106.015,107 107,106.015 107,104.802L107,89.698ZM68,13.174C68,10.87 66.13,9 63.826,9L13.174,9C10.87,9 9,10.87 9,13.174L9,63.826C9,66.13 10.87,68 13.174,68L63.826,68C66.13,68 68,66.13 68,63.826L68,13.174ZM128,22.636C128,19.526 125.474,17 122.364,17L83.636,17C80.526,17 78,19.526 78,22.636L78,61.364C78,64.474 80.526,67 83.636,67L122.364,67C125.474,67 128,64.474 128,61.364L128,22.636Z" style="fill:white;"/>
+        </g>
+        <g transform="matrix(1,0,0,1,19.002,2.66276)">
+            <text x="22px" y="111px" style="font-family:'DINAlternate-Bold', 'DIN Alternate', sans-serif;font-weight:700;font-size:16.667px;fill:white;">.widgy</text>
+        </g>
+    </g>
+    <path d="M112,34L78,0L78,25.5C78,30.191 81.809,34 86.5,34L112,34ZM103.5,0L86.5,0L103.5,0Z" style="fill:white;"/>
+    <defs>
+        <radialGradient id="_Radial1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="matrix(96,0,0,128,16,64)"><stop offset="0" style="stop-color:rgb(0,229,152);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(0,152,135);stop-opacity:1"/></radialGradient>
+    </defs>
+</svg>
