@@ -43,6 +43,7 @@
         
         <!-- Embedded style -->
         <style>
+			/* Add smooth scroll to site */
 			html {
 				scroll-behavior: smooth;
 			}
@@ -54,6 +55,14 @@
             }
 			.spacer {
 				flex-grow: 1;
+			}
+			/* Set an offset for the anchor links */
+			.anchor:before {
+				display: block;
+				content: "";
+				padding-top: 70px;
+				margin-top: -70px;
+				visibility: hidden;
 			}
             .header {
                 display: flex;
@@ -96,7 +105,7 @@
             .footer {
                 text-align: center;
 				padding: 20px;            }
-			/* This part checks states and changes the appearance accordingly */
+			/* This part changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
 				body {
 					background: #222222;
@@ -133,13 +142,6 @@
 					color: #000000;
 				}
 			}
-			.anchor:before {
-				display: block;
-				content: "";
-				padding-top: 70px;
-				margin-top: -70px;
-				visibility: hidden;
-			}
         </style>
     </head>
     
@@ -152,7 +154,7 @@
 				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" heigth="50" class="profileMask">
 			</a>
         </div>
-        
+        <!-- Navigation pills -->
         <div class="scrollmenu" id="fixedHeader">
             <a href="#Website">Website</a>
             <a href="#Resource Pack">Resource Pack</a>
@@ -161,20 +163,21 @@
             <a href="#Peawell">Peawell</a>
             <a href="#About">About</a>
         </div>
-
+		<!-- Rest of the site wrapped into a huge div -->
         <div class="content">
         <span class="anchor" id='Website'>
         <h3>On Scroll Sticky Header</h3>
+		<!-- Filler text to test anchors and scrolling -->
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
         </span>
-        
+        <!-- Here is the Minecraft stuff -->
         <span class="anchor" id='Resource Pack'>
         <div class="downloadButton" id='downloadMcpack'>
         <img src="mcpack.svg" alt="logo for mcpack filetype with download link"style="width:80px;height:80px;">
         <p>Get my pack "SemmelTweaks" right here!</p>
         </div>
         </span>
-
+		<!-- Here is the Widgy stuff -->
         <span class="anchor" id='Widgy'>
         <div class="downloadButton" id='downloadWidgy'>
         <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
@@ -183,9 +186,10 @@
         <p>Get my Widgy pack right here!</p>
         </div>
         </span>
+		<!-- Filler text to test anchors and scrolling -->
 		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 		</div>
-		
+		<!-- Link to the footer -->
 		<span class="anchor" id="About">
 			<div class="footer">
 				This website is using the
