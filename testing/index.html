@@ -43,6 +43,9 @@
         
         <!-- Embedded style -->
         <style>
+			html {
+				scroll-behavior: smooth;
+			}
             :root {
             }
             body {
@@ -56,11 +59,13 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+				padding: 5px 10px 0px 10px;
             }
             .profileMask {
                 border-radius: 100%;
             }
             .content {
+				padding: 20px;
             }
             .sticky {
                 position: fixed;
@@ -68,25 +73,29 @@
                 width: 100%;
             }
             .sticky + .content {
-                padding-top: 75px;
+                padding-top: 60px;
             }
             .scrollmenu {
-                overflow: hidden;
+                overflow: auto;
                 white-space: nowrap;
+				padding: 4px 4px 4px 4px;
             }
             .scrollmenu a {
                 display: inline-block;
                 color: white;
                 text-align: center;
                 text-decoration: none;
-                border-radius: 19px;
+				background: #666666;
+                border-radius: 20px;
+				padding: 8px 12px 8px 12px;
+				margin: 4px 2px 4px 2px;
             }
-            .scrollmenu a:hover {
-                background-color: #5d2aaa;
-            }
+			.scrollmenu a:hover {
+				background :#8538f7;
+			}
             .footer {
                 text-align: center;
-            }
+				padding: 20px;            }
 			/* This part checks states and changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
 				body {
@@ -100,6 +109,7 @@
 				.scrollmenu {
 					background: #404040;
 					color: #f1f1f1;
+				}
 				.footer {
 					background: #000000;
 					color: #f1f1f1;
@@ -117,6 +127,7 @@
 				.scrollmenu {
 					background: #f1f1f1;
 					color: #404040;
+				}
 				.footer {
 					background: #f1f1f1;
 					color: #000000;
@@ -157,7 +168,6 @@
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
         <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
-        </div>
         </span>
         
         <span id='Resource Pack'>
@@ -172,13 +182,17 @@
         <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
         <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
         <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
         <p>Get my Widgy pack right here!</p>
         </div>
         </span>
+		</div>
+		
+		<div class="footer">
+			This website is using the
+			<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">MIT license.</a>
+			Powered and hosted by GitHub.<br>
+			<a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">Contact adress</a>
+		</div>
         
         <script>
         window.onscroll = function() {myFunction()};
@@ -194,13 +208,6 @@
             }
         }
         </script>
-        
-        <div class="footer">
-        This website is using the 
-        <a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">MIT license.</a>
-        Powered and hosted by GitHub.
-        <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">Contact adress</a>
-        </div>
         
     </body>
 </html>
