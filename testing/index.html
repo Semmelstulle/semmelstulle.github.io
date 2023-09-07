@@ -52,24 +52,9 @@
             body {
 				margin: 0px;
 				font-family: ui-rounded, ui-sans, system-ui, Arial;
-            }
-			/* Declare dark colors by default for legacy browsers like Edge on Windows Phone */
-			body {
 				background: #161616;
 				color: #e6e6e6;
-			}
-			.header {
-				background: #404040;
-				color: #f1f1f1;
-			}
-			.scrollmenu {
-				background: #404040;
-				color: #f1f1f1;
-			}
-			.footer {
-				background: #000000;
-				color: #f1f1f1;
-			}
+            }
 			.spacer {
 				flex-grow: 1;
 			}
@@ -86,6 +71,8 @@
                 flex-direction: row;
                 align-items: center;
 				padding: 5px 10px 0px 10px;
+				background: #404040;
+				color: #f1f1f1;
             }
             .profileMask {
                 border-radius: 100%;
@@ -104,7 +91,9 @@
             .scrollmenu {
                 overflow: auto;
                 white-space: nowrap;
-				padding: 4px 15px 4px 15px;
+				padding: 4px;
+				background: #404040;
+				color: #f1f1f1;
             }
             .scrollmenu a {
                 display: inline-block;
@@ -167,6 +156,8 @@
             .footer {
                 text-align: center;
 				padding: 20px;
+				background: #000000;
+				color: #f1f1f1;
 			}
 			/* This part changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
