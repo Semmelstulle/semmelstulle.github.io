@@ -52,7 +52,7 @@
             body {
 				margin: 0px;
 				font-family: ui-rounded, ui-sans, system-ui, Arial;
-				background: #161616;
+				background: #222222;
 				color: #e6e6e6;
             }
 			.spacer {
@@ -159,10 +159,17 @@
 				background: #000000;
 				color: #f1f1f1;
 			}
+			.footer a {
+				text-decoration: none;
+				color: #f1f1f1;
+			}
+			.footer picture {
+				padding-top: 10px;
+			}
 			/* This part changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
 				body {
-					background: #161616;
+					background: #222222;
 					color: #e6e6e6;
 				}
 				.header {
@@ -185,7 +192,7 @@
 			@media (prefers-color-scheme: light) {
 				body {
 					background: #e6e6e6;
-					color: #161616;
+					color: #222222;
 				}
 				.header {
 					background: #f1f1f1;
@@ -329,7 +336,15 @@
 				This website is using the
 				<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">MIT license.</a>
 				Powered and hosted by GitHub.<br>
-				<a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">Contact adress</a>
+				
+				<a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
+					<picture>
+						<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
+						<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+						<img src="resources/images/mailLight.svg" alt="portrait of me" style="width:15px;height:15px;">
+					</picture>
+					Contact adress
+				</a>
 			</div>
 		</span>
         
