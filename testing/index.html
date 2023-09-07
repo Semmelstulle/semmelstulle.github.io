@@ -136,17 +136,12 @@
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
-			/* This makes the part the full height of the browser window
-			.bigPage {
-				height: 100vh;
-			}*/
 			.bigImage {
 				display: flex;
-				align-items: row;
-				margin-left: auto;
-				margin-right: 0px;
-				padding: 30px 0px 30px 0px;
-				max-width: 1024px;
+				justify-content: right;
+			}
+			.bigImage picture {
+				max-width: 500px;
 			}
 			.mediaCard {
 				padding: 10px;
@@ -241,17 +236,16 @@
         </div>
 		<!-- Rest of the site wrapped into a huge div -->
 		<div class="content">
-			<div class="bigPage">
-				<div class="bigText">
-					<h3>Welcome aboard!</h3>
-					<p>I make stuff.<br>You get to see it.</p>
-				</div>
-				<div class="bigImage">
-					<div class="spacer"></div>
+			<div class="bigText">
+				<h3>Welcome aboard!</h3>
+				<p>I make stuff.<br>You get to see it.</p>
+			</div>
+			<div class="bigImage">
+				<picture>
 					<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
 					<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-					<img src="resources/images/portraitDark.jpg" alt="portrait of me" width="50%" heigth="50%">
-				</div>
+					<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
+				</picture>
 			</div>
 		</div>
         </span>
