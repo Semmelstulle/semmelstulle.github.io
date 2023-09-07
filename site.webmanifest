@@ -15,6 +15,6 @@
     ],
     "theme_color": "#8538f7",
     "background_color": "#8538f7",
-    "start_url": "Https://semmelstulle.github.io",
+    "start_url": "https://semmelstulle.github.io",
     "display": "standalone"
 }
