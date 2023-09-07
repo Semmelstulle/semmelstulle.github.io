@@ -53,6 +53,23 @@
 				margin: 0px;
 				font-family: ui-rounded, ui-sans, system-ui, Arial;
             }
+			/* Declare dark colors by default for legacy browsers like Edge on Windows Phone */
+			body {
+				background: #161616;
+				color: #e6e6e6;
+			}
+			.header {
+				background: #404040;
+				color: #f1f1f1;
+			}
+			.scrollmenu {
+				background: #404040;
+				color: #f1f1f1;
+			}
+			.footer {
+				background: #000000;
+				color: #f1f1f1;
+			}
 			.spacer {
 				flex-grow: 1;
 			}
@@ -102,9 +119,36 @@
 			.scrollmenu a:hover {
 				background :#8538f7;
 			}
+			#Home {
+			}
+			#Home h3 {
+				font-size: 35px;
+				font-weight: bold;
+				background: linear-gradient(to bottom right, #4304FE, #7102FE);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-top: -2px;
+			}
+			#Home p {
+				font-size: 30px;
+				font-weight: bold;
+				background: linear-gradient(to bottom right, #7102FE, #AA08FF);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			/* This makes the part the full height of the browser window */
+			.bigPage {
+				height: 100vh;
+			}
+			.bigImage {
+				display: flex;
+				align-items: row;
+				padding: 30px 0px 30px 0px;
+			}
             .footer {
                 text-align: center;
-				padding: 20px;            }
+				padding: 20px;
+			}
 			/* This part changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
 				body {
@@ -146,7 +190,7 @@
     </head>
     
 	<body>
-
+		<span class="anchor" id='Home'>
         <div class="header">
         	<h2>Hello World!</h2>
 			<div class="spacer"></div>
@@ -156,7 +200,7 @@
         </div>
         <!-- Navigation pills -->
         <div class="scrollmenu" id="fixedHeader">
-            <a href="#Website">Website</a>
+            <a href="#Home">Home</a>
             <a href="#Resource Pack">Resource Pack</a>
             <a href="#Widgy">Widgy</a>
             <a href="#Icons">Icons</a>
@@ -164,11 +208,20 @@
             <a href="#About">About</a>
         </div>
 		<!-- Rest of the site wrapped into a huge div -->
-        <div class="content">
-        <span class="anchor" id='Website'>
-        <h3>On Scroll Sticky Header</h3>
-		<!-- Filler text to test anchors and scrolling -->
-        <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+		<div class="content">
+			<div class="bigPage">
+				<div class="bigText">
+					<h3>Welcome aboard!</h3>
+					<p>I make stuff.<br>You get to see it.</p>
+				</div>
+				<div class="bigImage">
+					<div class="spacer"></div>
+					<source srcset="portraitLight.jpg" media="(prefers-color-scheme: light)"/>
+					<source srcset="portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+					<img src="portraitDark.jpg" alt="mail symbol" width="50%" heigth="50%">
+				</div>
+			</div>
+		</div>
         </span>
         <!-- Here is the Minecraft stuff -->
         <span class="anchor" id='Resource Pack'>
