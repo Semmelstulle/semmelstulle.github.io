@@ -136,14 +136,30 @@
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
-			/* This makes the part the full height of the browser window */
+			/* This makes the part the full height of the browser window
 			.bigPage {
 				height: 100vh;
-			}
+			}*/
 			.bigImage {
 				display: flex;
 				align-items: row;
 				padding: 30px 0px 30px 0px;
+			}
+			.mediaCard {
+				padding: 10px;
+				margin: 10px;
+				width: 450px;
+				background: #373632;
+				border-radius: 28px;
+			}
+			.previewCard {
+				border-radius: 20px;
+			}
+			.actionCard {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 8px;
 			}
             .footer {
                 text-align: center;
@@ -225,22 +241,40 @@
         </span>
         <!-- Here is the Minecraft stuff -->
         <span class="anchor" id='Resource Pack'>
-        <div class="downloadButton" id='downloadMcpack'>
-        <img src="mcpack.svg" alt="logo for mcpack filetype with download link"style="width:80px;height:80px;">
-        <p>Get my pack "SemmelTweaks" right here!</p>
-        </div>
+			<div class="mediaCard">
+				<img src="previewMcpack.jpg" alt="preview image for some of the tweaks I added" style="width:450px;" class="previewCard">
+				<div class="actionCard">
+					<a href="SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+						<img src="mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+					</a>
+					<p>Get my pack "SemmelTweaks" right here!</p>
+				</div>
+			</div>
         </span>
 		<!-- Here is the Widgy stuff -->
         <span class="anchor" id='Widgy'>
-        <div class="downloadButton" id='downloadWidgy'>
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <img src="widgy.svg" alt="logo for widgy filetype with download link"style="width:80px;height:80px;">
-        <p>Get my Widgy pack right here!</p>
-        </div>
+			<div class="mediaCard">
+				<img src="previewWidgy01.jpg" alt="preview image for the widget" style="width:450px;" class="previewCard">
+					<div class="actionCard">
+						<img src="widgy.svg" alt="logo for widgy filetype with download link" style="width:50px;height:50px;">
+							<p>Get "Barter" right here!</p>
+					</div>
+			</div>
+			<div class="mediaCard">
+				<img src="previewWidgy01.jpg" alt="preview image for the widget" style="width:450px;" class="previewCard">
+					<div class="actionCard">
+						<img src="widgy.svg" alt="logo for widgy filetype with download link" style="width:50px;height:50px;">
+							<p>Get "Infoto 2.0" right here!</p>
+					</div>
+			</div><div class="mediaCard">
+				<img src="previewWidgy01.jpg" alt="preview image for the widget" style="width:450px;" class="previewCard">
+					<div class="actionCard">
+						<img src="widgy.svg" alt="logo for widgy filetype with download link" style="width:50px;height:50px;">
+							<p>Get "Widgy Subreddit" right here!</p>
+					</div>
+			</div>
         </span>
 		<!-- Filler text to test anchors and scrolling -->
-		<p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>  <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p><p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
 		</div>
 		<!-- Link to the footer -->
 		<span class="anchor" id="About">
