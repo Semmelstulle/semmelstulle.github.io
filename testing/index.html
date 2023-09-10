@@ -155,16 +155,19 @@
 			}
             .footer {
                 text-align: center;
-				padding: 20px;
 				background: #000000;
 				color: #f1f1f1;
+				padding: 10px 5px 20px 5px;
 			}
 			.footer a {
 				text-decoration: none;
 				color: #f1f1f1;
 			}
-			.footer picture {
-				padding-top: 10px;
+			.credits {
+				padding: 10px;
+			}
+			.veryBottom {
+				padding: 10px;
 			}
 			/* This part changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
@@ -236,7 +239,7 @@
 		<div class="content">
 			<div class="bigText">
 				<h3>Welcome aboard!</h3>
-				<p>I make stuff.<br>You get to see it.</p>
+				<p>I make stuff.<br>Here is where I put it.</p>
 			</div>
 			<div class="bigImage">
 				<picture>
@@ -333,11 +336,13 @@
 		<!-- Link to the footer -->
 		<span class="anchor" id="About">
 			<div class="footer">
-				This website is using the
-				<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">MIT license.</a>
-				Powered and hosted by GitHub.<br>
-				
-				<a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
+				<div class="credits">
+					<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">
+					This website is using the MIT license.</a>
+					<a href="https://github.com/">
+					Powered and hosted by GitHub.<br></a>
+				</div>
+				<a class="veryBottom" href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
 					<picture>
 						<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
 						<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
@@ -345,6 +350,7 @@
 					</picture>
 					Contact adress
 				</a>
+				<a class="veryBottom" href="#Home">Back to the top</a>
 			</div>
 		</span>
         
