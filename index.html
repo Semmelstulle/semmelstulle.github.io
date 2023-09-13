@@ -7,12 +7,12 @@
         <meta name="theme-color" content="#8538f7">
         <meta name="color-scheme" content="dark light">
         <meta name="author" content="Semmelstulle">
-        <meta name="description" content="My personal homepage for interested people, mainly for work and coding.">
+        <meta name="description" content="My personal homepage.">
         <meta property="og:title" content="Semmelstulle">
-        <meta property="og:description" content="My personal homepage for interested people, mainly for work and coding.">
+        <meta property="og:description" content="My personal homepage.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://semmelstulle.github.io">
-        <meta property="og:image" content="../og-image.png?v=2">
+        <meta property="og:image" content="/og-image.png">
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:title" content="Semmelstulle">
         <meta name="twitter:description" content="My personal homepage for interested people, mainly for work and coding.">
@@ -26,192 +26,387 @@
 		<title>Semmelstulle</title>
         
         <!-- Multi language -->
-        <link rel="canonical" href="https://semmelstulle.github.io/" hreflang="en-GB">
-        <link rel="alternate" href="https://semmelstulle.github.io/de/" hreflang="de-DE">
+        <link rel="canonical" href="https://semmelstulle.github.io/" hreflang="en-US">
+        <!--link rel="alternate" href="https://semmelstulle.github.io/de/" hreflang="de-DE"-->
 
         <!-- Favicons -->
         <link rel="shortcut icon" href="/favicon.ico?v=5" sizes="any">
         <link rel="icon" href="/mask-icon.svg?v=1" type="image/svg+xml">
-        <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=4">
-        <link rel="mask-icon" href="../mask-icon.svg?v=2">
-        <link rel="manifest" href="../site.webmanifest?v=4">
-            
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+        <link rel="mask-icon" href="/mask-icon.svg?v=2">
+        <link rel="manifest" href="/site.webmanifest?v=4">
+        
         <meta name="apple-mobile-web-app-title" content="Semmelstulle">
         <meta name="application-name" content="Semmelstulle">
         <meta name="msapplication-TileColor" content="#8538f7">
         <meta name="theme-color" content="#8538f7">
-    
         
-        <!-- Embedded CSS -->
+        <!-- Embedded style -->
         <style>
+			/* Add smooth scroll to site */
+			html {
+				scroll-behavior: smooth;
+			}
             :root {
             }
             body {
-                font-family: ui-rounded, ui-sans, system-ui, Arial;
+				margin: 0px;
+				font-family: ui-rounded, ui-sans, system-ui, Arial;
+				background: #222222;
+				color: #e6e6e6;
             }
-            .menuItem {
-                margin-left: 20px;
+			.spacer {
+				flex-grow: 1;
+			}
+			/* Set an offset for the anchor links */
+			.anchor:before {
+				display: block;
+				content: "";
+				padding-top: 48px;
+				margin-top: -48px;
+				visibility: hidden;
+			}
+            .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+				padding: 5px 10px 0px 10px;
+				background: #404040;
+				color: #f1f1f1;
             }
             .profileMask {
-                margin-left: 20px;
                 border-radius: 100%;
             }
-            .spacer {
-                flex-grow: 1;
+            .content {
+				padding: 20px;
+				margin-top: -20px;
             }
-            .headerBar {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding: 15px;
-                padding-top: 0px;
-                padding-bottom: 0px;
-                font-size: 19px;
-                font-weight: bold;
-                background: linear-gradient(to bottom right, #4510E5, #8A24E1);
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+            .sticky {
+                position: fixed;
+                top: 0;
+                width: 100%;
             }
-            .headerBar h1 {
-                align-items: left;
+            .sticky + .content {
+                padding-top: 70px;
             }
-            .links {
-                align-items: right;
+            .scrollmenu {
+                overflow: auto;
+                white-space: nowrap;
+				padding: 4px;
+				background: #404040;
+				color: #f1f1f1;
             }
-            .mainBody {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              margin-left: auto;
-              margin-right: auto;
-              padding-left: min(15px);
-              padding-right: min(15px);
-              max-width: 1100px;
+            .scrollmenu a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                text-decoration: none;
+				background: #666666;
+                border-radius: 20px;
+				padding: 8px 12px 8px 12px;
+				margin: 4px 2px 4px 2px;
             }
-            .mainBody img {
-                margin: 20px;
-                max-inline-size: 90%;
-            }
-            .peawellShowcase {
-                align-items: center;
-                margin-left: auto;
-                margin-right: auto;
-                width: auto;
-                max-width: 1100px;
-            }
-            .peawellShowcase img {
-                max-inline-size: 30%;
-                align-items: center;
-            }
-            /* This part checks states and changes the appearance accordingly */
-            @media (prefers-color-scheme: dark) {
-                body {
-                    background: #161616;
-                    color: #e6e6e6;
-                }
-            }
-            @media (prefers-color-scheme: light) {
-                body {
-                    background: #e6e6e6;
-                    color: #161616;
-                }
-            }
-            @media (min-width: 850px) {
-                .headerBar {
-                    flex-direction: row;
-                }
-                .headerBar h1 {
-                    justify-content: left;
-                }
-                .links {
-                    justify-content: right;
-                }
-                .mainBody {
-                    flex-direction: row;
-                }
-                .personalPhoto {
-                    
-                }
-            }
+			.scrollmenu a:hover {
+				background :#8538f7;
+			}
+			#Home h3 {
+				font-size: 35px;
+				font-weight: bold;
+				background: linear-gradient(to bottom right, #4304FE, #7102FE);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				margin-top: 20px;
+			}
+			#Home p {
+				font-size: 30px;
+				font-weight: bold;
+				background: linear-gradient(to bottom right, #7102FE, #AA08FF);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+			.bigImage {
+				display: flex;
+				justify-content: right;
+			}
+			.bigImage picture {
+				max-width: 500px;
+			}
+			.content {
+				padding: 20px;
+			}
+			.sectionDivider {
+				margin-left: auto;
+				margin-right: auto;
+				width: 90vw;
+				height: 1px;
+				background: #404040;
+			}
+			.mediaCard {
+				padding: 10px;
+				margin: 10px 0px 10px 0px;
+				width: auto;
+				max-width: 400px;
+				background: #373632;
+				border-radius: 28px;
+			}
+			.mediaCard img {
+				width: 100%;
+				max-width: 400px;
+			}
+			.previewCard {
+				border-radius: 20px;
+			}
+			.actionCard {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				padding: 10px 8px 2px 2px;
+			}
+            .footer {
+                text-align: center;
+				background: #000000;
+				color: #f1f1f1;
+				padding: 10px 5px 20px 5px;
+			}
+			.footer a {
+				text-decoration: none;
+				color: #f1f1f1;
+			}
+			.credits {
+				padding: 10px;
+			}
+			.veryBottom {
+				padding: 10px;
+			}
+			/* This part changes the appearance accordingly */
+			@media (prefers-color-scheme: dark) {
+				body {
+					background: #222222;
+					color: #e6e6e6;
+				}
+				.header {
+					background: #404040;
+					color: #f1f1f1;
+				}
+				.scrollmenu {
+					background: #404040;
+					color: #f1f1f1;
+				}
+				.sectionDivider {
+					background: #404040;
+				}
+				.mediaCard {
+					background: #404040;
+					color: #f1f1f1;
+				}
+				.footer {
+					background: #000000;
+					color: #f1f1f1;
+				}
+			}
+			@media (prefers-color-scheme: light) {
+				body {
+					background: #e6e6e6;
+					color: #222222;
+				}
+				.header {
+					background: #f1f1f1;
+					color: #404040;
+				}
+				.scrollmenu {
+					background: #f1f1f1;
+					color: #404040;
+				}
+				.sectionDivider {
+					background: #f1f1f1;
+				}
+				.mediaCard {
+					background: #f1f1f1;
+					color: #404040;
+				}
+				.footer {
+					background: #f1f1f1;
+					color: #000000;
+				}
+			}
         </style>
-	</head>
+    </head>
     
 	<body>
+		<span class="anchor" id='Home'>
+        <div class="header">
+        	<h1>Hello World!</h1>
+			<div class="spacer"></div>
+			<a href="https://github.com/SemmelStulle">
+				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" heigth="50" class="profileMask">
+			</a>
+        </div>
+        <!-- Navigation pills -->
+        <div class="scrollmenu" id="fixedHeader">
+            <a href="#Home">Home</a>
+            <a href="#ResourcePack">Resource Pack</a>
+            <a href="#Widgy">Widgy</a>
+            <a href="#Icons">Icons</a>
+            <a href="#Peawell">Peawell</a>
+            <a href="#About">About</a>
+        </div>
+		<!-- Top of the page stuff -->
+		<div class="content">
+			<div class="bigText">
+				<h3>Welcome aboard!</h3>
+				<p>I make stuff.<br>Here is where I put it.</p>
+			</div>
+			<div class="bigImage">
+				<picture>
+					<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
+					<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+					<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
+				</picture>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+        </span>
+        <!-- Here is the Minecraft stuff -->
+		<span class="anchor" id='ResourcePack'>
+			<div class="content">
+				<h1>Resource Pack</h1>
+				<div class="mediaCard">
+					<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+								<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "SemmelTweaks" right here!</p>
+						</div>
+				</div>
+				<h2>Full feature list:</h2>
+				<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
+				<li>No pumpkin overlay</li>
+				<li>Cake has no cherry on top</li>
+				<li>Effect symbols on every arrow and potion</li>
+				<li>Hunger bar displays potatos</li>
+				<li>Self made 3d sun and moon (probably took me the most work)</li>
+				<li>Custom purple Enderman gradient</li>
+				<li>Green indicator on max stage Nether warts and amethyst clusters</li>
+				<li>Redstone dust has a wire style</li>
+				<li>Redstone torch is red instead of yellow</li>
+				<li>Outlines for suspicious sand and gravel</li>
+				<li>"Rounded" wood stems, logs and bee hive</li>
+				<li>Removed animations from sea lantern, crimson and warped stem</li>
+				<li>Clear tintet and stained glass</li>
+				<li>Outline only for normal glass</li>
+				<li>Side textures of grass, nylium and snow are lowered</li>
+				<li>More visible trip wire</li>
+				<li>Lower high grass</li>
+			</div>
+			<div class="sectionDivider"></div>
+		</span>
+		<!-- Here is the Widgy stuff -->
+		<span class="anchor" id='Widgy'>
+			<div class="content">
+			<h1>Widgy Widgets</h1>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Widgy Subreddit Feed.widgy" download="Widgy Subreddit Feed.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Widgy Subreddit Feed" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Northern Weather Medium.widgy" download="Northern Weather Medium.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Northern Weather Medium" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Northern Weather Small.widgy" download="Northern Weather Small.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Northern Weather Small" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Infoto V2.widgy" download="Infoto V2.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Infoto V2" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Calenduh.widgy" download="Calenduh.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Calenduh" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Dynamic Widgy V3 En.widgy" download="Dynamic Widgy V3 En.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Dynamic Widgy V3 En" right here!</p>
+						</div>
+				</div><div class="mediaCard">
+					<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Dynamic Widgy V3 De.widgy" download="Dynamic Widgy V3 De.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Dynamic Widgy V3 De" right here!</p>
+						</div>
+				</div>
+			</div>
+			<div class="sectionDivider"></div>
+		</span>
+		<!-- Filler text to test anchors and scrolling -->
+		</div>
+		<!-- Link to the footer -->
+		<span class="anchor" id="About">
+			<div class="footer">
+				<div class="credits">
+					<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">
+					This website is using the MIT license.</a>
+					<a href="https://github.com/">
+					Powered and hosted by GitHub.<br></a>
+				</div>
+				<a class="veryBottom" href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
+					<picture>
+						<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
+						<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+						<img src="resources/images/mailLight.svg" alt="portrait of me" style="width:15px;height:15px;">
+					</picture>
+					Contact adress
+				</a>
+				<a class="veryBottom" href="#Home">Back to the top</a>
+			</div>
+		</span>
         
-        <!-- Embedded JS -->
         <script>
-            // MDN check if storage API is available
-            function storageAvailable(type) {
-                let storage;
-                try {
-                    storage = window[type];
-                    const x = '__storage_test__';
-                    storage.setItem(x, x);
-                    storage.removeItem(x);
-                    return true;
-                }
-                catch (e) {
-                    return e instanceof DOMException && (
-                        // everything except Firefox
-                        e.code === 22 ||
-                        // Firefox
-                        e.code === 1014 ||
-                        // test name field too, because code might not be present
-                        // everything except Firefox
-                        e.name === 'QuotaExceededError' ||
-                        // Firefox
-                        e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-                        // acknowledge QuotaExceededError only if there's something already stored
-                        (storage && storage.length !== 0);
-                }
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("fixedHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
             }
-
-            // This makes sure any JS inside is run AFTER the website loaded
-            document.addEventListener('DOMContentLoaded', () => {
-                
-            }
+        }
         </script>
         
-        <div class="headerBar">
-            <h1>Hello world!</h1>
-            <div class="spacer"></div>
-            <div class="links">
-            <a href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
-                <picture>
-                    <source srcset="../resources/images/MailDark.png" media="(prefers-color-scheme: light)"/>
-                    <source srcset="../resources/images/MailLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-                    <img src="../resources/images/MailLight.png" alt="mail symbol" width="40" heigth="40">
-                </picture>
-            </a>
-            <a href="https://github.com/SemmelStulle/semmelstulle.github.io">
-                <picture>
-                    <source srcset="../resources/images/GitHubInvertocatDark.png" media="(prefers-color-scheme: light)"/>
-                    <source srcset="../resources/images/GitHubInvertocatLight.png" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-                    <img src="../resources/images/GitHubInvertocatLight.png" alt="GitHub logo" width="40" heigth="40" class="menuItem">
-                </picture>
-            </a>
-            <a href="https://github.com/SemmelStulle">
-                <img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="40" heigth="40" class="profileMask">
-            </a>
-            </div>
-        </div>
-        <div class="mainBody">
-            <div class="mainText">
-                <h2>My profile</h2>
-                <p>Hey, my name is Dennis, I'm 25 years old and I'm from Nuremberg, Germany.<br><br>
-                I am doing a lot of different tech stuff since I'm 14. I do all things like repair my DS Lite, keep an old IdeaPad G580 running recent software using OpenCore, creating Peawell, this website and I like doing things using the terminal. I have experience setting up a Linux server, I've used Docker to run Homebridge, I also did a little bit of networking stuff. What I really want to do though is becoming a professional software developer or maybe even UI designer. Fun fact: all of the graphics and symbols on this site are made by myself!<br><br>
-                If you want to check out what I do, you can check out my GitHub or contact me using the mail button on this website. Keep in mind though that this is just a mail alias so my main adress won't get spammed by bots.
-                </p>
-            </div>
-            <div class="personalPhoto">
-                <img src="../resources/images/portrait.png" alt="photo of webiste owner" width="auto" heigth="auto">
-            </div>
-        </div>
-        <div class="peawellShowcase">
-            <h2>My mental health app</h2>
-            <img src="../resources/images/Peawell1.png" alt="screenshot of my personal app" class="screenshot">
-            <img src="../resources/images/Peawell2.png" alt="screenshot of my personal app" class="screenshot">
-            <img src="../resources/images/Peawell3.png" alt="screenshot of my personal app" class="screenshot">
-        </div>
     </body>
 </html>
