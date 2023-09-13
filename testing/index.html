@@ -79,6 +79,7 @@
             }
             .content {
 				padding: 20px;
+				margin-top: -20px;
             }
             .sticky {
                 position: fixed;
@@ -108,15 +109,13 @@
 			.scrollmenu a:hover {
 				background :#8538f7;
 			}
-			#Home {
-			}
 			#Home h3 {
 				font-size: 35px;
 				font-weight: bold;
 				background: linear-gradient(to bottom right, #4304FE, #7102FE);
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
-				margin-top: -2px;
+				margin-top: 20px;
 			}
 			#Home p {
 				font-size: 30px;
@@ -132,9 +131,19 @@
 			.bigImage picture {
 				max-width: 500px;
 			}
+			.content {
+				padding: 20px;
+			}
+			.sectionDivider {
+				margin-left: auto;
+				margin-right: auto;
+				width: 90vw;
+				height: 1px;
+				background: #404040;
+			}
 			.mediaCard {
 				padding: 10px;
-				margin: 10px;
+				margin: 10px 0px 10px 0px;
 				width: auto;
 				max-width: 400px;
 				background: #373632;
@@ -183,6 +192,9 @@
 					background: #404040;
 					color: #f1f1f1;
 				}
+				.sectionDivider {
+					background: #404040;
+				}
 				.mediaCard {
 					background: #404040;
 					color: #f1f1f1;
@@ -204,6 +216,9 @@
 				.scrollmenu {
 					background: #f1f1f1;
 					color: #404040;
+				}
+				.sectionDivider {
+					background: #f1f1f1;
 				}
 				.mediaCard {
 					background: #f1f1f1;
@@ -229,13 +244,13 @@
         <!-- Navigation pills -->
         <div class="scrollmenu" id="fixedHeader">
             <a href="#Home">Home</a>
-            <a href="#Resource Pack">Resource Pack</a>
+            <a href="#ResourcePack">Resource Pack</a>
             <a href="#Widgy">Widgy</a>
             <a href="#Icons">Icons</a>
             <a href="#Peawell">Peawell</a>
             <a href="#About">About</a>
         </div>
-		<!-- Rest of the site wrapped into a huge div -->
+		<!-- Top of the page stuff -->
 		<div class="content">
 			<div class="bigText">
 				<h3>Welcome aboard!</h3>
@@ -249,105 +264,112 @@
 				</picture>
 			</div>
 		</div>
+		<div class="sectionDivider"></div>
         </span>
         <!-- Here is the Minecraft stuff -->
-        <span class="anchor" id='Resource Pack'>
-			<h1>Resource Pack</h1>
-			<div class="mediaCard">
-				<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
-							<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "SemmelTweaks" right here!</p>
-					</div>
+		<span class="anchor" id='ResourcePack'>
+			<div class="content">
+				<h1>Resource Pack</h1>
+				<div class="mediaCard">
+					<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+								<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "SemmelTweaks" right here!</p>
+						</div>
+				</div>
+				<h2>Full feature list:</h2>
+				<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
+				<li>No pumpkin overlay</li>
+				<li>Cake has no cherry on top</li>
+				<li>Effect symbols on every arrow and potion</li>
+				<li>Hunger bar displays potatos</li>
+				<li>Self made 3d sun and moon (probably took me the most work)</li>
+				<li>Custom purple Enderman gradient</li>
+				<li>Green indicator on max stage Nether warts and amethyst clusters</li>
+				<li>Redstone dust has a wire style</li>
+				<li>Redstone torch is red instead of yellow</li>
+				<li>Outlines for suspicious sand and gravel</li>
+				<li>"Rounded" wood stems, logs and bee hive</li>
+				<li>Removed animations from sea lantern, crimson and warped stem</li>
+				<li>Clear tintet and stained glass</li>
+				<li>Outline only for normal glass</li>
+				<li>Side textures of grass, nylium and snow are lowered</li>
+				<li>More visible trip wire</li>
+				<li>Lower high grass</li>
 			</div>
-			<h2>Full feature list:</h2>
-			<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
-			<li>No pumpkin overlay</li>
-			<li>Cake has no cherry on top</li>
-			<li>Effect symbols on every arrow and potion</li>
-			<li>Hunger bar displays potatos</li>
-			<li>Self made 3d sun and moon (probably took me the most work)</li>
-			<li>Custom purple Enderman gradient</li>
-			<li>Green indicator on max stage Nether warts and amethyst clusters</li>
-			<li>Redstone dust has a wire style</li>
-			<li>Redstone torch is red instead of yellow</li>
-			<li>Outlines for suspicious sand and gravel</li>
-			<li>"Rounded" wood stems, logs and bee hive</li>
-			<li>Removed animations from sea lantern, crimson and warped stem</li>
-			<li>Clear tintet and stained glass</li>
-			<li>Outline only for normal glass</li>
-			<li>Side textures of grass, nylium and snow are lowered</li>
-			<li>More visible trip wire</li>
-			<li>Lower high grass</li>
-        </span>
+			<div class="sectionDivider"></div>
+		</span>
 		<!-- Here is the Widgy stuff -->
-        <span class="anchor" id='Widgy'>
+		<span class="anchor" id='Widgy'>
+			<div class="content">
 			<h1>Widgy Widgets</h1>
-			<div class="mediaCard">
-				<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Widgy Subreddit Feed.widgy" download="Widgy Subreddit Feed.widgy">
-							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Widgy Subreddit Feed" right here!</p>
-					</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Widgy Subreddit Feed.widgy" download="Widgy Subreddit Feed.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Widgy Subreddit Feed" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Northern Weather Medium.widgy" download="Northern Weather Medium.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Northern Weather Medium" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Northern Weather Small.widgy" download="Northern Weather Small.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Northern Weather Small" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Infoto V2.widgy" download="Infoto V2.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Infoto V2" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Calenduh.widgy" download="Calenduh.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Calenduh" right here!</p>
+						</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Dynamic Widgy V3 En.widgy" download="Dynamic Widgy V3 En.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Dynamic Widgy V3 En" right here!</p>
+						</div>
+				</div><div class="mediaCard">
+					<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Dynamic Widgy V3 De.widgy" download="Dynamic Widgy V3 De.widgy">
+								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>Get "Dynamic Widgy V3 De" right here!</p>
+						</div>
+				</div>
 			</div>
-			<div class="mediaCard">
-				<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Northern Weather Medium.widgy" download="Northern Weather Medium.widgy">
-						<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Northern Weather Medium" right here!</p>
-					</div>
-			</div>
-			<div class="mediaCard">
-				<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Northern Weather Small.widgy" download="Northern Weather Small.widgy">
-						<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Northern Weather Small" right here!</p>
-					</div>
-			</div>
-			<div class="mediaCard">
-				<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Infoto V2.widgy" download="Infoto V2.widgy">
-						<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Infoto V2" right here!</p>
-					</div>
-			</div>
-			<div class="mediaCard">
-				<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Calenduh.widgy" download="Calenduh.widgy">
-						<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Calenduh" right here!</p>
-					</div>
-			</div>
-			<div class="mediaCard">
-				<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Dynamic Widgy V3 En.widgy" download="Dynamic Widgy V3 En.widgy">
-						<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Dynamic Widgy V3 En" right here!</p>
-					</div>
-			</div><div class="mediaCard">
-				<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
-					<div class="actionCard">
-						<a href="resources/files/Dynamic Widgy V3 De.widgy" download="Dynamic Widgy V3 De.widgy">
-						<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-						</a>
-						<p>Get "Dynamic Widgy V3 De" right here!</p>
-					</div>
-			</div>
-        </span>
+			<div class="sectionDivider"></div>
+		</span>
 		<!-- Filler text to test anchors and scrolling -->
 		</div>
 		<!-- Link to the footer -->
