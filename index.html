@@ -134,6 +134,36 @@
 			.content {
 				padding: 20px;
 			}
+            @media screen and (max-width: 469px){
+                .contentGrid{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr); /* Adjust as needed */
+                    gap: 20px; /* Add gap between grid items */
+                }
+                .articleGrid{
+                    display: block;
+                }
+            }
+            @media screen and (min-width: 470px){
+                .contentGrid{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); /* Adjust as needed */
+                    gap: 20px; /* Add gap between grid items */
+                }
+            }
+            @media screen and (min-width: 800px){
+                .contentGrid{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
+                    gap: 20px; /* Add gap between grid items */
+                }
+                .articleGrid {
+                    display: flex;
+                }
+                .features {
+                    margin-left: 40px;
+                }
+            }
 			.sectionDivider {
 				margin-left: auto;
 				margin-right: auto;
@@ -270,41 +300,46 @@
 		<span class="anchor" id='ResourcePack'>
 			<div class="content">
 				<h1>Resource Pack</h1>
-				<div class="mediaCard">
-					<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
-								<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
+                <div class="articleGrid">
+                    <div class="mediaCard">
+                        <img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
+                            <div class="actionCard">
+                                <a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+                                    <img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+                                </a>
 							<p>Get "SemmelTweaks" right here!</p>
-						</div>
-				</div>
-				<h2>Full feature list:</h2>
-				<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
-				<li>No pumpkin overlay</li>
-				<li>Cake has no cherry on top</li>
-				<li>Effect symbols on every arrow and potion</li>
-				<li>Hunger bar displays potatos</li>
-				<li>Self made 3d sun and moon (probably took me the most work)</li>
-				<li>Custom purple Enderman gradient</li>
-				<li>Green indicator on max stage Nether warts and amethyst clusters</li>
-				<li>Redstone dust has a wire style</li>
-				<li>Redstone torch is red instead of yellow</li>
-				<li>Outlines for suspicious sand and gravel</li>
-				<li>"Rounded" wood stems, logs and bee hive</li>
-				<li>Removed animations from sea lantern, crimson and warped stem</li>
-				<li>Clear tintet and stained glass</li>
-				<li>Outline only for normal glass</li>
-				<li>Side textures of grass, nylium and snow are lowered</li>
-				<li>More visible trip wire</li>
-				<li>Lower high grass</li>
-			</div>
+                            </div>
+                    </div>
+                        <div class="features">
+        				    <h2>Full feature list:</h2>
+        				    <li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
+        				    <li>No pumpkin overlay</li>
+        				    <li>Cake has no cherry on top</li>
+        				    <li>Effect symbols on every arrow and potion</li>
+        				    <li>Hunger bar displays potatos</li>
+        				    <li>Self made 3d sun and moon (probably took me the most work)</li>
+        				    <li>Custom purple Enderman gradient</li>
+        				    <li>Green indicator on max stage Nether warts and amethyst clusters</li>
+        				    <li>Redstone dust has a wire style</li>
+        				    <li>Redstone torch is red instead of yellow</li>
+        				    <li>Outlines for suspicious sand and gravel</li>
+        				    <li>"Rounded" wood stems, logs and bee hive</li>
+        				    <li>Removed animations from sea lantern, crimson and warped stem</li>
+        				    <li>Clear tintet and stained glass</li>
+        				    <li>Outline only for normal glass</li>
+        				    <li>Side textures of grass, nylium and snow are lowered</li>
+        				    <li>More visible trip wire</li>
+        				    <li>Lower high grass</li>
+                        </div>
+                    </div>
+                </div>
 			<div class="sectionDivider"></div>
 		</span>
 		<!-- Here is the Widgy stuff -->
 		<span class="anchor" id='Widgy'>
 			<div class="content">
 			<h1>Widgy Widgets</h1>
+                <div class="contentGrid">
 				<div class="mediaCard">
 					<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
@@ -366,6 +401,7 @@
 							</a>
 							<p>Get "Dynamic Widgy V3 De" right here!</p>
 						</div>
+                </div>
 				</div>
 			</div>
 			<div class="sectionDivider"></div>
