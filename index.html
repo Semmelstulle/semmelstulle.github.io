@@ -145,6 +145,10 @@
                 }
             }
             @media screen and (min-width: 470px){
+                .content {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
                 .contentGrid{
                     display: grid;
                     grid-template-columns: repeat(2, 1fr); /* Adjust as needed */
@@ -152,6 +156,11 @@
                 }
             }
             @media screen and (min-width: 800px){
+                .content {
+                    max-width: 1000px;
+                    padding-left: 15%;
+                    padding-right: 15%;
+                }
                 .contentGrid{
                     display: grid;
                     grid-template-columns: repeat(3, 1fr); /* Adjust as needed */
@@ -173,7 +182,6 @@
 			}
 			.mediaCard {
 				padding: 10px;
-				margin: 10px 0px 10px 0px;
 				width: auto;
 				max-width: 400px;
 				background: #373632;
@@ -266,7 +274,8 @@
 		<span class="anchor" id='Home'>
         <div class="header">
         	<h1>Hello World!</h1>
-			<div class="spacer"></div>
+            <div class="spacer">
+            </div>
 			<a href="https://github.com/SemmelStulle">
 				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" heigth="50" class="profileMask">
 			</a>
@@ -276,8 +285,8 @@
             <a href="#Home">Home</a>
             <a href="#ResourcePack">Resource Pack</a>
             <a href="#Widgy">Widgy</a>
-            <a href="#Icons">Icons</a>
-            <a href="#Peawell">Peawell</a>
+            <!--a href="#Icons">Icons</a>
+            <a href="#Peawell">Peawell</a-->
             <a href="#About">About</a>
         </div>
 		<!-- Top of the page stuff -->
