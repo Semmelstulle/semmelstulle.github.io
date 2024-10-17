@@ -178,6 +178,10 @@
 				background: #000000;
 				color: #f1f1f1;
 				padding: 10px 5px 20px 5px;
+				padding-bottom: 10px
+				5px
+				calc(10px + env(safe-area-inset-bottom))
+				5px;
 			}
 			.footer a {
 				text-decoration: none;
@@ -188,7 +192,6 @@
 			}
 			.veryBottom {
 				padding: 10px;
-				padding-bottom: calc(10px + env(safe-area-inset-bottom));
 			}
 			/* This part changes the appearance accordingly */
 			@media (prefers-color-scheme: dark) {
