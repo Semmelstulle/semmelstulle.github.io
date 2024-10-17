@@ -68,10 +68,10 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-				/*padding: 5px 10px 0px 10px;*/
-				padding: calc(5px + env(safe-area-inset-top))
+				padding: 5px 10px 0px 10px;
+				padding: 5px
                      calc(10px + env(safe-area-inset-right))
-                     calc(0px + env(safe-area-inset-bottom))
+                     0px
                      calc(10px + env(safe-area-inset-left));
 				background: #404040;
 				color: #f1f1f1;
@@ -94,7 +94,7 @@
             .scrollmenu {
                 overflow: auto;
                 white-space: nowrap;
-				/*padding: 4px;*/
+				padding: 4px;
 				padding: 4px
                      calc(4px + env(safe-area-inset-right))
                      4px
@@ -104,10 +104,10 @@
             }
             .scrollmenu a {
                 display: inline-block;
-                color: white;
+                color: #f1f1f1;
+				background: #666666;
                 text-align: center;
                 text-decoration: none;
-				background: #666666;
                 border-radius: 20px;
 				padding: 8px 12px 8px 12px;
 				margin: 4px 2px 4px 2px;
@@ -202,6 +202,13 @@
 					background: #404040;
 					color: #f1f1f1;
 				}
+    	        .scrollmenu a {
+            	    color: #f1f1f1;
+					background: #666666;
+            	}
+				.scrollmenu a:hover {
+					background :#8538f7;
+				}
 				.sectionDivider {
 					background: #404040;
 				}
@@ -229,6 +236,13 @@
 				.scrollmenu {
 					background: #f1f1f1;
 					color: #404040;
+				}
+    	        .scrollmenu a {
+            	    color: #404040;
+					background: #e6e6e6;
+            	}
+				.scrollmenu a:hover {
+					background :#8538f780;
 				}
 				.sectionDivider {
 					background: #f1f1f1;
