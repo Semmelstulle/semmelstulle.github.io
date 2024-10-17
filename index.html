@@ -132,7 +132,10 @@
 				max-width: 500px;
 			}
 			.content {
-				padding: 20px;
+				padding: calc(20px + env(safe-area-inset-top))
+                     calc(20px + env(safe-area-inset-right))
+                     calc(20px + env(safe-area-inset-bottom))
+                     calc(20px + env(safe-area-inset-left));
 			}
 			.sectionDivider {
 				margin-left: auto;
@@ -246,8 +249,10 @@
             }
             @media screen and (min-width: 470px){
                 .content {
-                    padding-left: 60px;
-                    padding-right: 60px;
+					padding: calc(20px + env(safe-area-inset-top))
+                     calc(60px + env(safe-area-inset-right))
+                     calc(20px + env(safe-area-inset-bottom))
+                     calc(60px + env(safe-area-inset-left));
                 }
                 .contentGrid{
                     display: grid;
