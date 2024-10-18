@@ -307,8 +307,10 @@
 			.articleGrid {
 				display: flex;
 			}
-			.features {
-				margin-left: 40px;
+			.articleGrid ul {
+				display: flex;
+				flex-direction: column;
+				margin-left: 10px;
 			}
 		}
 		@keyframes appear-on-page {
@@ -336,6 +338,7 @@
 		<!-- Navigation pills -->
 		<div class="scrollmenu" id="fixedHeader">
 			<a href="#Home">Home</a>
+			<a href="#Website">Website</a>
 			<a href="#ResourcePack">Resource Pack</a>
 			<a href="#Widgy">Widgy</a>
 			<a href="#About">About</a>
@@ -349,6 +352,32 @@
 					<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
 					<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
 				</picture>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	<!-- Here is the meta stuff -->
+	<span class="anchor" id='Website'>
+		<div class="content">
+			<h1>Website</h1>
+			<p>This very site you are looking at right now. I made it with legacy
+			devices in mind. That means you can totally use this page on a
+			Windows Phone right now and would have it look almost the same as
+			on a recent phone. But don't just take my word for it. Look at this picture!
+			</p>
+			<div class="articleGrid">
+				<div class="mediaCard">
+					<img src="resources/images/websiteShowcase.jpg" alt="A picture of this very website on an old Windows Phone and a new iPhone" class="previewCard">
+					<p style="margin-left: 10px;">A picture of this very website on an old Windows Phone and a new iPhone</p>
+				</div>
+				<ul>
+				<h2>Top 5 features:</h2>
+				<li>WebKit first</li>
+				<li>EdgeHTML compatible</li>
+				<li>Dark and light mode</li>
+				<li>All CSS and JS is embedded</li>
+				<li>All of the graphics are mine</li>
+				</ul>
 			</div>
 		</div>
 		<div class="sectionDivider"></div>
@@ -367,7 +396,7 @@
 						<p>Get "SemmelTweaks" right here!</p>
 					</div>
 				</div>
-				<div class="features">
+				<ul>
 					<h2>Full feature list:</h2>
 					<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
 					<li>No pumpkin overlay</li>
@@ -387,7 +416,7 @@
 					<li>Side textures of grass, nylium and snow are lowered</li>
 					<li>More visible trip wire</li>
 					<li>Lower high grass</li>
-				</div>
+				</ul>
 			</div>
 		</div>
 		<div class="sectionDivider"></div>
