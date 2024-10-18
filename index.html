@@ -135,6 +135,10 @@
 			.bigImage {
 				display: flex;
 				justify-content: right;
+				animation-name: appear-on-page;
+				animation-duration: 0.5s;
+				animation-delay: 0.5s;
+				animation-timing-function: ease-out;
 			}
 			.bigImage picture {
 				max-width: 500px;
@@ -279,7 +283,7 @@
                      20px
                      calc(60px + env(safe-area-inset-left));
                 }
-                .contentGrid{
+                .contentGrid {
                     display: grid;
                     grid-template-columns: repeat(2, 1fr); /* Adjust grid columns as needed */
                     gap: 20px; /* Add gap between grid items */
@@ -291,7 +295,7 @@
 					margin-left: auto;
 					margin-right: auto;
                 }
-                .contentGrid{
+                .contentGrid {
                     display: grid;
                     grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
                     gap: 20px; /* Add gap between grid items */
@@ -303,6 +307,16 @@
                     margin-left: 40px;
                 }
             }
+			@keyframes appear-on-page {
+				from {
+  				  transform: translateY(150px);
+    				opacity: 0;
+  				}
+  				to {
+    				transform: translateY(0);
+    				opacity: 1;
+  				}
+			}
         </style>
     </head>
     
