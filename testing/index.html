@@ -1,527 +1,593 @@
 <!DOCTYPE html>
 <html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-        <!-- Meta parts -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-        <meta name="theme-color" content="#8538f7">
-        <meta name="color-scheme" content="dark light">
-        <meta name="author" content="Semmelstulle">
-        <meta name="description" content="My personal homepage.">
-        <meta property="og:title" content="Semmelstulle">
-        <meta property="og:description" content="My personal homepage.">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://semmelstulle.github.io">
-        <meta property="og:image" content="/og-image.png">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="Semmelstulle">
-        <meta name="twitter:description" content="My personal homepage for interested people, mainly for work and coding.">
-            
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="mobile-web-app-capable" content="yes">
-        
-        <!-- This just verifies ownership of this site over on Mastodon -->
-        <a rel="me" href="https://mastodon.social/@Semmelstulle"></a>
-        
-		<title>Semmelstulle</title>
-        
-        <!-- Multi language -->
-        <link rel="canonical" href="https://semmelstulle.github.io/" hreflang="en-US">
-        <!--link rel="alternate" href="https://semmelstulle.github.io/de/" hreflang="de-DE"-->
-
-        <!-- Favicons -->
-        <link rel="shortcut icon" href="/favicon.ico?v=5" sizes="any">
-        <link rel="icon" href="/mask-icon.svg?v=1" type="image/svg+xml">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
-        <link rel="mask-icon" href="/mask-icon.svg?v=2">
-        <link rel="manifest" href="/site.webmanifest?v=4">
-        
-        <meta name="apple-mobile-web-app-title" content="Semmelstulle">
-        <meta name="application-name" content="Semmelstulle">
-        <meta name="msapplication-TileColor" content="#8538f7">
-        <meta name="theme-color" content="#8538f7">
-        
-        <!-- Embedded style -->
-        <style>
-			/* Add smooth scroll to site */
-			html {
-				scroll-behavior: smooth;
-			}
-            body {
-				margin: 0px;
-				font-family: ui-rounded, ui-sans, system-ui, Arial;
+<head>
+	<!-- Meta parts -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#8538f7">
+	<meta name="color-scheme" content="dark light">
+	<meta name="author" content="Semmelstulle">
+	<meta name="description" content="My personal homepage.">
+	<meta property="og:title" content="Semmelstulle">
+	<meta property="og:description" content="My personal homepage.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://semmelstulle.github.io">
+	<meta property="og:image" content="/og-image.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Semmelstulle">
+	<meta name="twitter:description" content="My personal homepage for interested people, mainly for work and coding.">
+	
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	
+	<!-- This just verifies ownership of this site over on Mastodon -->
+	<a rel="me" href="https://mastodon.social/@Semmelstulle"></a>
+	
+	<title>Semmelstulle</title>
+	
+	<!-- Multi language -->
+	<link rel="canonical" href="https://semmelstulle.github.io/" hreflang="en-US">
+	<!--link rel="alternate" href="https://semmelstulle.github.io/de/" hreflang="de-DE"-->
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="/favicon.ico?v=5" sizes="any">
+	<link rel="icon" href="/mask-icon.svg?v=1" type="image/svg+xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+	<link rel="mask-icon" href="/mask-icon.svg?v=2">
+	<link rel="manifest" href="/site.webmanifest?v=4">
+	
+	<meta name="apple-mobile-web-app-title" content="Semmelstulle">
+	<meta name="application-name" content="Semmelstulle">
+	<meta name="msapplication-TileColor" content="#8538f7">
+	<meta name="theme-color" content="#8538f7">
+	
+	<!-- Embedded style -->
+	<style>
+		/* Add smooth scroll to site */
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			margin: 0px;
+			font-family: ui-rounded, ui-sans, system-ui, Arial;
+			background: #222222;
+			color: #e6e6e6;
+		}
+		.spacer {
+			flex-grow: 1;
+		}
+		/* Set an offset for the anchor links */
+		.anchor:before {
+			display: block;
+			content: "";
+			padding-top: 48px;
+			margin-top: -48px;
+			visibility: hidden;
+		}
+		.header {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 5px 10px 0px 10px;
+			padding: 5px
+			calc(10px + env(safe-area-inset-right))
+			0px
+			calc(10px + env(safe-area-inset-left));
+			background: #404040;
+			color: #f1f1f1;
+		}
+		.profileMask {
+			border-radius: 100%;
+		}
+		.content {
+			padding: 20px;
+			margin-top: -20px;
+		}
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.sticky + .content {
+			padding-top: 70px;
+		}
+		.scrollmenu {
+			overflow: auto;
+			white-space: nowrap;
+			padding: 4px;
+			padding: 4px
+			calc(4px + env(safe-area-inset-right))
+			4px
+			calc(4px + env(safe-area-inset-left));
+			background: #404040;
+			color: #f1f1f1;
+		}
+		.scrollmenu a {
+			display: inline-block;
+			color: #f1f1f1;
+			background: #666666;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 20px;
+			padding: 8px 12px 8px 12px;
+			margin: 4px 2px 4px 2px;
+			position: relative;
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.scrollmenu a .circle {
+			position: absolute;
+			background: #8438f750;
+			transform: scale(0);
+			transition: transform 0.4s ease-in-out;
+			pointer-events: none;
+		}
+		.scrollmenu a.clicked .circle {
+			transform: scale(2);
+		}
+		/*.scrollmenu a:hover {
+		background :#8538f7;
+		}*/
+		#Home h3 {
+			font-size: 40px;
+			font-weight: bold;
+			background: linear-gradient(to bottom right, #4304FE, #7102FE);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-top: 20px;
+		}
+		.bigImage {
+			display: flex;
+			justify-content: right;
+			animation-name: appear-on-page;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-out;
+		}
+		.bigImage picture {
+			max-width: 500px;
+		}
+		.content {
+			padding: 20px;
+			padding: 20px
+			calc(20px + env(safe-area-inset-right))
+			20px
+			calc(20px + env(safe-area-inset-left));
+		}
+		.sectionDivider {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90vw;
+			height: 1px;
+			background: #404040;
+		}
+		.mediaCard {
+			padding: 10px;
+			width: auto;
+			max-width: 400px;
+			background: #373632;
+			border-radius: 28px;
+		}
+		.mediaCard img {
+			width: 100%;
+			max-width: 400px;
+		}
+		.previewCard {
+			border-radius: 20px;
+		}
+		.actionCard {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 10px 8px 2px 2px;
+		}
+		.actionCard img {
+			margin-right:10px;
+		}
+		.footer {
+			text-align: center;
+			background: #000000;
+			color: #f1f1f1;
+			padding: 10px 5px 20px 5px;
+			padding-bottom: calc(10px + env(safe-area-inset-bottom));
+		}
+		.footer a {
+			text-decoration: none;
+			color: #f1f1f1;
+		}
+		.credits {
+			padding: 10px;
+		}
+		.veryBottom {
+			padding: 10px;
+		}
+		/* This part changes the appearance accordingly */
+		@media (prefers-color-scheme: dark) {
+			body {
 				background: #222222;
 				color: #e6e6e6;
-            }
-			.spacer {
-				flex-grow: 1;
 			}
-			/* Set an offset for the anchor links */
-			.anchor:before {
-				display: block;
-				content: "";
-				padding-top: 48px;
-				margin-top: -48px;
-				visibility: hidden;
-			}
-            .header {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-				padding: 5px 10px 0px 10px;
-				padding: 5px
-                     calc(10px + env(safe-area-inset-right))
-                     0px
-                     calc(10px + env(safe-area-inset-left));
+			.header {
 				background: #404040;
 				color: #f1f1f1;
-            }
-            .profileMask {
-                border-radius: 100%;
-            }
-            .content {
-				padding: 20px;
-				margin-top: -20px;
-            }
-            .sticky {
-                position: fixed;
-                top: 0;
-                width: 100%;
-            }
-            .sticky + .content {
-                padding-top: 70px;
-            }
-            .scrollmenu {
-                overflow: auto;
-                white-space: nowrap;
-				padding: 4px;
-				padding: 4px
-                     calc(4px + env(safe-area-inset-right))
-                     4px
-                     calc(4px + env(safe-area-inset-left));
+			}
+			.scrollmenu {
 				background: #404040;
 				color: #f1f1f1;
-            }
-            .scrollmenu a {
-                display: inline-block;
-                color: #f1f1f1;
+			}
+			.scrollmenu a {
+				color: #f1f1f1;
 				background: #666666;
-                text-align: center;
-                text-decoration: none;
-                border-radius: 20px;
-				padding: 8px 12px 8px 12px;
-				margin: 4px 2px 4px 2px;
-            }
-			.scrollmenu a:hover {
-				background :#8538f7;
+			}
+			.scrollmenu a.circle {
+				background: #8438f750;
 			}
 			#Home h3 {
-				font-size: 40px;
-				font-weight: bold;
-				background: linear-gradient(to bottom right, #4304FE, #7102FE);
+				background: linear-gradient(to bottom right, #936ffe, #8e66c1);
 				background-clip: text;
 				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				margin-top: 20px;
-			}
-			.bigImage {
-				display: flex;
-				justify-content: right;
-				animation-name: appear-on-page;
-				animation-duration: 0.5s;
-				animation-timing-function: ease-out;
-			}
-			.bigImage picture {
-				max-width: 500px;
-			}
-			.content {
-				padding: 20px;
-				padding: 20px
-                     calc(20px + env(safe-area-inset-right))
-					 20px
-                     calc(20px + env(safe-area-inset-left));
 			}
 			.sectionDivider {
-				margin-left: auto;
-				margin-right: auto;
-				width: 90vw;
-				height: 1px;
 				background: #404040;
 			}
 			.mediaCard {
-				padding: 10px;
-				width: auto;
-				max-width: 400px;
-				background: #373632;
-				border-radius: 28px;
+				background: #404040;
+				color: #f1f1f1;
 			}
-			.mediaCard img {
-				width: 100%;
-				max-width: 400px;
-			}
-			.previewCard {
-				border-radius: 20px;
-			}
-			.actionCard {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				padding: 10px 8px 2px 2px;
-			}
-			.actionCard img {
-				margin-right:10px;
-			}
-            .footer {
-                text-align: center;
+			.footer {
 				background: #000000;
 				color: #f1f1f1;
-				padding: 10px 5px 20px 5px;
-				padding-bottom: calc(10px + env(safe-area-inset-bottom));
 			}
 			.footer a {
-				text-decoration: none;
 				color: #f1f1f1;
 			}
-			.credits {
-				padding: 10px;
+		}
+		@media (prefers-color-scheme: light) {
+			body {
+				background: #e6e6e6;
+				color: #222222;
 			}
-			.veryBottom {
-				padding: 10px;
+			.header {
+				background: #f1f1f1;
+				color: #404040;
 			}
-			/* This part changes the appearance accordingly */
-			@media (prefers-color-scheme: dark) {
-				body {
-					background: #222222;
-					color: #e6e6e6;
-				}
-				.header {
-					background: #404040;
-					color: #f1f1f1;
-				}
-				.scrollmenu {
-					background: #404040;
-					color: #f1f1f1;
-				}
-    	        .scrollmenu a {
-            	    color: #f1f1f1;
-					background: #666666;
-            	}
-				.scrollmenu a:hover {
-					background :#8538f7;
-				}
-				#Home h3 {
-					background: linear-gradient(to bottom right, #936ffe, #8e66c1);
-					background-clip: text;
-					-webkit-background-clip: text;
-				}
-				.sectionDivider {
-					background: #404040;
-				}
-				.mediaCard {
-					background: #404040;
-					color: #f1f1f1;
-				}
-				.footer {
-					background: #000000;
-					color: #f1f1f1;
-				}
-                .footer a {
-                    color: #f1f1f1;
-                }
+			.scrollmenu {
+				background: #f1f1f1;
+				color: #404040;
 			}
-			@media (prefers-color-scheme: light) {
-				body {
-					background: #e6e6e6;
-					color: #222222;
-				}
-				.header {
-					background: #f1f1f1;
-					color: #404040;
-				}
-				.scrollmenu {
-					background: #f1f1f1;
-					color: #404040;
-				}
-    	        .scrollmenu a {
-            	    color: #404040;
-					background: #e6e6e6;
-            	}
-				.scrollmenu a:hover {
-					background :#8538f780;
-				}
-				#Home h3 {
-					background: linear-gradient(to bottom right, #400be0, #650fd7);
-					background-clip: text;
-					-webkit-background-clip: text;
-				}
-				.sectionDivider {
-					background: #f1f1f1;
-				}
-				.mediaCard {
-					background: #f1f1f1;
-					color: #404040;
-				}
-				.footer {
-					background: #f1f1f1;
-					color: #000000;
-				}
-                .footer a {
-                    color: #000000;
-                }
+			.scrollmenu a {
+				color: #404040;
+				background: #e6e6e6;
 			}
-            @media screen and (max-width: 469px){
-                .contentGrid{
-                    display: grid;
-                    grid-template-columns: repeat(1, 1fr); /* Adjust grid columns as needed */
-                    gap: 20px; /* Add gap between grid items */
-                }
-                .articleGrid{
-                    display: block;
-                }
-            }
-            @media screen and (min-width: 470px){
-                .content {
-					padding: 20px 60px 20px 60px;
-					padding: 20px
-                     calc(60px + env(safe-area-inset-right))
-                     20px
-                     calc(60px + env(safe-area-inset-left));
-                }
-                .contentGrid {
-                    display: grid;
-                    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns as needed */
-                    gap: 20px; /* Add gap between grid items */
-                }
-            }
-            @media screen and (min-width: 800px){
-                .content {
-                    max-width: 800px;
-					margin-left: auto;
-					margin-right: auto;
-                }
-                .contentGrid {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
-                    gap: 20px; /* Add gap between grid items */
-                }
-                .articleGrid {
-                    display: flex;
-                }
-                .features {
-                    margin-left: 40px;
-                }
-            }
-			@keyframes appear-on-page {
-				from {
-  				  transform: translateY(150px);
-    				opacity: 0;
-  				}
-  				to {
-    				transform: translateY(0);
-    				opacity: 1;
-  				}
+			.scrollmenu a.circle {
+				background: #8538f750;
 			}
-        </style>
-    </head>
-    
-	<body>
-		<span class="anchor" id='Home'>
-        <div class="header">
-        	<h1>My projects</h1>
-            <div class="spacer">
-            </div>
+			#Home h3 {
+				background: linear-gradient(to bottom right, #400be0, #650fd7);
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			.sectionDivider {
+				background: #f1f1f1;
+			}
+			.mediaCard {
+				background: #f1f1f1;
+				color: #404040;
+			}
+			.footer {
+				background: #f1f1f1;
+				color: #000000;
+			}
+			.footer a {
+				color: #000000;
+			}
+		}
+		@media screen and (max-width: 469px){
+			.contentGrid{
+				display: grid;
+				grid-template-columns: repeat(1, 1fr); /* Adjust grid columns as needed */
+				gap: 20px; /* Add gap between grid items */
+			}
+			.articleGrid{
+				display: block;
+			}
+		}
+		@media screen and (min-width: 470px){
+			.content {
+				padding: 20px 60px 20px 60px;
+				padding: 20px
+				calc(60px + env(safe-area-inset-right))
+				20px
+				calc(60px + env(safe-area-inset-left));
+			}
+			.contentGrid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr); /* Adjust grid columns as needed */
+				gap: 20px; /* Add gap between grid items */
+			}
+		}
+		@media screen and (min-width: 800px){
+			.content {
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.contentGrid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
+				gap: 20px; /* Add gap between grid items */
+			}
+			.articleGrid {
+				display: flex;
+			}
+			.features {
+				margin-left: 40px;
+			}
+		}
+		@keyframes appear-on-page {
+			from {
+				transform: translateY(150px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<span class="anchor" id='Home'>
+		<div class="header">
+			<h1>My projects</h1>
+			<div class="spacer">
+			</div>
 			<a href="https://github.com/SemmelStulle">
 				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" heigth="50" class="profileMask">
 			</a>
-        </div>
-        <!-- Navigation pills -->
-        <div class="scrollmenu" id="fixedHeader">
-            <a href="#Home">Home</a>
-            <a href="#ResourcePack">Resource Pack</a>
-            <a href="#Widgy">Widgy</a>
-            <!--a href="#Icons">Icons</a>
-            <a href="#Peawell">Peawell</a-->
-            <a href="#About">About</a>
-        </div>
-		<!-- Top of the page stuff -->
-		<div class="content">
-			<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
-			<div class="bigImage">
-				<picture>
-					<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
-					<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-					<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
-				</picture>
-			</div>
 		</div>
-		<div class="sectionDivider"></div>
-        </span>
-        <!-- Here is the Minecraft stuff -->
+		<!-- Navigation pills -->
+		<div class="scrollmenu" id="fixedHeader">
+			<a href="#Home">Home</a>
+			<a href="#ResourcePack">Resource Pack</a>
+			<a href="#Widgy">Widgy</a>
+			<!--a href="#Icons">Icons</a>
+			<a href="#Peawell">Peawell</a-->
+				<a href="#About">About</a>
+			</div>
+			<!-- Top of the page stuff -->
+			<div class="content">
+				<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
+				<div class="bigImage">
+					<picture>
+						<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
+						<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+						<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
+					</picture>
+				</div>
+			</div>
+			<div class="sectionDivider"></div>
+		</span>
+		<!-- Here is the Minecraft stuff -->
 		<span class="anchor" id='ResourcePack'>
 			<div class="content">
 				<h1>Resource Pack</h1>
-                <div class="articleGrid">
-                    <div class="mediaCard">
-                        <img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
-                            <div class="actionCard">
-                                <a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
-                                    <img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-                                </a>
+				<div class="articleGrid">
+					<div class="mediaCard">
+						<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+								<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+							</a>
 							<p>Get "SemmelTweaks" right here!</p>
-                            </div>
-                    </div>
-                    <div class="features">
-                        <h2>Full feature list:</h2>
-                        <li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
-                        <li>No pumpkin overlay</li>
-                        <li>Cake has no cherry on top</li>
-                        <li>Effect symbols on every arrow and potion</li>
-                        <li>Hunger bar displays potatos</li>
-                        <li>Self made 3d sun and moon (probably took me the most work)</li>
-                        <li>Custom purple Enderman gradient</li>
-                        <li>Green indicator on max stage Nether warts and amethyst clusters</li>
-                        <li>Redstone dust has a wire style</li>
-                        <li>Redstone torch is red instead of yellow</li>
-                        <li>Outlines for suspicious sand and gravel</li>
-                        <li>"Rounded" wood stems, logs and bee hive</li>
-                        <li>Removed animations from sea lantern, crimson and warped stem</li>
-                        <li>Clear tintet and stained glass</li>
-                        <li>Outline only for normal glass</li>
-                        <li>Side textures of grass, nylium and snow are lowered</li>
-                        <li>More visible trip wire</li>
-                        <li>Lower high grass</li>
-                    </div>
-                </div>
-            </div>
+						</div>
+					</div>
+					<div class="features">
+						<h2>Full feature list:</h2>
+						<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
+						<li>No pumpkin overlay</li>
+						<li>Cake has no cherry on top</li>
+						<li>Effect symbols on every arrow and potion</li>
+						<li>Hunger bar displays potatos</li>
+						<li>Self made 3d sun and moon (probably took me the most work)</li>
+						<li>Custom purple Enderman gradient</li>
+						<li>Green indicator on max stage Nether warts and amethyst clusters</li>
+						<li>Redstone dust has a wire style</li>
+						<li>Redstone torch is red instead of yellow</li>
+						<li>Outlines for suspicious sand and gravel</li>
+						<li>"Rounded" wood stems, logs and bee hive</li>
+						<li>Removed animations from sea lantern, crimson and warped stem</li>
+						<li>Clear tintet and stained glass</li>
+						<li>Outline only for normal glass</li>
+						<li>Side textures of grass, nylium and snow are lowered</li>
+						<li>More visible trip wire</li>
+						<li>Lower high grass</li>
+					</div>
+				</div>
+			</div>
 			<div class="sectionDivider"></div>
 		</span>
 		<!-- Here is the Widgy stuff -->
 		<span class="anchor" id='Widgy'>
 			<div class="content">
-			<h1>Widgy Widgets</h1>
-            <div class="contentGrid">
-            <div class="mediaCard">
-                <img src="resources/images/previewWidgy08.jpg" alt="preview image for my widget" class="previewCard">
-                    <div class="actionCard">
-                        <a href="resources/files/Xbox Profile EN V1.json" download="Xbox Profile EN V1.json">
-                            <img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
-                        </a>
-                        <p>NEW: Get "Xbox Profile EN V1" right here!</p>
-                    </div>
-            </div>
-            <div class="mediaCard">
-                <img src="resources/images/previewWidgy09.jpg" alt="preview image for my widget" class="previewCard">
-                    <div class="actionCard">
-                        <a href="resources/files/Xbox Profile DE V1.json" download="Xbox Profile DE V1.json">
-                            <img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
-                        </a>
-                        <p>NEW: Get "Xbox Profile DE V1" right here!</p>
-                    </div>
-            </div>
-				<div class="mediaCard">
-					<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
+				<h1>Widgy Widgets</h1>
+				<div class="contentGrid">
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy08.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Xbox Profile EN V1.json" download="Xbox Profile EN V1.json">
+								<img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>NEW: Get "Xbox Profile EN V1" right here!</p>
+						</div>
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy09.jpg" alt="preview image for my widget" class="previewCard">
+						<div class="actionCard">
+							<a href="resources/files/Xbox Profile DE V1.json" download="Xbox Profile DE V1.json">
+								<img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
+							</a>
+							<p>NEW: Get "Xbox Profile DE V1" right here!</p>
+						</div>
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Widgy Subreddit Feed.widgy" download="Widgy Subreddit Feed.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Widgy Subreddit Feed" right here!</p>
 						</div>
-				</div>
-				<div class="mediaCard">
-					<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Northern Weather Medium.widgy" download="Northern Weather Medium.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Northern Weather Medium" right here!</p>
 						</div>
-				</div>
-				<div class="mediaCard">
-					<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Northern Weather Small.widgy" download="Northern Weather Small.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Northern Weather Small" right here!</p>
 						</div>
-				</div>
-				<div class="mediaCard">
-					<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Infoto V2.widgy" download="Infoto V2.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Infoto V2" right here!</p>
 						</div>
-				</div>
-				<div class="mediaCard">
-					<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Calenduh.widgy" download="Calenduh.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Calenduh" right here!</p>
 						</div>
-				</div>
-				<div class="mediaCard">
-					<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
+					</div>
+					<div class="mediaCard">
+						<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Dynamic Widgy V3 En.widgy" download="Dynamic Widgy V3 En.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Dynamic Widgy V3 En" right here!</p>
 						</div>
-				</div><div class="mediaCard">
-					<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
+					</div><div class="mediaCard">
+						<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
 							<a href="resources/files/Dynamic Widgy V3 De.widgy" download="Dynamic Widgy V3 De.widgy">
 								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
 							</a>
 							<p>Get "Dynamic Widgy V3 De" right here!</p>
 						</div>
-                </div>
+					</div>
 				</div>
 			</div>
 			<!--div class="sectionDivider"></div-->
 		</span>
 		<!-- Filler text to test anchors and scrolling -->
-		</div>
-		<!-- Link to the footer -->
-		<span class="anchor" id="About">
-			<div class="footer">
-				<div class="credits">
-					<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">
+	</div>
+	<!-- Link to the footer -->
+	<span class="anchor" id="About">
+		<div class="footer">
+			<div class="credits">
+				<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">
 					This website is using the MIT license.</a>
 					<a href="https://github.com/">
-					Powered and hosted by GitHub.<br></a>
+						Powered and hosted by GitHub.<br></a>
+					</div>
+					<a class="veryBottom" href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
+						<picture>
+							<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
+							<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+							<img src="resources/images/mailLight.svg" alt="portrait of me" style="width:15px;height:15px;">
+						</picture>
+						Contact adress
+					</a>
+					<a class="veryBottom" href="#Home">Back to the top</a>
 				</div>
-				<a class="veryBottom" href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
-					<picture>
-						<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
-						<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-						<img src="resources/images/mailLight.svg" alt="portrait of me" style="width:15px;height:15px;">
-					</picture>
-					Contact adress
-				</a>
-				<a class="veryBottom" href="#Home">Back to the top</a>
-			</div>
-		</span>
-        
-        <script>
-        window.onscroll = function() {myFunction()};
-        
-        var header = document.getElementById("fixedHeader");
-        var sticky = header.offsetTop;
-        
-        function myFunction() {
-            // use >= for more smoothness or > for a bit less resource usage
-            if (window.pageYOffset >= sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
-        </script>
-        
-    </body>
-</html>
+			</span>
+			
+			<script>
+				window.onscroll = function() {keepHeaderFixed()};
+				
+				var header = document.getElementById("fixedHeader");
+				var sticky = header.offsetTop;
+				
+				function keepHeaderFixed() {
+					// use >= for more smoothness or > for a bit less resource usage
+					if (window.pageYOffset >= sticky) {
+						header.classList.add("sticky");
+					} else {
+						header.classList.remove("sticky");
+					}
+				}
+				
+				document.querySelectorAll('.scrollmenu a').forEach(link => {
+					function handleInteraction(e) {
+						// Prevent default to stop immediate navigation
+						e.preventDefault();
+						
+						// Remove existing circles
+						link.querySelectorAll('.circle').forEach(circle => circle.remove());
+						
+						// Create new circle
+						const circle = document.createElement('span');
+						circle.classList.add('circle');
+						
+						// Set circle position
+						const rect = link.getBoundingClientRect();
+						const size = Math.max(rect.width, rect.height);
+						circle.style.width = circle.style.height = `${size}px`;
+						
+						// Get the correct coordinates for both mouse and touch events
+						const x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+						const y = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+						
+						circle.style.left = `${x - rect.left - size/2}px`;
+						circle.style.top = `${y - rect.top - size/2}px`;
+						
+						// Add circle to link
+						link.appendChild(circle);
+						
+						// Trigger animation
+						setTimeout(() => {
+							link.classList.add('clicked');
+						}, 50);
+						
+						// Remove animation class after transition
+						setTimeout(() => {
+							link.classList.remove('clicked');
+							circle.remove();
+						}, 500);
+						
+						// Delay the navigation to allow the animation to play
+						setTimeout(() => {
+							window.location.href = link.href;
+						}, 300);
+					}
+					
+					// Add event listeners for both mouse and touch events
+					link.addEventListener('click', handleInteraction);
+					link.addEventListener('touchstart', handleInteraction);
+				});
+			</script>
+			
+		</body>
+		</html>
+		
