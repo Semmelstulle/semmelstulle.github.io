@@ -109,11 +109,14 @@
 			text-align: center;
 			text-decoration: none;
 			border-radius: 20px;
-			padding: 8px 12px 8px 12px;
-			margin: 4px 2px 4px 2px;
-		}
-		.scrollmenu a:hover {
-			background :#8538f7;
+			padding: 8px 12px;
+			margin: 4px 2px;
+			position: relative;
+			overflow: hidden;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
 		}
 		#Home h3 {
 			font-size: 40px;
@@ -176,7 +179,7 @@
 			background: #000000;
 			color: #f1f1f1;
 			padding: 10px 5px 20px 5px;
-			padding-bottom: calc(10px + env(safe-area-inset-bottom));
+			padding-bottom: calc(20px + env(safe-area-inset-bottom));
 		}
 		.footer a {
 			text-decoration: none;
@@ -206,8 +209,16 @@
 				color: #f1f1f1;
 				background: #666666;
 			}
-			.scrollmenu a:hover {
-				background :#8538f7;
+			.scrollmenu a .circle {
+				position: absolute;
+				background :#8438f750;
+				border-radius: 50%;
+				transform: scale(0);
+				transition: transform 0.4s ease-in-out;
+				pointer-events: none;
+			}
+			.scrollmenu a.clicked .circle {
+				transform: scale(2);
 			}
 			#Home h3 {
 				background: linear-gradient(to bottom right, #936ffe, #8e66c1);
@@ -246,8 +257,16 @@
 				color: #404040;
 				background: #e6e6e6;
 			}
-			.scrollmenu a:hover {
-				background :#8538f780;
+			.scrollmenu a .circle {
+				position: absolute;
+				background :#8538f750;
+				border-radius: 50%;
+				transform: scale(0);
+				transition: transform 0.4s ease-in-out;
+				pointer-events: none;
+			}
+			.scrollmenu a.clicked .circle {
+				transform: scale(2);
 			}
 			#Home h3 {
 				background: linear-gradient(to bottom right, #400be0, #650fd7);
@@ -307,8 +326,10 @@
 			.articleGrid {
 				display: flex;
 			}
-			.features {
-				margin-left: 40px;
+			.articleGrid ul {
+				display: flex;
+				flex-direction: column;
+				margin-left: 10px;
 			}
 		}
 		@keyframes appear-on-page {
@@ -328,8 +349,7 @@
 	<span class="anchor" id='Home'>
 		<div class="header">
 			<h1>My projects</h1>
-			<div class="spacer">
-			</div>
+			<div class="spacer"></div>
 			<a href="https://github.com/SemmelStulle">
 				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" heigth="50" class="profileMask">
 			</a>
@@ -337,151 +357,178 @@
 		<!-- Navigation pills -->
 		<div class="scrollmenu" id="fixedHeader">
 			<a href="#Home">Home</a>
+			<a href="#Website">Website</a>
 			<a href="#ResourcePack">Resource Pack</a>
 			<a href="#Widgy">Widgy</a>
-				<a href="#About">About</a>
+			<a href="#About">About</a>
+		</div>
+		<!-- Top of the page stuff -->
+		<div class="content">
+			<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
+			<div class="bigImage">
+				<picture>
+					<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
+					<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+					<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
+				</picture>
 			</div>
-			<!-- Top of the page stuff -->
-			<div class="content">
-				<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
-				<div class="bigImage">
-					<picture>
-						<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
-						<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-						<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
-					</picture>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	<!-- Here is the meta stuff -->
+	<span class="anchor" id='Website'>
+		<div class="content">
+			<h1>Website</h1>
+			<p>This very site you are looking at right now. I made it with legacy
+			devices in mind. That means you can totally use this page on a
+			Windows Phone right now and would have it look almost the same as
+			on a recent phone. But don't just take my word for it. Look at this picture!
+			</p>
+			<div class="articleGrid">
+				<div class="mediaCard">
+					<img src="resources/images/websiteShowcase.jpg" alt="A picture of this very website on an old Windows Phone and a new iPhone" class="previewCard">
+					<p style="margin-left: 10px;">A picture of this very website on an old Windows Phone and a new iPhone</p>
 				</div>
+				<ul>
+				<h2>Top 5 features:</h2>
+				<li>WebKit first</li>
+				<li>EdgeHTML compatible</li>
+				<li>Dark and light mode</li>
+				<li>All CSS and JS is embedded</li>
+				<li>All of the graphics are mine</li>
+				</ul>
 			</div>
-			<div class="sectionDivider"></div>
-		</span>
-		<!-- Here is the Minecraft stuff -->
-		<span class="anchor" id='ResourcePack'>
-			<div class="content">
-				<h1>Resource Pack</h1>
-				<div class="articleGrid">
-					<div class="mediaCard">
-						<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
-								<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "SemmelTweaks" right here!</p>
-						</div>
-					</div>
-					<div class="features">
-						<h2>Full feature list:</h2>
-						<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
-						<li>No pumpkin overlay</li>
-						<li>Cake has no cherry on top</li>
-						<li>Effect symbols on every arrow and potion</li>
-						<li>Hunger bar displays potatos</li>
-						<li>Self made 3d sun and moon (probably took me the most work)</li>
-						<li>Custom purple Enderman gradient</li>
-						<li>Green indicator on max stage Nether warts and amethyst clusters</li>
-						<li>Redstone dust has a wire style</li>
-						<li>Redstone torch is red instead of yellow</li>
-						<li>Outlines for suspicious sand and gravel</li>
-						<li>"Rounded" wood stems, logs and bee hive</li>
-						<li>Removed animations from sea lantern, crimson and warped stem</li>
-						<li>Clear tintet and stained glass</li>
-						<li>Outline only for normal glass</li>
-						<li>Side textures of grass, nylium and snow are lowered</li>
-						<li>More visible trip wire</li>
-						<li>Lower high grass</li>
-					</div>
-				</div>
-			</div>
-			<div class="sectionDivider"></div>
-		</span>
-		<!-- Here is the Widgy stuff -->
-		<span class="anchor" id='Widgy'>
-			<div class="content">
-				<h1>Widgy Widgets</h1>
-				<div class="contentGrid">
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy08.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Xbox Profile EN V1.json" download="Xbox Profile EN V1.json">
-								<img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>NEW: Get "Xbox Profile EN V1" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy09.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Xbox Profile DE V1.json" download="Xbox Profile DE V1.json">
-								<img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>NEW: Get "Xbox Profile DE V1" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Widgy Subreddit Feed.widgy" download="Widgy Subreddit Feed.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Widgy Subreddit Feed" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Northern Weather Medium.widgy" download="Northern Weather Medium.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Northern Weather Medium" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Northern Weather Small.widgy" download="Northern Weather Small.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Northern Weather Small" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Infoto V2.widgy" download="Infoto V2.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Infoto V2" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Calenduh.widgy" download="Calenduh.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Calenduh" right here!</p>
-						</div>
-					</div>
-					<div class="mediaCard">
-						<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Dynamic Widgy V3 En.widgy" download="Dynamic Widgy V3 En.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Dynamic Widgy V3 En" right here!</p>
-						</div>
-					</div><div class="mediaCard">
-						<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/Dynamic Widgy V3 De.widgy" download="Dynamic Widgy V3 De.widgy">
-								<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
-							<p>Get "Dynamic Widgy V3 De" right here!</p>
-						</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	<!-- Here is the Minecraft stuff -->
+	<span class="anchor" id='ResourcePack'>
+		<div class="content">
+			<h1>Resource Pack</h1>
+			<div class="articleGrid">
+				<div class="mediaCard">
+					<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+							<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "SemmelTweaks" right here!</p>
 					</div>
 				</div>
+				<ul>
+					<h2>Full feature list:</h2>
+					<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
+					<li>No pumpkin overlay</li>
+					<li>Cake has no cherry on top</li>
+					<li>Effect symbols on every arrow and potion</li>
+					<li>Hunger bar displays potatos</li>
+					<li>Self made 3d sun and moon (probably took me the most work)</li>
+					<li>Custom purple Enderman gradient</li>
+					<li>Green indicator on max stage Nether warts and amethyst clusters</li>
+					<li>Redstone dust has a wire style</li>
+					<li>Redstone torch is red instead of yellow</li>
+					<li>Outlines for suspicious sand and gravel</li>
+					<li>"Rounded" wood stems, logs and bee hive</li>
+					<li>Removed animations from sea lantern, crimson and warped stem</li>
+					<li>Clear tintet and stained glass</li>
+					<li>Outline only for normal glass</li>
+					<li>Side textures of grass, nylium and snow are lowered</li>
+					<li>More visible trip wire</li>
+					<li>Lower high grass</li>
+				</ul>
 			</div>
-		</span>
-	</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	<!-- Here is the Widgy stuff -->
+	<span class="anchor" id='Widgy'>
+		<div class="content">
+			<h1>Widgy Widgets</h1>
+			<div class="contentGrid">
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy08.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Xbox Profile EN V1.json" download="Xbox Profile EN V1.json">
+							<img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>NEW: Get "Xbox Profile EN V1" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy09.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Xbox Profile DE V1.json" download="Xbox Profile DE V1.json">
+							<img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>NEW: Get "Xbox Profile DE V1" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Widgy Subreddit Feed.widgy" download="Widgy Subreddit Feed.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Widgy Subreddit Feed" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy02.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Northern Weather Medium.widgy" download="Northern Weather Medium.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Northern Weather Medium" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy03.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Northern Weather Small.widgy" download="Northern Weather Small.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Northern Weather Small" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy04.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Infoto V2.widgy" download="Infoto V2.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Infoto V2" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy05.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Calenduh.widgy" download="Calenduh.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Calenduh" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy06.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Dynamic Widgy V3 En.widgy" download="Dynamic Widgy V3 En.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Dynamic Widgy V3 En" right here!</p>
+					</div>
+				</div>
+				<div class="mediaCard">
+					<img src="resources/images/previewWidgy07.jpg" alt="preview image for my widget" class="previewCard">
+					<div class="actionCard">
+						<a href="resources/files/Dynamic Widgy V3 De.widgy" download="Dynamic Widgy V3 De.widgy">
+							<img src="resources/images/widgy.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+						</a>
+						<p>Get "Dynamic Widgy V3 De" right here!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</span>
 	<!-- Link to the footer -->
 	<span class="anchor" id="About">
 		<div class="footer">
@@ -496,28 +543,75 @@
 							<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
 							<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
 							<img src="resources/images/mailLight.svg" alt="portrait of me" style="width:15px;height:15px;">
-						</picture>
-						Contact adress
+						</picture>Contact adress
 					</a>
 					<a class="veryBottom" href="#Home">Back to the top</a>
 				</div>
 			</span>
 			
-		<script>
-			window.onscroll = function() {keepChipsOnTop()};
-			
-			var header = document.getElementById("fixedHeader");
-			var sticky = header.offsetTop;
-
-			function keepChipsOnTop() {
-				if (window.pageYOffset >= sticky) {
-					header.classList.add("sticky");
-				} else {
-					header.classList.remove("sticky");
+			<script>
+				window.onscroll = function() {keepChipsOnTop()};
+				
+				var header = document.getElementById("fixedHeader");
+				var sticky = header.offsetTop;
+				
+				function keepChipsOnTop() {
+					if (window.pageYOffset >= sticky) {
+						header.classList.add("sticky");
+					} else {
+						header.classList.remove("sticky");
+					}
 				}
-			}
-		</script>
-			
-	</body>
-</html>
+
+				document.querySelectorAll('.scrollmenu a').forEach(link => {
+					function handleInteraction(e) {
+						// Prevent default to stop immediate navigation
+						e.preventDefault();
+						
+						// Remove existing circles
+						link.querySelectorAll('.circle').forEach(circle => circle.remove());
+						
+						// Create new circle
+						const circle = document.createElement('span');
+						circle.classList.add('circle');
+						
+						// Set circle position
+						const rect = link.getBoundingClientRect();
+						const size = Math.max(rect.width, rect.height);
+						circle.style.width = circle.style.height = `${size}px`;
+						
+						// Get the correct coordinates for both mouse and touch events
+						const x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+						const y = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+						
+						circle.style.left = `${x - rect.left - size/2}px`;
+						circle.style.top = `${y - rect.top - size/2}px`;
+						
+						// Add circle to link
+						link.appendChild(circle);
+						
+						// Trigger animation
+						setTimeout(() => {
+							link.classList.add('clicked');
+						}, 50);
+						
+						// Remove animation class after transition
+						setTimeout(() => {
+							link.classList.remove('clicked');
+							circle.remove();
+						}, 500);
+						
+						// Delay the navigation to allow the animation to play
+						setTimeout(() => {
+							window.location.href = link.href;
+						}, 0);
+					}
+					
+					// Add event listeners for both mouse and touch events
+					link.addEventListener('click', handleInteraction);
+					link.addEventListener('touchstart', handleInteraction);
+				});
+			</script>
+		</body>
+		</html>
 		
