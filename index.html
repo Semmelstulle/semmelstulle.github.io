@@ -140,6 +140,10 @@
 			calc(20px + env(safe-area-inset-right))
 			20px
 			calc(20px + env(safe-area-inset-left));
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
 		}
 		.sectionDivider {
 			margin-left: auto;
@@ -340,19 +344,19 @@
 			<a href="#ResourcePack">Resource Pack</a>
 			<a href="#Widgy">Widgy</a>
 				<a href="#About">About</a>
+		</div>
+		<!-- Top of the page stuff -->
+		<div class="content" id="startingPoint">
+			<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
+			<div class="bigImage">
+				<picture>
+					<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
+					<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
+					<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
+				</picture>
 			</div>
-			<!-- Top of the page stuff -->
-			<div class="content">
-				<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
-				<div class="bigImage">
-					<picture>
-						<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
-						<source srcset="resources/images/portraitDark.jpg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-						<img src="resources/images/portraitDark.jpg" alt="portrait of me" style="width:100%;height:100%;">
-					</picture>
-				</div>
-			</div>
-			<div class="sectionDivider"></div>
+		</div>
+		<div class="sectionDivider"></div>
 		</span>
 		<!-- Here is the Minecraft stuff -->
 		<span class="anchor" id='ResourcePack'>
