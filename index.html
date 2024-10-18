@@ -116,21 +116,13 @@
 				background :#8538f7;
 			}
 			#Home h3 {
-				font-size: 35px;
+				font-size: 40px;
 				font-weight: bold;
 				background: linear-gradient(to bottom right, #4304FE, #7102FE);
 				background-clip: text;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				margin-top: 20px;
-			}
-			#Home p {
-				font-size: 30px;
-				font-weight: bold;
-				background: linear-gradient(to bottom right, #7102FE, #AA08FF);
-				background-clip: text;
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
 			}
 			.bigImage {
 				display: flex;
@@ -177,6 +169,9 @@
 				align-items: center;
 				padding: 10px 8px 2px 2px;
 			}
+			.actionCard img {
+				margin-right:10px;
+			}
             .footer {
                 text-align: center;
 				background: #000000;
@@ -215,6 +210,11 @@
 				.scrollmenu a:hover {
 					background :#8538f7;
 				}
+				#Home h3 {
+					background: linear-gradient(to bottom right, #936ffe, #8e66c1);
+					background-clip: text;
+					-webkit-background-clip: text;
+				}
 				.sectionDivider {
 					background: #404040;
 				}
@@ -249,6 +249,11 @@
             	}
 				.scrollmenu a:hover {
 					background :#8538f780;
+				}
+				#Home h3 {
+					background: linear-gradient(to bottom right, #400be0, #650fd7);
+					background-clip: text;
+					-webkit-background-clip: text;
 				}
 				.sectionDivider {
 					background: #f1f1f1;
@@ -323,7 +328,7 @@
 	<body>
 		<span class="anchor" id='Home'>
         <div class="header">
-        	<h1>Hello World!</h1>
+        	<h1>My projects</h1>
             <div class="spacer">
             </div>
 			<a href="https://github.com/SemmelStulle">
@@ -341,10 +346,7 @@
         </div>
 		<!-- Top of the page stuff -->
 		<div class="content">
-			<div class="bigText">
-				<h3>Welcome aboard!</h3>
-				<p>I make stuff.<br>Here is where I put it.</p>
-			</div>
+			<h3 class="bigText">I make stuff.<br>Here is where I put it.</h3>
 			<div class="bigImage">
 				<picture>
 					<source srcset="resources/images/portraitLight.jpg" media="(prefers-color-scheme: light)"/>
