@@ -558,10 +558,27 @@
 						header.classList.remove("sticky");
 					}
 				}
-
+				
 				document.querySelectorAll('.scrollmenu a').forEach(link => {
+					let touchStartY;
+					let touchEndY;
+					const touchThreshold = 10; // Adjust this value to fine-tune sensitivity
+					
+					function handleTouchStart(e) {
+						touchStartY = e.touches[0].clientY;
+					}
+					
+					function handleTouchEnd(e) {
+						touchEndY = e.changedTouches[0].clientY;
+						const touchDiff = Math.abs(touchStartY - touchEndY);
+						
+						if (touchDiff < touchThreshold) {
+							// This is considered a tap, not a scroll
+							handleInteraction(e);
+						}
+					}
+					
 					function handleInteraction(e) {
-						// Prevent default to stop immediate navigation
 						e.preventDefault();
 						
 						// Remove existing circles
@@ -577,8 +594,8 @@
 						circle.style.width = circle.style.height = `${size}px`;
 						
 						// Get the correct coordinates for both mouse and touch events
-						const x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
-						const y = e.type.includes('touch') ? e.touches[0].clientY : e.clientY;
+						const x = e.type.includes('touch') ? e.changedTouches[0].clientX : e.clientX;
+						const y = e.type.includes('touch') ? e.changedTouches[0].clientY : e.clientY;
 						
 						circle.style.left = `${x - rect.left - size/2}px`;
 						circle.style.top = `${y - rect.top - size/2}px`;
@@ -600,12 +617,15 @@
 						// Delay the navigation to allow the animation to play
 						setTimeout(() => {
 							window.location.href = link.href;
-						}, 0);
+						}, 300);
 					}
 					
-					// Add event listeners for both mouse and touch events
+					// Add event listeners for mouse events
 					link.addEventListener('click', handleInteraction);
-					link.addEventListener('touchstart', handleInteraction);
+					
+					// Add event listeners for touch events
+					link.addEventListener('touchstart', handleTouchStart);
+					link.addEventListener('touchend', handleTouchEnd);
 				});
 			</script>
 		</body>
