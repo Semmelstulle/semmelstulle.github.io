@@ -47,8 +47,6 @@
 			html {
 				scroll-behavior: smooth;
 			}
-            :root {
-            }
             body {
 				margin: 0px;
 				font-family: ui-rounded, ui-sans, system-ui, Arial;
@@ -71,6 +69,10 @@
                 flex-direction: row;
                 align-items: center;
 				padding: 5px 10px 0px 10px;
+				padding: 5px
+                     calc(10px + env(safe-area-inset-right))
+                     0px
+                     calc(10px + env(safe-area-inset-left));
 				background: #404040;
 				color: #f1f1f1;
             }
@@ -93,15 +95,19 @@
                 overflow: auto;
                 white-space: nowrap;
 				padding: 4px;
+				padding: 4px
+                     calc(4px + env(safe-area-inset-right))
+                     4px
+                     calc(4px + env(safe-area-inset-left));
 				background: #404040;
 				color: #f1f1f1;
             }
             .scrollmenu a {
                 display: inline-block;
-                color: white;
+                color: #f1f1f1;
+				background: #666666;
                 text-align: center;
                 text-decoration: none;
-				background: #666666;
                 border-radius: 20px;
 				padding: 8px 12px 8px 12px;
 				margin: 4px 2px 4px 2px;
@@ -113,6 +119,7 @@
 				font-size: 35px;
 				font-weight: bold;
 				background: linear-gradient(to bottom right, #4304FE, #7102FE);
+				background-clip: text;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 				margin-top: 20px;
@@ -121,18 +128,27 @@
 				font-size: 30px;
 				font-weight: bold;
 				background: linear-gradient(to bottom right, #7102FE, #AA08FF);
+				background-clip: text;
 				-webkit-background-clip: text;
 				-webkit-text-fill-color: transparent;
 			}
 			.bigImage {
 				display: flex;
 				justify-content: right;
+				animation-name: appear-on-page;
+				animation-duration: 0.5s;
+				animation-delay: 0.5s;
+				animation-timing-function: ease-out;
 			}
 			.bigImage picture {
 				max-width: 500px;
 			}
 			.content {
 				padding: 20px;
+				padding: 20px
+                     calc(20px + env(safe-area-inset-right))
+					 20px
+                     calc(20px + env(safe-area-inset-left));
 			}
 			.sectionDivider {
 				margin-left: auto;
@@ -143,7 +159,6 @@
 			}
 			.mediaCard {
 				padding: 10px;
-				margin: 10px 0px 10px 0px;
 				width: auto;
 				max-width: 400px;
 				background: #373632;
@@ -167,6 +182,7 @@
 				background: #000000;
 				color: #f1f1f1;
 				padding: 10px 5px 20px 5px;
+				padding-bottom: calc(10px + env(safe-area-inset-bottom));
 			}
 			.footer a {
 				text-decoration: none;
@@ -192,6 +208,13 @@
 					background: #404040;
 					color: #f1f1f1;
 				}
+    	        .scrollmenu a {
+            	    color: #f1f1f1;
+					background: #666666;
+            	}
+				.scrollmenu a:hover {
+					background :#8538f7;
+				}
 				.sectionDivider {
 					background: #404040;
 				}
@@ -203,6 +226,9 @@
 					background: #000000;
 					color: #f1f1f1;
 				}
+                .footer a {
+                    color: #f1f1f1;
+                }
 			}
 			@media (prefers-color-scheme: light) {
 				body {
@@ -217,6 +243,13 @@
 					background: #f1f1f1;
 					color: #404040;
 				}
+    	        .scrollmenu a {
+            	    color: #404040;
+					background: #e6e6e6;
+            	}
+				.scrollmenu a:hover {
+					background :#8538f780;
+				}
 				.sectionDivider {
 					background: #f1f1f1;
 				}
@@ -228,6 +261,61 @@
 					background: #f1f1f1;
 					color: #000000;
 				}
+                .footer a {
+                    color: #000000;
+                }
+			}
+            @media screen and (max-width: 469px){
+                .contentGrid{
+                    display: grid;
+                    grid-template-columns: repeat(1, 1fr); /* Adjust grid columns as needed */
+                    gap: 20px; /* Add gap between grid items */
+                }
+                .articleGrid{
+                    display: block;
+                }
+            }
+            @media screen and (min-width: 470px){
+                .content {
+					padding: 20px 60px 20px 60px;
+					padding: 20px
+                     calc(60px + env(safe-area-inset-right))
+                     20px
+                     calc(60px + env(safe-area-inset-left));
+                }
+                .contentGrid {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); /* Adjust grid columns as needed */
+                    gap: 20px; /* Add gap between grid items */
+                }
+            }
+            @media screen and (min-width: 800px){
+                .content {
+                    max-width: 800px;
+					margin-left: auto;
+					margin-right: auto;
+                }
+                .contentGrid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
+                    gap: 20px; /* Add gap between grid items */
+                }
+                .articleGrid {
+                    display: flex;
+                }
+                .features {
+                    margin-left: 40px;
+                }
+            }
+			@keyframes appear-on-page {
+				from {
+  				  transform: translateY(150px);
+    				opacity: 0;
+  				}
+  				to {
+    				transform: translateY(0);
+    				opacity: 1;
+  				}
 			}
         </style>
     </head>
@@ -236,7 +324,8 @@
 		<span class="anchor" id='Home'>
         <div class="header">
         	<h1>Hello World!</h1>
-			<div class="spacer"></div>
+            <div class="spacer">
+            </div>
 			<a href="https://github.com/SemmelStulle">
 				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" heigth="50" class="profileMask">
 			</a>
@@ -246,8 +335,8 @@
             <a href="#Home">Home</a>
             <a href="#ResourcePack">Resource Pack</a>
             <a href="#Widgy">Widgy</a>
-            <a href="#Icons">Icons</a>
-            <a href="#Peawell">Peawell</a>
+            <!--a href="#Icons">Icons</a>
+            <a href="#Peawell">Peawell</a-->
             <a href="#About">About</a>
         </div>
 		<!-- Top of the page stuff -->
@@ -270,41 +359,64 @@
 		<span class="anchor" id='ResourcePack'>
 			<div class="content">
 				<h1>Resource Pack</h1>
-				<div class="mediaCard">
-					<img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
-						<div class="actionCard">
-							<a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
-								<img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
-							</a>
+                <div class="articleGrid">
+                    <div class="mediaCard">
+                        <img src="resources/images/previewMcpack.jpg" alt="preview image for some of the tweaks I added" class="previewCard">
+                            <div class="actionCard">
+                                <a href="resources/files/SemmelTweaks.mcpack" download="SemmelTweaks.mcpack">
+                                    <img src="resources/images/mcpack.svg" alt="logo for mcpack filetype with download link" style="width:50px;height:50px;">
+                                </a>
 							<p>Get "SemmelTweaks" right here!</p>
-						</div>
-				</div>
-				<h2>Full feature list:</h2>
-				<li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
-				<li>No pumpkin overlay</li>
-				<li>Cake has no cherry on top</li>
-				<li>Effect symbols on every arrow and potion</li>
-				<li>Hunger bar displays potatos</li>
-				<li>Self made 3d sun and moon (probably took me the most work)</li>
-				<li>Custom purple Enderman gradient</li>
-				<li>Green indicator on max stage Nether warts and amethyst clusters</li>
-				<li>Redstone dust has a wire style</li>
-				<li>Redstone torch is red instead of yellow</li>
-				<li>Outlines for suspicious sand and gravel</li>
-				<li>"Rounded" wood stems, logs and bee hive</li>
-				<li>Removed animations from sea lantern, crimson and warped stem</li>
-				<li>Clear tintet and stained glass</li>
-				<li>Outline only for normal glass</li>
-				<li>Side textures of grass, nylium and snow are lowered</li>
-				<li>More visible trip wire</li>
-				<li>Lower high grass</li>
-			</div>
+                            </div>
+                    </div>
+                    <div class="features">
+                        <h2>Full feature list:</h2>
+                        <li>3 changed 1x1 paintings (my logo, SilentWhisperer, PhoenixSC)</li>
+                        <li>No pumpkin overlay</li>
+                        <li>Cake has no cherry on top</li>
+                        <li>Effect symbols on every arrow and potion</li>
+                        <li>Hunger bar displays potatos</li>
+                        <li>Self made 3d sun and moon (probably took me the most work)</li>
+                        <li>Custom purple Enderman gradient</li>
+                        <li>Green indicator on max stage Nether warts and amethyst clusters</li>
+                        <li>Redstone dust has a wire style</li>
+                        <li>Redstone torch is red instead of yellow</li>
+                        <li>Outlines for suspicious sand and gravel</li>
+                        <li>"Rounded" wood stems, logs and bee hive</li>
+                        <li>Removed animations from sea lantern, crimson and warped stem</li>
+                        <li>Clear tintet and stained glass</li>
+                        <li>Outline only for normal glass</li>
+                        <li>Side textures of grass, nylium and snow are lowered</li>
+                        <li>More visible trip wire</li>
+                        <li>Lower high grass</li>
+                    </div>
+                </div>
+            </div>
 			<div class="sectionDivider"></div>
 		</span>
 		<!-- Here is the Widgy stuff -->
 		<span class="anchor" id='Widgy'>
 			<div class="content">
 			<h1>Widgy Widgets</h1>
+            <div class="contentGrid">
+            <div class="mediaCard">
+                <img src="resources/images/previewWidgy08.jpg" alt="preview image for my widget" class="previewCard">
+                    <div class="actionCard">
+                        <a href="resources/files/Xbox Profile EN V1.json" download="Xbox Profile EN V1.json">
+                            <img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
+                        </a>
+                        <p>NEW: Get "Xbox Profile EN V1" right here!</p>
+                    </div>
+            </div>
+            <div class="mediaCard">
+                <img src="resources/images/previewWidgy09.jpg" alt="preview image for my widget" class="previewCard">
+                    <div class="actionCard">
+                        <a href="resources/files/Xbox Profile DE V1.json" download="Xbox Profile DE V1.json">
+                            <img src="resources/images/json.svg" alt="logo for json filetype with download link" style="width:50px;height:50px;">
+                        </a>
+                        <p>NEW: Get "Xbox Profile DE V1" right here!</p>
+                    </div>
+            </div>
 				<div class="mediaCard">
 					<img src="resources/images/previewWidgy01.jpg" alt="preview image for my widget" class="previewCard">
 						<div class="actionCard">
@@ -366,9 +478,10 @@
 							</a>
 							<p>Get "Dynamic Widgy V3 De" right here!</p>
 						</div>
+                </div>
 				</div>
 			</div>
-			<div class="sectionDivider"></div>
+			<!--div class="sectionDivider"></div-->
 		</span>
 		<!-- Filler text to test anchors and scrolling -->
 		</div>
@@ -400,7 +513,8 @@
         var sticky = header.offsetTop;
         
         function myFunction() {
-            if (window.pageYOffset > sticky) {
+            // use >= for more smoothness or > for a bit less resource usage
+            if (window.pageYOffset >= sticky) {
                 header.classList.add("sticky");
             } else {
                 header.classList.remove("sticky");
