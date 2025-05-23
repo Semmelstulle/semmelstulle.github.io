@@ -338,6 +338,37 @@
 				opacity: 1;
 			}
 		}
+		/* Modal styles */
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.6);
+		}
+		.modal-content {
+			background-color: #222;
+			/* margin: 10vh auto; */
+			margin: 0 auto 5vh auto;
+			padding: 20px;
+			border-radius: 16px;
+			max-width: 400px;
+			color: #f1f1f1;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@media (prefers-color-scheme: light) {
+			.modal-content {
+				background: #fff;
+				color: #222;
+			}
+		}
 	</style>
 </head>
 
@@ -408,7 +439,6 @@
 			</p>
 			<href=>
 			<div class="articleGrid">
-				
 				<div class="contentGrid">
 					<div class="mediaCard">
 						<img src="https://github.com/Semmelstulle/Peawell-iOS/blob/main/Resources/PreviewMain.PNG?raw=true" alt="preview image for the app landing page" class="previewCard">
@@ -590,16 +620,35 @@
 					<br>
 				</a>
 			</div>
-			<a class="veryBottom" href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
-				<picture>
-					<source srcset="resources/images/mailDark.svg" media="(prefers-color-scheme: light)"/>
-					<source srcset="resources/images/mailLight.svg" media="(prefers-color-scheme: dark), (prefers-color-scheme: no-preference)"/>
-					<img src="resources/images/mailLight.svg" alt="portrait of me" style="width:15px;height:15px;">
-				</picture>Contact adress
-			</a>
+			<!-- Privacy Policy and Impressum as pop-up links -->
+			<div style="padding:10px; font-size:0.95em;">
+				<a href="#" id="privacyLink">Privacy Policy</a> |
+				<a href="#" id="impressumLink">Impressum</a>
+			</div>
 			<a class="veryBottom" href="#Home">Back to the top</a>
 		</div>
 	</span>
+	<!-- Privacy Policy Modal -->
+	<div id="privacyModal" class="modal">
+		<div class="modal-content">
+			<span class="modal-close" id="closePrivacy">&times;</span>
+			<strong>Privacy Policy</strong>
+			<p>This website does not store, save, or process any user data.<br><br>
+			This website is hosted by GitHub Pages. GitHub may collect technical data such as IP addresses in server logs for operational purposes. For more information, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub’s privacy statement</a>.</p>
+		</div>
+	</div>
+	<!-- Impressum Modal -->
+	<div id="impressumModal" class="modal">
+		<div class="modal-content">
+			<span class="modal-close" id="closeImpressum">&times;</span>
+			<strong>Impressum</strong><br>
+			Dennis Tobias Atkins<br>
+			Hohenstädter Straße 32<br>
+			91230 Happurg, Germany<br>
+			E-Mail: dennis &lt;at&gt; atkins.sh<br>
+			Phone: +49 157 73816417
+		</div>
+	</div>
 	
 	<script>
 		window.onscroll = function() {keepChipsOnTop()};
@@ -683,6 +732,34 @@
 			link.addEventListener('touchstart', handleTouchStart);
 			link.addEventListener('touchend', handleTouchEnd);
 		});
+		
+		// Modal pop-up logic
+		function showModal(id) {
+			document.getElementById(id).style.display = 'block';
+		}
+		function closeModal(id) {
+			document.getElementById(id).style.display = 'none';
+		}
+		document.getElementById('privacyLink').onclick = function(e) {
+			e.preventDefault();
+			showModal('privacyModal');
+		};
+		document.getElementById('impressumLink').onclick = function(e) {
+			e.preventDefault();
+			showModal('impressumModal');
+		};
+		document.getElementById('closePrivacy').onclick = function() {
+			closeModal('privacyModal');
+		};
+		document.getElementById('closeImpressum').onclick = function() {
+			closeModal('impressumModal');
+		};
+		window.onclick = function(event) {
+			if (event.target.classList.contains('modal')) {
+				closeModal('privacyModal');
+				closeModal('impressumModal');
+			}
+		};
 	</script>
 </body>
 </html>
