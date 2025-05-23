@@ -354,6 +354,7 @@
 		<div class="scrollmenu" id="fixedHeader">
 			<a href="#Home">Home</a>
 			<a href="#Website">Website</a>
+			<a href="#PeawellApp">Peawell</a>
 			<a href="#ResourcePack">Resource Pack</a>
 			<a href="#Widgy">Widgy</a>
 			<a href="#About">About</a>
@@ -376,9 +377,9 @@
 		<div class="content">
 			<h1>Website</h1>
 			<p>This very site you are looking at right now. I made it with legacy
-			devices in mind. That means you can totally use this page on a
-			Windows Phone right now and would have it look almost the same as
-			on a recent phone. But don't just take my word for it. Look at this picture!
+				devices in mind. That means you can totally use this page on a
+				Windows Phone right now and would have it look almost the same as
+				on a recent phone. But don't just take my word for it. Look at this picture!
 			</p>
 			<div class="articleGrid">
 				<div class="mediaCard">
@@ -386,13 +387,54 @@
 					<p style="margin-left: 10px;">A picture of this very website on an old Windows Phone and a new iPhone</p>
 				</div>
 				<ul>
-				<h2>Top 5 features:</h2>
-				<li>WebKit first</li>
-				<li>EdgeHTML compatible</li>
-				<li>Dark and light mode</li>
-				<li>All CSS and JS is embedded</li>
-				<li>All of the graphics are mine</li>
+					<h2>Top 5 features:</h2>
+					<li>WebKit first</li>
+					<li>EdgeHTML compatible</li>
+					<li>Dark and light mode</li>
+					<li>All CSS and JS is embedded</li>
+					<li>All of the graphics are mine</li>
 				</ul>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	<!-- Here is the Peawell stuff -->
+	<span class="anchor" id='PeawellApp'>
+		<div class="content">
+			<h1>Peawell</h1>
+			<p>
+				This is an App I made. Once I am legally set up, donations will be
+				possible. For now, you can just build the app yourself and use it for free.
+			</p>
+			<href=>
+			<div class="articleGrid">
+				
+				<div class="contentGrid">
+					<div class="mediaCard">
+						<img src="https://github.com/Semmelstulle/Peawell-iOS/blob/main/Resources/PreviewMain.PNG?raw=true" alt="preview image for the app landing page" class="previewCard">
+						<p>
+							Preview image for the app landing page
+						</p>
+					</div>
+					<div class="mediaCard">
+						<img src="https://github.com/Semmelstulle/Peawell-iOS/blob/main/Resources/PreviewSettings.PNG?raw=true" alt="preview image for the app settings page" class="previewCard">
+						<p>
+							Preview image for the app settings page
+						</p>
+					</div>
+					<div class="mediaCard">
+						<img src="https://github.com/Semmelstulle/Peawell-iOS/blob/main/Resources/PreviewMood.PNG?raw=true" alt="preview image for the diary page" class="previewCard">
+						<p>
+							Preview image for the diary page
+						</p>
+					</div>
+					<div class="mediaCard">
+						<img src="https://github.com/Semmelstulle/Peawell-iOS/blob/main/Resources/PreviewMeds.PNG?raw=true" alt="preview image for the app medication detail page" class="previewCard">
+						<p>
+							Preview image for the app medication detail page
+						</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="sectionDivider"></div>
@@ -539,10 +581,14 @@
 		<div class="footer">
 			<div class="credits">
 				<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">
-					This website is using the MIT license.</a>
+					This website is using the MIT license.
+				</a>
 				<a href="https://github.com/">
-						Powered and hosted by GitHub.</a>
-				<a>Last updated on 29.03.2025 08:56<br></a>
+					Powered and hosted by GitHub.
+				</a>
+				<a>Last updated on 23.05.2025
+					<br>
+				</a>
 			</div>
 			<a class="veryBottom" href="mailto:botanisch-hotels-0g@icloud.com?subject=Kontaktaufnahme">
 				<picture>
@@ -554,90 +600,89 @@
 			<a class="veryBottom" href="#Home">Back to the top</a>
 		</div>
 	</span>
-			
-			<script>
-				window.onscroll = function() {keepChipsOnTop()};
-				
-				var header = document.getElementById("fixedHeader");
-				var sticky = header.offsetTop;
-				
-				function keepChipsOnTop() {
-					if (window.pageYOffset >= sticky) {
-						header.classList.add("sticky");
-					} else {
-						header.classList.remove("sticky");
-					}
-				}
-				
-				document.querySelectorAll('.scrollmenu a').forEach(link => {
-					let touchStartY;
-					let touchEndY;
-					const touchThreshold = 1; // Adjust this value to fine-tune sensitivity
-					
-					function handleTouchStart(e) {
-						touchStartY = e.touches[0].clientY;
-					}
-					
-					function handleTouchEnd(e) {
-						touchEndY = e.changedTouches[0].clientY;
-						const touchDiff = Math.abs(touchStartY - touchEndY);
-						
-						if (touchDiff < touchThreshold) {
-							// This is considered a tap, not a scroll
-							handleInteraction(e);
-						}
-					}
-					
-					function handleInteraction(e) {
-						e.preventDefault();
-						
-						// Remove existing circles
-						link.querySelectorAll('.circle').forEach(circle => circle.remove());
-						
-						// Create new circle
-						const circle = document.createElement('span');
-						circle.classList.add('circle');
-						
-						// Set circle position
-						const rect = link.getBoundingClientRect();
-						const size = Math.max(rect.width, rect.height);
-						circle.style.width = circle.style.height = `${size}px`;
-						
-						// Get the correct coordinates for both mouse and touch events
-						const x = e.type.includes('touch') ? e.changedTouches[0].clientX : e.clientX;
-						const y = e.type.includes('touch') ? e.changedTouches[0].clientY : e.clientY;
-						
-						circle.style.left = `${x - rect.left - size/2}px`;
-						circle.style.top = `${y - rect.top - size/2}px`;
-						
-						// Add circle to link
-						link.appendChild(circle);
-						
-						// Trigger animation
-						setTimeout(() => {
-							link.classList.add('clicked');
-						}, 50);
-						
-						// Remove animation class after transition
-						setTimeout(() => {
-							link.classList.remove('clicked');
-							circle.remove();
-						}, 500);
-						
-						// Delay the navigation to allow the animation to play
-						setTimeout(() => {
-							window.location.href = link.href;
-						}, 0);
-					}
-					
-					// Add event listeners for mouse events
-					link.addEventListener('click', handleInteraction);
-					
-					// Add event listeners for touch events
-					link.addEventListener('touchstart', handleTouchStart);
-					link.addEventListener('touchend', handleTouchEnd);
-				});
-			</script>
-		</body>
-		</html>
+	
+	<script>
+		window.onscroll = function() {keepChipsOnTop()};
 		
+		var header = document.getElementById("fixedHeader");
+		var sticky = header.offsetTop;
+		
+		function keepChipsOnTop() {
+			if (window.pageYOffset >= sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+		
+		document.querySelectorAll('.scrollmenu a').forEach(link => {
+			let touchStartY;
+			let touchEndY;
+			const touchThreshold = 1; // Adjust this value to fine-tune sensitivity
+			
+			function handleTouchStart(e) {
+				touchStartY = e.touches[0].clientY;
+			}
+			
+			function handleTouchEnd(e) {
+				touchEndY = e.changedTouches[0].clientY;
+				const touchDiff = Math.abs(touchStartY - touchEndY);
+				
+				if (touchDiff < touchThreshold) {
+					// This is considered a tap, not a scroll
+					handleInteraction(e);
+				}
+			}
+			
+			function handleInteraction(e) {
+				e.preventDefault();
+				
+				// Remove existing circles
+				link.querySelectorAll('.circle').forEach(circle => circle.remove());
+				
+				// Create new circle
+				const circle = document.createElement('span');
+				circle.classList.add('circle');
+				
+				// Set circle position
+				const rect = link.getBoundingClientRect();
+				const size = Math.max(rect.width, rect.height);
+				circle.style.width = circle.style.height = `${size}px`;
+				
+				// Get the correct coordinates for both mouse and touch events
+				const x = e.type.includes('touch') ? e.changedTouches[0].clientX : e.clientX;
+				const y = e.type.includes('touch') ? e.changedTouches[0].clientY : e.clientY;
+				
+				circle.style.left = `${x - rect.left - size/2}px`;
+				circle.style.top = `${y - rect.top - size/2}px`;
+				
+				// Add circle to link
+				link.appendChild(circle);
+				
+				// Trigger animation
+				setTimeout(() => {
+					link.classList.add('clicked');
+				}, 50);
+				
+				// Remove animation class after transition
+				setTimeout(() => {
+					link.classList.remove('clicked');
+					circle.remove();
+				}, 500);
+				
+				// Delay the navigation to allow the animation to play
+				setTimeout(() => {
+					window.location.href = link.href;
+				}, 0);
+			}
+			
+			// Add event listeners for mouse events
+			link.addEventListener('click', handleInteraction);
+			
+			// Add event listeners for touch events
+			link.addEventListener('touchstart', handleTouchStart);
+			link.addEventListener('touchend', handleTouchEnd);
+		});
+	</script>
+</body>
+</html>
