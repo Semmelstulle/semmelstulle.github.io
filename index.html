@@ -623,7 +623,8 @@
 			<!-- Privacy Policy and Impressum as pop-up links -->
 			<div style="padding:10px; font-size:0.95em;">
 				<a href="#" id="privacyLink">Privacy Policy</a> |
-				<a href="#" id="impressumLink">Impressum</a>
+				<a href="#" id="impressumLink">Impressum</a> |
+				<a href="#" id="kontaktLink">Kontakt</a>
 			</div>
 			<a class="veryBottom" href="#Home">Back to the top</a>
 		</div>
@@ -634,7 +635,9 @@
 			<span class="modal-close" id="closePrivacy">&times;</span>
 			<strong>Privacy Policy</strong>
 			<p>This website does not store, save, or process any user data.<br><br>
-			This website is hosted by GitHub Pages. GitHub may collect technical data such as IP addresses in server logs for operational purposes. For more information, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub’s privacy statement</a>.</p>
+			This website is hosted by GitHub Pages. GitHub may collect technical data such as IP addresses in server logs for operational purposes. For more information, see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">GitHub’s privacy statement</a>.<br><br>
+			If you use the contact form, your email address and message will be processed by formsubmit.co to deliver your message. For details, see the <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener">formsubmit.co privacy policy</a>.
+			</p>
 		</div>
 	</div>
 	<!-- Impressum Modal -->
@@ -645,8 +648,26 @@
 			Dennis Tobias Atkins<br>
 			Hohenstädter Straße 32<br>
 			91230 Happurg, Germany<br>
-			E-Mail: dennis &lt;at&gt; atkins.sh<br>
+			E-Mail: d.atkins &lt;at&gt; bytebench.tech<br>
 			Phone: +49 157 73816417
+		</div>
+	</div>
+	<!-- Kontakt Modal -->
+	<div id="kontaktModal" class="modal">
+		<div class="modal-content">
+			<span class="modal-close" id="closeKontakt">&times;</span>
+			<strong>Kontaktformular</strong>
+			<form action="https://formsubmit.co/a023c6e9d6666934f12ddbe5d4d91158" method="POST" style="display:flex;flex-direction:column;gap:10px;">
+				<label style="text-align:left;">Deine E-Mail-Adresse:<br>
+					<input type="email" name="email" required style="width:100%;padding:6px;border-radius:6px;border:1px solid #ccc;">
+				</label>
+				<label style="text-align:left;">Deine Nachricht:<br>
+					<textarea name="message" required rows="4" style="width:100%;padding:6px;border-radius:6px;border:1px solid #ccc;"></textarea>
+				</label>
+				<button type="submit" style="border-radius:8px;padding:8px 16px;background:#8538f7;color:#fff;border:none;font-weight:bold;cursor:pointer;">Absenden</button>
+				<input type="hidden" name="_next" value="https://bytebench.tech/thx">
+				<input type="hidden" name="_autoresponse" value="Hallo, danke, dass du uns kontaktiert hast!\nWir haben deine Nachricht erhalten und ein ByteBench Teammitglied wird sich zeitnah um dein Anliegen bemühen!\nUnten in dieser Mail findest du als Bestätigung noch eine Zusammenfassung deiner Einsendung.\nBis Bald!\nDein ByteBench-Team!">
+			</form>
 		</div>
 	</div>
 	
@@ -754,10 +775,18 @@
 		document.getElementById('closeImpressum').onclick = function() {
 			closeModal('impressumModal');
 		};
+		document.getElementById('kontaktLink').onclick = function(e) {
+			e.preventDefault();
+			showModal('kontaktModal');
+		};
+		document.getElementById('closeKontakt').onclick = function() {
+			closeModal('kontaktModal');
+		};
 		window.onclick = function(event) {
 			if (event.target.classList.contains('modal')) {
 				closeModal('privacyModal');
 				closeModal('impressumModal');
+				closeModal('kontaktModal');
 			}
 		};
 	</script>
