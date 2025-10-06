@@ -4,6 +4,7 @@
 	<!-- Meta parts -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 	<meta name="theme-color" content="#8538f7">
 	<meta name="color-scheme" content="dark light">
 	<meta name="author" content="Semmelstulle">
@@ -50,9 +51,20 @@
 				top: 0;
 				left: 0;
 				right: 0;
+				width: 100%;
 				height: env(safe-area-inset-top);
 				background: #404040;
-				z-index: 1000;
+				z-index: 9999;
+				-webkit-backdrop-filter: saturate(180%) blur(20px);
+				backdrop-filter: saturate(180%) blur(20px);
+			}
+			/* Ensure header accounts for status bar */
+			.header {
+				padding-top: calc(5px + env(safe-area-inset-top));
+			}
+			/* Adjust sticky position for status bar */
+			.sticky {
+				top: env(safe-area-inset-top);
 			}
 		}
 		/* Add smooth scroll to site */
@@ -113,12 +125,6 @@
 			calc(4px + env(safe-area-inset-left));
 			background: #404040;
 			color: #f1f1f1;
-		}
-		/* Special handling for sticky state */
-		.sticky .scrollmenu {
-			padding-top: calc(4px + env(safe-area-inset-top));
-			margin-top: calc(-1 * env(safe-area-inset-top));
-			background: #404040;
 		}
 		.scrollmenu a {
 			display: inline-block;
