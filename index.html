@@ -43,6 +43,18 @@
 	
 	<!-- Embedded style -->
 	<style>
+		/* Status bar overlay for iOS */
+		@supports (padding-top: env(safe-area-inset-top)) {
+			.status-bar-overlay {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: env(safe-area-inset-top);
+				background: #404040;
+				z-index: 1000;
+			}
+		}
 		/* Add smooth scroll to site */
 		html {
 			scroll-behavior: smooth;
@@ -243,6 +255,9 @@
 			}
 		}
 		@media (prefers-color-scheme: light) {
+			.status-bar-overlay {
+				background: #f1f1f1;
+			}
 			body {
 				background: #e6e6e6;
 				color: #222222;
@@ -379,6 +394,7 @@
 </head>
 
 <body>
+	<div class="status-bar-overlay"></div>
 	<span class="anchor" id='Home'>
 		<div class="header">
 			<h1>My projects</h1>
