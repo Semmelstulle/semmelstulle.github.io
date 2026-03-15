@@ -1,0 +1,41 @@
+{
+  "name": "StarterSeeds",
+  "subtitle": "The game launcher by Dennis",
+  "description": "Official AltStore source for StarterSeeds.",
+  "iconURL": "PLACEHOLDER_ICON_URL",
+  "website": "https://atkins.sh",
+  "tintColor": "#F54F32",
+  "apps": [
+    {
+      "name": "StarterSeeds",
+      "bundleIdentifier": "com.semmelstulle.StarterSeeds",
+      "marketplaceID": "6757363455",
+      "developerName": "Dennis Atkins",
+      "subtitle": "Your game launcher, always ready",
+      "localizedDescription": "StarterSeeds is not affiliated with any of the products you see in the screenshots. They simply demonstrate the function of the app.\n\nStarterSeeds just landed! Start and launch all your favourite iOS games from one place. Pin your favourites for easy access and scroll through your full library. You can also view your photo gallery in app if you want to do so with a controller. Just make sure you make it your \"default launcher\" by going to Settings > General > Game Controller > Controller Launcher.",
+      "iconURL": "PLACEHOLDER_ICON_URL",
+      "tintColor": "#F54F32",
+      "category": "games",
+      "version": "1.2",
+      "versionDate": "2026-01-20",
+      "downloadURL": "https://atkins.sh/altstore/starterseeds/1.2/manifest.json",
+      "size": 3351231,
+      "screenshotURLs": [
+        "https://atkins.sh/resources/images/StarterSeedsHome.png",
+        "https://atkins.sh/resources/images/StarterSeedsGameLib.png",
+        "https://atkins.sh/resources/images/StarterSeedsPhotoLib.png"
+      ],
+      "versions": [
+        {
+          "version": "1.2",
+          "buildVersion": "1",
+          "date": "2026-01-20",
+          "downloadURL": "https://atkins.sh/altstore/starterseeds/1.2/manifest.json",
+          "size": 3351231,
+          "localizedDescription": "PLACEHOLDER_1.2_CHANGELOG"
+        }
+      ]
+    }
+  ],
+  "news": []
+}
