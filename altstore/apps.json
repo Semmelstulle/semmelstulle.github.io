@@ -1,10 +1,10 @@
 {
-  "name": "StarterSeeds",
-  "subtitle": "The game launcher by Dennis",
-  "description": "Official AltStore source for StarterSeeds.",
+  "name": "Semmelstulle",
+  "subtitle": "Made in Germany",
+  "description": "Official AltStore source for apps published by Atkins.sh.",
   "iconURL": "https://atkins.sh/android-chrome-192x192.png",
   "website": "https://atkins.sh",
-  "tintColor": "#F54F32",
+  "tintColor": "#EFA637",
   "apps": [
     {
       "name": "StarterSeeds",
@@ -37,5 +37,16 @@
       ]
     }
   ],
-  "news": []
+  "news": [
+    {
+      "title": "StarterSeeds is now on AltStore PAL!",
+      "identifier": "starterseeds-altstore-launch-2026-03-16",
+      "caption": "Start and launch all your favourite iOS games from one place, now available in AltStore PAL.",
+      "date": "2026-03-16",
+      "tintColor": "#AF734D",
+      "appID": "com.semmelstulle.StarterSeeds",
+      "url": "https://atkins.sh",
+      "notify": false
+    }
+  ]
 }
