@@ -33,7 +33,26 @@
           "date": "2026-01-20",
           "downloadURL": "https://atkins.sh/altstore/starterseeds/1.2/manifest.json",
           "size": 3351231,
-          "localizedDescription": "PLACEHOLDER_1.2_CHANGELOG"
+          "localizedDescription": "Version 1.2 - Smarter Filters, Smoother Control
+Media Gallery
+- Filter by media type (photos, videos)
+- Filter by folders
+- Gallery remembers your last selected item
+- Set any photo as wallpaper directly from full-screen view
+Navigation & Controls
+- Key repetition: Hold D-pad or stick to continuously navigate
+- Snappier, more responsive navigation throughout
+- Improved bottom toolbar with clearer gamepad button hints
+- Video player now only pauses system audio when actually playing videos
+Interface
+- Battery indicator now visible in landscape mode
+- Refined full-screen viewing experience
+Localization
+- Added German translation
+Performance
+- Significant code restructuring for better performance
+- Reduced battery consumption
+- More reusable components for improved stability"
         }
       ]
     }
