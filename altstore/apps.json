@@ -4,6 +4,7 @@
   "description": "Official AltStore source for apps published by Atkins.sh.",
   "iconURL": "https://atkins.sh/android-chrome-192x192.png",
   "website": "https://atkins.sh",
+  "fediUsername": "semmelstulle",
   "tintColor": "#EFA637",
   "apps": [
     {
