@@ -48,14 +48,14 @@
   ],
   "news": [
     {
-      "title": "StarterSeeds 1.3 with Pro is here",
-      "identifier": "starterseeds-altstore-launch-2026-03-16",
-      "caption": "Pro is a lifetime, one time purchase. This will get you support for game library tags and other things that will come to Pro in the future. Also, Pro helps keeping the app around. The 1.3 upate also brings a lot of under the hood improvements to you, as well as a new app layout.\n\nHappy gaming!",
+      "title": "StarterSeeds 1.3 -issue with Pro",
+      "identifier": "starterseeds-pro-issue-2026-04-08",
+      "caption": "Pro is a one-time lifetime purchase that unlocks tag management. Unfortunately, shortly after publishing v1.3 to AltStore, I discovered that in-app purchases aren't functioning correctly — I'm still working out the integration with AltStore's purchase system. Also note that this is not an issue on the AltStore side.\nI apologize for the inconvenience and will push a fix as soon as it's resolved.",
       "date": "2026-04-08",
       "tintColor": "#AF734D",
       "appID": "com.semmelstulle.StarterSeeds",
       "url": "https://atkins.sh",
-      "notify": false
+      "notify": true
     },
     {
       "title": "StarterSeeds is now on AltStore PAL!",
