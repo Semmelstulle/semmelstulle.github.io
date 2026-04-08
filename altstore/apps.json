@@ -18,8 +18,8 @@
       "tintColor": "#AF734D",
       "category": "games",
       "version": "1.2",
-      "versionDate": "2026-01-20",
-      "downloadURL": "https://atkins.sh/altstore/starterseeds/1.2/manifest.json",
+      "versionDate": "2026-04-08",
+      "downloadURL": "https://atkins.sh/altstore/starterseeds/1.3/manifest.json",
       "size": 3351231,
       "screenshotURLs": [
         "https://atkins.sh/resources/images/StarterSeedsHome.png",
@@ -27,6 +27,14 @@
         "https://atkins.sh/resources/images/StarterSeedsPhotoLib.png"
       ],
       "versions": [
+        {
+          "version": "1.3",
+          "buildVersion": "6",
+          "date": "2026-04-08",
+          "downloadURL": "https://atkins.sh/altstore/starterseeds/1.2/manifest.json",
+          "size": 3351231,
+          "localizedDescription": "Version 1.3 - StarterSeeds Pro, tag management, and major gamepad improvements.\n\n- StarterSeeds Pro: unlock tags and upcoming features via in-app purchase\n- Tag Management: create, edit, and assign tags to organize your library\n- Library Search: quickly find games with the new search bar\n- Gamepad Navigation: navigable toolbar, grids, filters, and popovers with a controller\n- Photo View: filters moved to the toolbar, consistent with the library\n- Home Screen: animated shortcut icons, improved portrait layout, toolbar hints\n- Settings: added useful links and a welcome message\n- Duplicate Detection: importing a game already in your library is now flagged by App Store ID\n- Various bug fixes and stability improvements"
+        },
         {
           "version": "1.2",
           "buildVersion": "8",
@@ -39,6 +47,16 @@
     }
   ],
   "news": [
+    {
+      "title": "StarterSeeds 1.3 with Pro is here",
+      "identifier": "starterseeds-altstore-launch-2026-03-16",
+      "caption": "Pro is a lifetime, one time purchase. This will get you support for game library tags and other things that will come to Pro in the future. Also, Pro helps keeping the app around. The 1.3 upate also brings a lot of under the hood improvements to you, as well as a new app layout.\n\nHappy gaming!",
+      "date": "2026-04-08",
+      "tintColor": "#AF734D",
+      "appID": "com.semmelstulle.StarterSeeds",
+      "url": "https://atkins.sh",
+      "notify": false
+    },
     {
       "title": "StarterSeeds is now on AltStore PAL!",
       "identifier": "starterseeds-altstore-launch-2026-03-16",
