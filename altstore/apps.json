@@ -31,7 +31,7 @@
           "version": "1.3",
           "buildVersion": "6",
           "date": "2026-04-08",
-          "downloadURL": "https://atkins.sh/altstore/starterseeds/1.2/manifest.json",
+          "downloadURL": "https://atkins.sh/altstore/starterseeds/1.3/manifest.json",
           "size": 3351231,
           "localizedDescription": "Version 1.3 - StarterSeeds Pro, tag management, and major gamepad improvements.\n\n- StarterSeeds Pro: unlock tags and upcoming features via in-app purchase\n- Tag Management: create, edit, and assign tags to organize your library\n- Library Search: quickly find games with the new search bar\n- Gamepad Navigation: navigable toolbar, grids, filters, and popovers with a controller\n- Photo View: filters moved to the toolbar, consistent with the library\n- Home Screen: animated shortcut icons, improved portrait layout, toolbar hints\n- Settings: added useful links and a welcome message\n- Duplicate Detection: importing a game already in your library is now flagged by App Store ID\n- Various bug fixes and stability improvements"
         },
