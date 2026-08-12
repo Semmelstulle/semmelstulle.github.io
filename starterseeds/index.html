@@ -20,7 +20,7 @@
 	<meta property="og:description" content="Launch your favorite iOS games from one place. Organize with tags, pin favorites, and browse your photo library with a controller.">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://atkins.sh/starterseeds/">
-	<meta property="og:image" content="https://atkins.sh/resources/images/StarterSeedsIcon.png">
+	<meta property="og:image" content="https://atkins.sh/starterseeds/og-image.png">
 	<meta property="og:image:alt" content="StarterSeeds app icon">
 	<meta property="og:site_name" content="StarterSeeds">
 	<meta property="og:locale" content="en_US">
@@ -29,7 +29,7 @@
 	<meta name="twitter:card" content="summary_large_image">
 	<meta name="twitter:title" content="StarterSeeds - Your iOS Game Launcher">
 	<meta name="twitter:description" content="Launch your favorite iOS games from one place. Organize with tags, pin favorites, and browse your photo library with a controller.">
-	<meta name="twitter:image" content="https://atkins.sh/resources/images/StarterSeedsIcon.png">
+	<meta name="twitter:image" content="https://atkins.sh/starterseeds/og-image.png">
 	<meta name="twitter:image:alt" content="StarterSeeds app icon">
 	
 	<title>StarterSeeds - Your iOS Game Launcher</title>
@@ -110,8 +110,9 @@
 			border-radius: 100%;
 		}
 		.appIcon {
-			border-radius: 22%;
+			border-radius: 25%;
 			box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+			margin-top: 20px;
 		}
 		.content {
 			padding: 20px;
@@ -456,12 +457,12 @@
 		<!-- Navigation pills -->
 		<div class="scrollmenu" id="fixedHeader">
 			<a href="#Home">Home</a>
+			<a href="#Screenshots">Screenshots</a>
 			<a href="#About">About</a>
 			<a href="#Features">Features</a>
 			<a href="#Download">Download</a>
-			<a href="#Screenshots">Screenshots</a>
 			<a href="#Changelog">Changelog</a>
-			<a href="#About">Contact</a>
+			<a href="#Contact">Contact</a>
 		</div>
 		<!-- Top of the page stuff -->
 		<div class="content">
@@ -479,6 +480,28 @@
 					<picture>
 						<img src="/resources/images/heroStarterSeedsBig.png" alt="StarterSeeds app icon" class="appIcon" style="width:100%;max-width:400px;height:auto;">
 					</picture>
+				</div>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- Screenshots section -->
+	<span class="anchor" id='Screenshots'>
+		<div class="content">
+			<h1>Screenshots</h1>
+			<div class="contentGrid">
+				<div class="mediaCard">
+					<img src="/resources/images/StarterSeedsHome.png" alt="StarterSeeds main screen" class="previewCard">
+					<p>Main screen</p>
+				</div>
+				<div class="mediaCard">
+					<img src="/resources/images/StarterSeedsGameLib.png" alt="StarterSeeds game library" class="previewCard">
+					<p>Game library</p>
+				</div>
+				<div class="mediaCard">
+					<img src="/resources/images/StarterSeedsPhotoLib.png" alt="StarterSeeds photo library" class="previewCard">
+					<p>Photo library</p>
 				</div>
 			</div>
 		</div>
@@ -524,37 +547,11 @@
 	<span class="anchor" id='Download'>
 		<div class="content">
 			<h1>Download</h1>
-			<p>Get StarterSeeds from the App Store, or add the AltStore PAL source to install it there.</p>
+			<p>Get StarterSeeds from the App Store</p>
 			<div class="downloadBadge">
 				<a href="https://apps.apple.com/de/app/starterseeds/id6757363455">
 					<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1737331200" alt="Download StarterSeeds on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
 				</a>
-			</div>
-			<p>
-				AltStore PAL source URL:<br>
-				<code style="background: rgba(128,128,128,0.2); padding: 4px 8px; border-radius: 6px; word-break: break-all;">https://atkins.sh/altstore/apps.json</code>
-			</p>
-		</div>
-		<div class="sectionDivider"></div>
-	</span>
-	
-	<!-- Screenshots section -->
-	<span class="anchor" id='Screenshots'>
-		<div class="content">
-			<h1>Screenshots</h1>
-			<div class="contentGrid">
-				<div class="mediaCard">
-					<img src="/resources/images/StarterSeedsHome.png" alt="StarterSeeds main screen" class="previewCard">
-					<p>Main screen</p>
-				</div>
-				<div class="mediaCard">
-					<img src="/resources/images/StarterSeedsGameLib.png" alt="StarterSeeds game library" class="previewCard">
-					<p>Game library</p>
-				</div>
-				<div class="mediaCard">
-					<img src="/resources/images/StarterSeedsPhotoLib.png" alt="StarterSeeds photo library" class="previewCard">
-					<p>Photo library</p>
-				</div>
 			</div>
 		</div>
 		<div class="sectionDivider"></div>
@@ -566,8 +563,99 @@
 			<h1>Changelog</h1>
 			
 			<div class="versionCard">
-				<h3>Version 1.3 <span style="font-weight: normal; opacity: 0.7;">— April 8, 2026</span></h3>
-				<p>StarterSeeds Pro, tag management, and major gamepad improvements.</p>
+				<h3>Version 2.1 <span style="font-weight: normal; opacity: 0.7;">- Feeling toasty</span></h3>
+				<p><em>August 7, 2026</em></p>
+				<ul>
+					<li>New search option when adding games to have everything pre-filled</li>
+					<li>Import and search now use a new lookup table</li>
+					<li>The lookup table contains known URI schemes and details for some delisted games</li>
+					<li>Import and add some known delisted games as if they were still available</li>
+					<li>Add a new game directly from the library instead of just settings</li>
+					<li>New toast notifications for controller connect/disconnect and library refresh</li>
+					<li>First-run game icons now load correctly on the very first launch</li>
+					<li>Added iOS 17 support</li>
+					<li>Rewritten layout logic</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 2.0.2 <span style="font-weight: normal; opacity: 0.7;">- more tiny steps</span></h3>
+				<p><em>July 24, 2026</em></p>
+				<ul>
+					<li>Games can now be edited from within the library again</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 2.0.1 <span style="font-weight: normal; opacity: 0.7;">- tiny steps</span></h3>
+				<p><em>July 12, 2026</em></p>
+				<ul>
+					<li>Fixed external links in settings</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 2.0 <span style="font-weight: normal; opacity: 0.7;">- More buttons, more beats, more style</span></h3>
+				<p><em>July 10, 2026</em></p>
+				<ul>
+					<li>Gamepad handling is now view-based, so navigation feels much more reliable</li>
+					<li>Gamepad layout selection now works every time</li>
+					<li>Added a random game option when you just cannot decide</li>
+					<li>Focus visuals got a big glow up</li>
+					<li>Game tiles now use a percentage-based corner radius, so they look right on every screen</li>
+					<li>Tiles got a subtle outline to make them pop</li>
+					<li>New focus ring fallback for older systems</li>
+					<li>The empty small glass bubble from the toolbar is gone</li>
+					<li>Added background music to set the mood</li>
+					<li>Added UI sounds for extra tactile feedback</li>
+					<li>Added a toggle to cut ASO strings from game names on import</li>
+					<li>Added a toggle to auto-refresh metadata</li>
+					<li>Set and delete photo actions are now reachable in settings</li>
+					<li>New shortcut: set wallpaper</li>
+					<li>New shortcut: launch StarterSeeds into a specific view</li>
+					<li>Fixed crashes when opening sheets in Catalyst</li>
+					<li>Photo picker is now a custom image picker</li>
+					<li>Global menu actions added for iPad and Catalyst</li>
+					<li>Carousel text stays readable in landscape, even without glass background</li>
+					<li>Added in-app legal texts</li>
+					<li>Plus a mountain of general UI bug fixes and refactors</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 1.3.3 <span style="font-weight: normal; opacity: 0.7;">- Bugfixes</span></h3>
+				<p><em>May 22, 2026</em></p>
+				<ul>
+					<li>Fixed scrolling performance issues in game and photo libraries</li>
+					<li>Fixed gamepad navigation when previewing images, using the tag manager, or creating games from settings</li>
+					<li>Optimized data fetching to load once instead of separately for each game in the grid</li>
+					<li>Improved wallpaper rendering to reduce RAM usage through proper compression</li>
+					<li>Disabled certain animations when reduce motion mode is enabled</li>
+					<li>Video wallpapers now capped at 30fps in power saving mode</li>
+					<li>Improved accessibility support for high contrast, differentiate without colors, custom text scaling, and reduce motion</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 1.3.2</h3>
+				<p><em>April 23, 2026</em></p>
+				<ul>
+					<li>Fixed a race condition that made the gamepad navigation focus the home screen instead of the screen you were actually shown</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 1.3.1</h3>
+				<p><em>April 15, 2026</em></p>
+				<ul>
+					<li>Badges: you can add a badge to your Shortcuts to help differentiate them from your games</li>
+					<li>Performance: more efficient loading of your game library</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 1.3 <span style="font-weight: normal; opacity: 0.7;">- Pro, tags, and gamepad improvements</span></h3>
+				<p><em>April 2, 2026</em></p>
 				<ul>
 					<li>StarterSeeds Pro: unlock tags and upcoming features via in-app purchase</li>
 					<li>Tag Management: create, edit, and assign tags to organize your library</li>
@@ -582,8 +670,8 @@
 			</div>
 			
 			<div class="versionCard">
-				<h3>Version 1.2 <span style="font-weight: normal; opacity: 0.7;">— January 20, 2026</span></h3>
-				<p>Smarter filters, smoother control, and German localization.</p>
+				<h3>Version 1.2 <span style="font-weight: normal; opacity: 0.7;">- Smarter filters, smoother control</span></h3>
+				<p><em>February 26, 2026</em></p>
 				<ul>
 					<li>Media Gallery: filter by media type and folders; remembers last selected item</li>
 					<li>Set any photo as wallpaper directly from full-screen view</li>
