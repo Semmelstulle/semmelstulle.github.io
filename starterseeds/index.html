@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<!-- Meta parts -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="theme-color" content="#AF734D">
+	<meta name="color-scheme" content="dark light">
+	<meta name="author" content="Dennis Tobias Atkins">
+	<meta name="description" content="StarterSeeds - Your iOS game launcher, always ready. Launch your favorite iOS games from one place, organize your library with tags, and browse your photos with a controller.">
+	
+	<!-- Canonical -->
+	<link rel="canonical" href="https://atkins.sh/starterseeds/">
+	
+	<!-- Multi language -->
+	<link rel="canonical" href="https://atkins.sh/starterseeds/" hreflang="en-US">
+	
+	<!-- Open Graph -->
+	<meta property="og:title" content="StarterSeeds - Your iOS Game Launcher">
+	<meta property="og:description" content="Launch your favorite iOS games from one place. Organize with tags, pin favorites, and browse your photo library with a controller.">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://atkins.sh/starterseeds/">
+	<meta property="og:image" content="https://atkins.sh/resources/images/StarterSeedsIcon.png">
+	<meta property="og:image:alt" content="StarterSeeds app icon">
+	<meta property="og:site_name" content="StarterSeeds">
+	<meta property="og:locale" content="en_US">
+	
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="StarterSeeds - Your iOS Game Launcher">
+	<meta name="twitter:description" content="Launch your favorite iOS games from one place. Organize with tags, pin favorites, and browse your photo library with a controller.">
+	<meta name="twitter:image" content="https://atkins.sh/resources/images/StarterSeedsIcon.png">
+	<meta name="twitter:image:alt" content="StarterSeeds app icon">
+	
+	<title>StarterSeeds - Your iOS Game Launcher</title>
+	
+	<!-- Structured data -->
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "SoftwareApplication",
+		"name": "StarterSeeds",
+		"description": "Launch your favorite iOS games from one place. Organize with tags, pin favorites, and browse your photo library with a controller.",
+		"url": "https://atkins.sh/starterseeds/",
+		"applicationCategory": "GameApplication",
+		"operatingSystem": "iOS",
+		"offers": {
+			"@type": "Offer",
+			"price": "0",
+			"priceCurrency": "USD"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "Dennis Tobias Atkins",
+			"url": "https://atkins.sh"
+		}
+	}
+	</script>
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="/favicon.ico?v=5" sizes="any">
+	<link rel="icon" href="/mask-icon.svg?v=1" type="image/svg+xml">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=4">
+	<link rel="mask-icon" href="/mask-icon.svg?v=2">
+	<link rel="manifest" href="/site.webmanifest?v=4">
+	
+	<meta name="apple-mobile-web-app-title" content="StarterSeeds">
+	<meta name="application-name" content="StarterSeeds">
+	<meta name="msapplication-TileColor" content="#AF734D">
+	
+	<!-- Mastodon verification -->
+	<link rel="me" href="https://mastodon.social/@Semmelstulle">
+	
+	<!-- Embedded style -->
+	<style>
+		/* Add smooth scroll to site */
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			margin: 0px;
+			font-family: ui-rounded, ui-sans, system-ui, Arial;
+			background: #222222;
+			color: #e6e6e6;
+		}
+		.spacer {
+			flex-grow: 1;
+		}
+		/* Set an offset for the anchor links */
+		.anchor:before {
+			display: block;
+			content: "";
+			padding-top: 48px;
+			margin-top: -48px;
+			visibility: hidden;
+		}
+		.header {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 5px 10px 0px 10px;
+			padding: 5px
+			calc(10px + env(safe-area-inset-right))
+			0px
+			calc(10px + env(safe-area-inset-left));
+			background: #404040;
+			color: #f1f1f1;
+		}
+		.profileMask {
+			border-radius: 100%;
+		}
+		.appIcon {
+			border-radius: 22%;
+			box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+		}
+		.content {
+			padding: 20px;
+			margin-top: -20px;
+		}
+		.sticky {
+			position: fixed;
+			top: 0;
+			width: 100%;
+		}
+		.sticky + .content {
+			padding-top: 70px;
+		}
+		.scrollmenu {
+			overflow: auto;
+			white-space: nowrap;
+			padding: 4px;
+			padding: 4px
+			calc(4px + env(safe-area-inset-right))
+			4px
+			calc(4px + env(safe-area-inset-left));
+			background: #404040;
+			color: #f1f1f1;
+		}
+		.scrollmenu a {
+			display: inline-block;
+			color: #f1f1f1;
+			background: #666666;
+			text-align: center;
+			text-decoration: none;
+			border-radius: 20px;
+			padding: 8px 12px;
+			margin: 4px 2px;
+			position: relative;
+			overflow: hidden;
+		}
+		#Home h3 {
+			font-size: 40px;
+			font-weight: bold;
+			background: linear-gradient(to bottom right, #AF734D, #EFA637);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			margin-top: 20px;
+		}
+		.bigImage {
+			display: flex;
+			justify-content: right;
+			animation-name: appear-on-page;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-out;
+		}
+		.bigImage picture {
+			max-width: 500px;
+		}
+		.content {
+			padding: 20px;
+			padding: 20px
+			calc(20px + env(safe-area-inset-right))
+			20px
+			calc(20px + env(safe-area-inset-left));
+		}
+		.sectionDivider {
+			margin-left: auto;
+			margin-right: auto;
+			width: 90vw;
+			height: 1px;
+			background: #404040;
+		}
+		.mediaCard {
+			padding: 10px;
+			width: auto;
+			max-width: 400px;
+			background: #373632;
+			border-radius: 28px;
+		}
+		.mediaCard img {
+			width: 100%;
+			max-width: 400px;
+		}
+		.previewCard {
+			border-radius: 20px;
+		}
+		.actionCard {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: 10px 8px 2px 2px;
+		}
+		.actionCard img {
+			margin-right:10px;
+		}
+		.footer {
+			text-align: center;
+			background: #000000;
+			color: #f1f1f1;
+			padding: 10px 5px 20px 5px;
+			padding-bottom: calc(20px + env(safe-area-inset-bottom));
+		}
+		.footer a {
+			text-decoration: none;
+			color: #f1f1f1;
+		}
+		.credits {
+			padding: 10px;
+		}
+		.veryBottom {
+			padding: 10px;
+		}
+		.downloadBadge {
+			display: inline-block;
+			margin: 10px 0;
+		}
+		.downloadBadge img {
+			border-radius: 13px;
+		}
+		.versionCard {
+			background: #373632;
+			border-radius: 20px;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+		.versionCard h3 {
+			margin-top: 0;
+			color: #f1f1f1;
+		}
+		.versionCard ul {
+			margin: 10px 0 0 20px;
+			padding: 0;
+		}
+		.versionCard li {
+			margin-bottom: 8px;
+		}
+		.featureList li {
+			margin-bottom: 10px;
+		}
+		/* This part changes the appearance accordingly */
+		@media (prefers-color-scheme: dark) {
+			body {
+				background: #222222;
+				color: #e6e6e6;
+			}
+			.header {
+				background: #404040;
+				color: #f1f1f1;
+			}
+			.scrollmenu {
+				background: #404040;
+				color: #f1f1f1;
+			}
+			.scrollmenu a {
+				color: #f1f1f1;
+				background: #666666;
+			}
+			.scrollmenu a .circle {
+				position: absolute;
+				background :#AF734D50;
+				border-radius: 50%;
+				transform: scale(0);
+				transition: transform 0.4s ease-in-out;
+				pointer-events: none;
+			}
+			.scrollmenu a.clicked .circle {
+				transform: scale(2);
+			}
+			#Home h3 {
+				background: linear-gradient(to bottom right, #d49a73, #EFA637);
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			.sectionDivider {
+				background: #404040;
+			}
+			.mediaCard {
+				background: #404040;
+				color: #f1f1f1;
+			}
+			.versionCard {
+				background: #404040;
+				color: #f1f1f1;
+			}
+			.footer {
+				background: #000000;
+				color: #f1f1f1;
+			}
+			.footer a {
+				color: #f1f1f1;
+			}
+		}
+		@media (prefers-color-scheme: light) {
+			body {
+				background: #e6e6e6;
+				color: #222222;
+			}
+			.header {
+				background: #f1f1f1;
+				color: #404040;
+			}
+			.scrollmenu {
+				background: #f1f1f1;
+				color: #404040;
+			}
+			.scrollmenu a {
+				color: #404040;
+				background: #e6e6e6;
+			}
+			.scrollmenu a .circle {
+				position: absolute;
+				background :#AF734D50;
+				border-radius: 50%;
+				transform: scale(0);
+				transition: transform 0.4s ease-in-out;
+				pointer-events: none;
+			}
+			.scrollmenu a.clicked .circle {
+				transform: scale(2);
+			}
+			#Home h3 {
+				background: linear-gradient(to bottom right, #8B5A2B, #AF734D);
+				background-clip: text;
+				-webkit-background-clip: text;
+			}
+			.sectionDivider {
+				background: #f1f1f1;
+			}
+			.mediaCard {
+				background: #f1f1f1;
+				color: #404040;
+			}
+			.versionCard {
+				background: #f1f1f1;
+				color: #404040;
+			}
+			.footer {
+				background: #f1f1f1;
+				color: #000000;
+			}
+			.footer a {
+				color: #000000;
+			}
+		}
+		@media screen and (max-width: 469px){
+			.contentGrid{
+				display: grid;
+				grid-template-columns: repeat(1, 1fr); /* Adjust grid columns as needed */
+				gap: 20px; /* Add gap between grid items */
+			}
+			.articleGrid{
+				display: block;
+			}
+			.bigImage {
+				justify-content: center;
+			}
+		}
+		@media screen and (min-width: 470px){
+			.content {
+				padding: 20px 60px 20px 60px;
+				padding: 20px
+				calc(60px + env(safe-area-inset-right))
+				20px
+				calc(60px + env(safe-area-inset-left));
+			}
+			.contentGrid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr); /* Adjust grid columns as needed */
+				gap: 20px; /* Add gap between grid items */
+			}
+		}
+		@media screen and (min-width: 800px){
+			.content {
+				max-width: 800px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			.contentGrid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr); /* Adjust grid columns as needed */
+				gap: 20px; /* Add gap between grid items */
+			}
+			.articleGrid {
+				display: flex;
+			}
+			.articleGrid ul {
+				display: flex;
+				flex-direction: column;
+				margin-left: 10px;
+			}
+		}
+		@keyframes appear-on-page {
+			from {
+				transform: translateY(150px);
+				opacity: 0;
+			}
+			to {
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+		/* Modal styles */
+		.modal {
+			display: none;
+			position: fixed;
+			z-index: 1000;
+			left: 0;
+			top: 0;
+			width: 100vw;
+			height: 100vh;
+			overflow: auto;
+			background-color: rgba(0,0,0,0.6);
+		}
+		.modal-content {
+			background-color: #222;
+			/* margin: 10vh auto; */
+			margin: 0 auto 5vh auto;
+			padding: 20px;
+			border-radius: 16px;
+			max-width: 400px;
+			color: #f1f1f1;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+		@media (prefers-color-scheme: light) {
+			.modal-content {
+				background: #fff;
+				color: #222;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<span class="anchor" id='Home'>
+		<div class="header">
+			<h1>StarterSeeds</h1>
+			<div class="spacer"></div>
+			<a href="https://github.com/SemmelStulle">
+				<img src="https://avatars.githubusercontent.com/u/74740271" alt="profile picture from GitHub" width="50" height="50" class="profileMask">
+			</a>
+		</div>
+		<!-- Navigation pills -->
+		<div class="scrollmenu" id="fixedHeader">
+			<a href="#Home">Home</a>
+			<a href="#About">About</a>
+			<a href="#Features">Features</a>
+			<a href="#Download">Download</a>
+			<a href="#Screenshots">Screenshots</a>
+			<a href="#Changelog">Changelog</a>
+			<a href="#About">Contact</a>
+		</div>
+		<!-- Top of the page stuff -->
+		<div class="content">
+			<div class="articleGrid">
+				<div>
+					<h3 class="bigText">Your game launcher,<br>always ready.</h3>
+					<p>Start and launch all your favourite iOS games from one place. Pin your favourites for easy access and scroll through your full library.</p>
+					<div class="downloadBadge">
+						<a href="https://apps.apple.com/de/app/starterseeds/id6757363455">
+							<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1737331200" alt="Download StarterSeeds on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
+						</a>
+					</div>
+				</div>
+				<div class="bigImage">
+					<picture>
+						<img src="/resources/images/heroStarterSeedsBig.png" alt="StarterSeeds app icon" class="appIcon" style="width:100%;max-width:400px;height:auto;">
+					</picture>
+				</div>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- About section -->
+	<span class="anchor" id='About'>
+		<div class="content">
+			<h1>About</h1>
+			<p>
+				StarterSeeds is an iOS game launcher designed for people who want quick access to their mobile games. Pin your favourites to the home screen, browse your complete game library, and even view your photo gallery with a controller.
+			</p>
+			<p>
+				The app is built with privacy in mind: no analytics SDKs, no trackers, no third-party services. All your data stays on your device.
+			</p>
+			<p>
+				To use StarterSeeds as your default launcher with a controller, go to <strong>Settings &gt; General &gt; Game Controller &gt; Controller Launcher</strong>.
+			</p>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- Features section -->
+	<span class="anchor" id='Features'>
+		<div class="content">
+			<h1>Features</h1>
+			<ul class="featureList">
+				<li><strong>Game Launcher:</strong> Start all your iOS games from a single app.</li>
+				<li><strong>Favorites:</strong> Pin the games you play most to the home screen.</li>
+				<li><strong>Full Library:</strong> Scroll through every game installed on your device.</li>
+				<li><strong>Tag Management (Pro):</strong> Create and assign tags to organize your library.</li>
+				<li><strong>Library Search:</strong> Quickly find the game you are looking for.</li>
+				<li><strong>Gamepad Navigation:</strong> Navigate the toolbar, grids, filters, and popovers with a controller.</li>
+				<li><strong>Photo Gallery:</strong> Browse your photos in the app, optimized for controller use.</li>
+				<li><strong>Privacy First:</strong> No data collection, no third-party trackers.</li>
+			</ul>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- Download section -->
+	<span class="anchor" id='Download'>
+		<div class="content">
+			<h1>Download</h1>
+			<p>Get StarterSeeds from the App Store, or add the AltStore PAL source to install it there.</p>
+			<div class="downloadBadge">
+				<a href="https://apps.apple.com/de/app/starterseeds/id6757363455">
+					<img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1737331200" alt="Download StarterSeeds on the App Store" style="border-radius: 13px; width: 250px; height: 83px;">
+				</a>
+			</div>
+			<p>
+				AltStore PAL source URL:<br>
+				<code style="background: rgba(128,128,128,0.2); padding: 4px 8px; border-radius: 6px; word-break: break-all;">https://atkins.sh/altstore/apps.json</code>
+			</p>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- Screenshots section -->
+	<span class="anchor" id='Screenshots'>
+		<div class="content">
+			<h1>Screenshots</h1>
+			<div class="contentGrid">
+				<div class="mediaCard">
+					<img src="/resources/images/StarterSeedsHome.png" alt="StarterSeeds main screen" class="previewCard">
+					<p>Main screen</p>
+				</div>
+				<div class="mediaCard">
+					<img src="/resources/images/StarterSeedsGameLib.png" alt="StarterSeeds game library" class="previewCard">
+					<p>Game library</p>
+				</div>
+				<div class="mediaCard">
+					<img src="/resources/images/StarterSeedsPhotoLib.png" alt="StarterSeeds photo library" class="previewCard">
+					<p>Photo library</p>
+				</div>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- Changelog section -->
+	<span class="anchor" id='Changelog'>
+		<div class="content">
+			<h1>Changelog</h1>
+			
+			<div class="versionCard">
+				<h3>Version 1.3 <span style="font-weight: normal; opacity: 0.7;">— April 8, 2026</span></h3>
+				<p>StarterSeeds Pro, tag management, and major gamepad improvements.</p>
+				<ul>
+					<li>StarterSeeds Pro: unlock tags and upcoming features via in-app purchase</li>
+					<li>Tag Management: create, edit, and assign tags to organize your library</li>
+					<li>Library Search: quickly find games with the new search bar</li>
+					<li>Gamepad Navigation: navigable toolbar, grids, filters, and popovers with a controller</li>
+					<li>Photo View: filters moved to the toolbar, consistent with the library</li>
+					<li>Home Screen: animated shortcut icons, improved portrait layout, toolbar hints</li>
+					<li>Settings: added useful links and a welcome message</li>
+					<li>Duplicate Detection: importing a game already in your library is now flagged by App Store ID</li>
+					<li>Various bug fixes and stability improvements</li>
+				</ul>
+			</div>
+			
+			<div class="versionCard">
+				<h3>Version 1.2 <span style="font-weight: normal; opacity: 0.7;">— January 20, 2026</span></h3>
+				<p>Smarter filters, smoother control, and German localization.</p>
+				<ul>
+					<li>Media Gallery: filter by media type and folders; remembers last selected item</li>
+					<li>Set any photo as wallpaper directly from full-screen view</li>
+					<li>Key repetition: hold D-pad or stick to continuously navigate</li>
+					<li>Snappier, more responsive navigation throughout</li>
+					<li>Improved bottom toolbar with clearer gamepad button hints</li>
+					<li>Video player only pauses system audio when actually playing videos</li>
+					<li>Battery indicator now visible in landscape mode</li>
+					<li>Refined full-screen viewing experience</li>
+					<li>Added German translation</li>
+					<li>Significant code restructuring for better performance and stability</li>
+					<li>Reduced battery consumption</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sectionDivider"></div>
+	</span>
+	
+	<!-- Link to the footer -->
+	<span class="anchor" id="Contact">
+		<div class="footer">
+			<div class="credits">
+				<a href="https://github.com/Semmelstulle/semmelstulle.github.io/blob/main/LICENSE">
+					This website is using the MIT license.
+				</a>
+				<a href="https://github.com/">
+					Powered and hosted by GitHub.
+				</a>
+				<a href="/">Back to Semmelstulle</a>
+			</div>
+			<!-- Privacy Policy, Legal Notice and Contact links -->
+			<div style="padding:10px; font-size:0.95em;">
+				<a href="/privacy/">Privacy Policy</a> |
+				<a href="/starterseeds/legal/privacy-policy.md">Privacy Policy (Markdown)</a> |
+				<a href="#" id="impressumLink">Impressum/Legal</a> |
+				<a href="#" id="kontaktLink">Contact</a>
+			</div>
+			<a class="veryBottom" href="#Home">Back to the top</a>
+		</div>
+	</span>
+	
+	<!-- Impressum Modal -->
+	<div id="impressumModal" class="modal">
+		<div class="modal-content">
+			<span class="modal-close" id="closeImpressum">&times;</span>
+			<strong>Impressum/Legal</strong><br>
+			Dennis Tobias Atkins<br>
+            Softwareentwickler für atkins.sh<br>
+			Hohenstädter Straße 32<br>
+			91230 Happurg, Germany<br>
+			E-Mail: d.atkins &lt;at&gt; bytebench.tech<br>
+			Phone: +49 157 73816417
+		</div>
+	</div>
+	<!-- Kontakt Modal -->
+	<div id="kontaktModal" class="modal">
+		<div class="modal-content">
+			<span class="modal-close" id="closeKontakt">&times;</span>
+			<strong>Kontaktformular</strong>
+			<form action="https://formsubmit.co/a023c6e9d6666934f12ddbe5d4d91158" method="POST" style="display:flex;flex-direction:column;gap:10px;">
+				<label style="text-align:left;">E-Mail address:<br>
+					<input type="email" name="email" required style="width:100%;padding:6px;border-radius:6px;border:1px solid #ccc;">
+				</label>
+				<label style="text-align:left;">Your message:<br>
+					<textarea name="message" required rows="4" style="width:100%;padding:6px;border-radius:6px;border:1px solid #ccc;"></textarea>
+				</label>
+				<button type="submit" style="border-radius:8px;padding:8px 16px;background:#8538f7;color:#fff;border:none;font-weight:bold;cursor:pointer;">Absenden</button>
+				<input type="hidden" name="_next" value="https://bytebench.tech/thx">
+				<input type="hidden" name="_autoresponse" value="Hallo, danke, dass du uns kontaktiert hast!\nWir haben deine Nachricht erhalten und ein ByteBench Teammitglied wird sich zeitnah um dein Anliegen bemühen!\nUnten in dieser Mail findest du als Bestätigung noch eine Zusammenfassung deiner Einsendung.\nBis Bald!\nDein ByteBench-Team!">
+			</form>
+		</div>
+	</div>
+	
+	<script>
+		window.onscroll = function() {keepChipsOnTop()};
+		
+		var header = document.getElementById("fixedHeader");
+		var sticky = header.offsetTop;
+		
+		function keepChipsOnTop() {
+			if (window.pageYOffset >= sticky) {
+				header.classList.add("sticky");
+			} else {
+				header.classList.remove("sticky");
+			}
+		}
+		
+		document.querySelectorAll('.scrollmenu a').forEach(link => {
+			let touchStartY;
+			let touchEndY;
+			const touchThreshold = 1; // Adjust this value to fine-tune sensitivity
+			
+			function handleTouchStart(e) {
+				touchStartY = e.touches[0].clientY;
+			}
+			
+			function handleTouchEnd(e) {
+				touchEndY = e.changedTouches[0].clientY;
+				const touchDiff = Math.abs(touchStartY - touchEndY);
+				
+				if (touchDiff < touchThreshold) {
+					// This is considered a tap, not a scroll
+					handleInteraction(e);
+				}
+			}
+			
+			function handleInteraction(e) {
+				e.preventDefault();
+				
+				// Remove existing circles
+				link.querySelectorAll('.circle').forEach(circle => circle.remove());
+				
+				// Create new circle
+				const circle = document.createElement('span');
+				circle.classList.add('circle');
+				
+				// Set circle position
+				const rect = link.getBoundingClientRect();
+				const size = Math.max(rect.width, rect.height);
+				circle.style.width = circle.style.height = `${size}px`;
+				
+				// Get the correct coordinates for both mouse and touch events
+				const x = e.type.includes('touch') ? e.changedTouches[0].clientX : e.clientX;
+				const y = e.type.includes('touch') ? e.changedTouches[0].clientY : e.clientY;
+				
+				circle.style.left = `${x - rect.left - size/2}px`;
+				circle.style.top = `${y - rect.top - size/2}px`;
+				
+				// Add circle to link
+				link.appendChild(circle);
+				
+				// Trigger animation
+				setTimeout(() => {
+					link.classList.add('clicked');
+				}, 50);
+				
+				// Remove animation class after transition
+				setTimeout(() => {
+					link.classList.remove('clicked');
+					circle.remove();
+				}, 500);
+				
+				// Delay the navigation to allow the animation to play
+				setTimeout(() => {
+					window.location.href = link.href;
+				}, 0);
+			}
+			
+			// Add event listeners for mouse events
+			link.addEventListener('click', handleInteraction);
+			
+			// Add event listeners for touch events
+			link.addEventListener('touchstart', handleTouchStart);
+			link.addEventListener('touchend', handleTouchEnd);
+		});
+		
+		// Modal pop-up logic
+		function showModal(id) {
+			document.getElementById(id).style.display = 'block';
+		}
+		function closeModal(id) {
+			document.getElementById(id).style.display = 'none';
+		}
+		document.getElementById('impressumLink').onclick = function(e) {
+			e.preventDefault();
+			showModal('impressumModal');
+		};
+		document.getElementById('closeImpressum').onclick = function() {
+			closeModal('impressumModal');
+		};
+		document.getElementById('kontaktLink').onclick = function(e) {
+			e.preventDefault();
+			showModal('kontaktModal');
+		};
+		document.getElementById('closeKontakt').onclick = function() {
+			closeModal('kontaktModal');
+		};
+		window.onclick = function(event) {
+			if (event.target.classList.contains('modal')) {
+				closeModal('impressumModal');
+				closeModal('kontaktModal');
+			}
+		};
+	</script>
+</body>
+</html>
