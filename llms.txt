@@ -1,0 +1,51 @@
+# Semmelstulle / atkins.sh
+
+## About
+Personal homepage and project portfolio of Dennis Tobias Atkins, a software developer based in Germany. The site showcases creations, including personal iOS apps, Minecraft resources, Widgy widgets, and the website itself.
+
+- Domain: https://semmelstulle.github.io
+- Also served via: https://atkins.sh
+- GitHub: https://github.com/Semmelstulle / https://github.com/SemmelStulle
+- Mastodon: https://mastodon.social/@Semmelstulle
+
+## Projects
+
+### StarterSeeds
+An iOS game launcher that lets you start your favorite iOS games from one place, pin favorites, and browse your full library. Includes a photo gallery view usable with a game controller.
+- App Store: https://apps.apple.com/de/app/starterseeds/id6757363455
+- AltStore PAL source: https://atkins.sh/altstore/apps.json
+- Latest version: 1.3 (2026-04-08)
+- Bundle ID: com.semmelstulle.StarterSeeds
+- Privacy: No personal data is collected.
+
+### Peawell
+An iOS journaling and medication-tracking app. It was built for App Store submission but was not published due to prolonged App Review communication issues. Source and screenshots are available on GitHub.
+- Repository: https://github.com/Semmelstulle/Peawell-iOS
+
+### SemmelTweaks
+A Minecraft resource pack (.mcpack) with quality-of-life texture tweaks, including custom sun/moon, no pumpkin overlay, clear glass, effect-labeled potions/arrows, and more.
+- Download: https://semmelstulle.github.io/resources/files/SemmelTweaks.mcpack
+
+### Widgy Widgets
+A collection of iOS home-screen widgets for the Widgy app, including weather widgets, Xbox profile cards, calendar widgets, Reddit feeds, and dynamic widgets in English and German.
+- Download: https://semmelstulle.github.io/resources/files/
+
+### This Website
+A hand-built, single-page personal site designed to work on legacy devices (including EdgeHTML / Windows Phone) while still looking modern. It uses embedded CSS and JavaScript, supports dark/light mode, and all graphics are original.
+- Source: https://github.com/Semmelstulle/semmelstulle.github.io
+- License: MIT
+
+## Key URLs
+- Home: https://semmelstulle.github.io/
+- Privacy Policy (StarterSeeds): https://semmelstulle.github.io/privacy/
+- Privacy Policy (Markdown): https://semmelstulle.github.io/starterseeds/legal/privacy-policy.md
+- AltStore source: https://semmelstulle.github.io/altstore/apps.json
+- Downloads: https://semmelstulle.github.io/resources/files/
+
+## Contact
+- Name: Dennis Tobias Atkins
+- Email: d.atkins@bytebench.tech
+- Location: Hohenstädter Straße 32, 91230 Happurg, Germany
+
+## Privacy
+StarterSeeds and this website do not collect, store, transmit, or process any personal information. The site is hosted on GitHub Pages; GitHub may collect technical data such as IP addresses in server logs. See GitHub’s privacy statement for details.
