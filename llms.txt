@@ -44,7 +44,7 @@ A hand-built, single-page personal site designed to work on legacy devices (incl
 
 ## Contact
 - Name: Dennis Tobias Atkins
-- Email: d.atkins@bytebench.tech
+- Email: contact@atkins.sh
 - Location: Hohenstädter Straße 32, 91230 Happurg, Germany
 
 ## Privacy
