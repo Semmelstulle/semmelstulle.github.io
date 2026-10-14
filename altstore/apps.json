@@ -17,9 +17,9 @@
       "iconURL": "https://atkins.sh/resources/images/StarterSeedsIcon.png",
       "tintColor": "#AF734D",
       "category": "games",
-      "version": "2.3",
-      "versionDate": "2026-10-11",
-      "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3/manifest.json",
+      "version": "2.3.1",
+      "versionDate": "2026-10-14",
+      "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.1/manifest.json",
       "size": 10560830,
       "screenshotURLs": [
         "https://atkins.sh/resources/images/StarterSeedsHome.png",
@@ -27,6 +27,14 @@
         "https://atkins.sh/resources/images/StarterSeedsPhotoLib.png"
       ],
       "versions": [
+        {
+          "version": "2.3.1",
+          "buildVersion": "1",
+          "date": "2026-10-14",
+          "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.1/manifest.json",
+          "size": 10560830,
+          "localizedDescription": "2.3.1 - Debugged\n\nChanges\n- App is not called "StarterSeeds Debug" anymore due to quirks in the project configuration\n- Added more external project links, Discord is back"
+        },
         {
           "version": "2.3",
           "buildVersion": "1",
