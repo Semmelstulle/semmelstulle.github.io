@@ -33,7 +33,7 @@
           "date": "2026-10-14",
           "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.1/manifest.json",
           "size": 10560830,
-          "localizedDescription": "2.3.1 - Debugged\n\nChanges\n- App is not called "StarterSeeds Debug" anymore due to quirks in the project configuration\n- Added more external project links, Discord is back"
+          "localizedDescription": "2.3.1 - Debugged\n\nChanges\n- App is not called \"StarterSeeds Debug\" anymore due to quirks in the project configuration\n- Added more external project links, Discord is back"
         },
         {
           "version": "2.3",
