@@ -29,7 +29,7 @@
       "versions": [
         {
           "version": "2.3.1",
-          "buildVersion": "1",
+          "buildVersion": "2",
           "date": "2026-10-14",
           "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.1/manifest.json",
           "size": 10560830,
