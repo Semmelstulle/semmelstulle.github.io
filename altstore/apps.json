@@ -31,7 +31,7 @@
             "version": "2.3.2",
             "buildVersion": "2",
             "date": "2026-10-16",
-            "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.1/manifest.json",
+            "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.2/manifest.json",
             "size": 10560830,
             "localizedDescription": "2.3.2 - Crashlanding\n\n- Corrupted databases will be reset now instead of keep crashing the app on launch\n- Update sheet only shown for major.minor releases, not every hotfix\n- Update sheet shows proper icons for 2.3 releases\n- Background audio import is working again"
           },
