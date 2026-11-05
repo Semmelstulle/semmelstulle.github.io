@@ -17,9 +17,9 @@
       "iconURL": "https://atkins.sh/resources/images/StarterSeedsIcon.png",
       "tintColor": "#AF734D",
       "category": "games",
-      "version": "2.3.2",
-      "versionDate": "2026-10-16",
-      "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.2/manifest.json",
+      "version": "2.3.3",
+      "versionDate": "2026-11-05",
+      "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.3/manifest.json",
       "size": 10560830,
       "screenshotURLs": [
         "https://atkins.sh/resources/images/StarterSeedsHome.png",
@@ -27,14 +27,22 @@
         "https://atkins.sh/resources/images/StarterSeedsPhotoLib.png"
       ],
       "versions": [
-          {
-            "version": "2.3.2",
-            "buildVersion": "2",
-            "date": "2026-10-16",
-            "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.2/manifest.json",
-            "size": 10560830,
-            "localizedDescription": "2.3.2 - Crashlanding\n\n- Corrupted databases will be reset now instead of keep crashing the app on launch\n- Update sheet only shown for major.minor releases, not every hotfix\n- Update sheet shows proper icons for 2.3 releases\n- Background audio import is working again"
-          },
+        {
+          "version": "2.3.3",
+          "buildVersion": "1",
+          "date": "2026-11-05",
+          "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.3/manifest.json",
+          "size": 11929048,
+          "localizedDescription": "2.3.3 - The Duo update\n\nCompiled v2.3.2 with the latest SDK to properly support iPhone Duo"
+        },
+        {
+          "version": "2.3.2",
+          "buildVersion": "2",
+          "date": "2026-10-16",
+          "downloadURL": "https://atkins.sh/altstore/starterseeds/2.3.2/manifest.json",
+          "size": 10560830,
+          "localizedDescription": "2.3.2 - Crashlanding\n\n- Corrupted databases will be reset now instead of keep crashing the app on launch\n- Update sheet only shown for major.minor releases, not every hotfix\n- Update sheet shows proper icons for 2.3 releases\n- Background audio import is working again"
+        },
         {
           "version": "2.3.1",
           "buildVersion": "2",
@@ -71,6 +79,16 @@
     }
   ],
   "news": [
+    {
+      "title": "iPhone Duo support is here",
+      "identifier": "starterseeds-iphone-duo-support-is-here-2026-11-05",
+      "caption": "I knew the rumors about iPhone Duo, so I have been building StarterSeeds with iPad in mind from the beginning. Following Apple Developer videos best practices, it is basically Duo supported out of the box. It only needed to be built with the Xcode 27.2 SDK to fully take advantage of the new hardware.\n\nHappy gaming!",
+      "date": "2026-10-11",
+      "tintColor": "#AF734D",
+      "appID": "com.semmelstulle.StarterSeeds",
+      "url": "https://atkins.sh/starterseeds/#Changelog",
+      "notify": true
+    },
     {
       "title": "StarterSeeds is back from the dead on AltStore!",
       "identifier": "starterseeds-altstore-revived-2026-10-11",
